@@ -412,13 +412,14 @@ This research is aimed at answering the following research questions:
   \item \textbf{RQ1}. What impact does usage examples have on REST API client developer productivity?
   \item \textbf{RQ2}. What problems API client developers face when using a REST API documentation that lacks usage examples?
 \end{itemize}
-.
+
 \subsection{Requirements} % (fold)
 
 To answer the aforementioned research questions, the study has the following requirements:
 
 \begin{itemize}
   \item \textbf{R1. Realistic.} We had to choose an existing REST API that is currently used by API client developers. Selecting a mature REST API for this study reduces the possibility of an underdeveloped solution that may be found if a new or a seldom used API is selected. A familiar domain needed to be selected so that participants are able to relate to the API features without requiring upfront training. In addition to selecting the API, we had to select tasks that are related to the core features provided by the API to represent reality.
+  \item \textbf{Open source.} To be able to understand the impact of usage examples, we needed to select an open-source API where we can add new examples to the documentation for performing this study. For proprietary APIs, it won't be possible to retrofit usage examples on existing API documentation without separating the examples from the documentation.
   \item \textbf{R2. Time bound.} The total time spent by each participant is required to be time bound to measure productivity. As a result, the study needs to be setup such that participants are able to focus on performing the tasks minimizing any overhead.
   \item \textbf{R3. Experienced developers.} Developers with prior experience on REST APIs need to be recruited as study participants to perform the study within a limited amount of time and in a realistic setup. Furthermore, to reduce a learning bias, only participants with no prior experince of using the WordPress REST API V2 are accepted for this study.
 \end{itemize}
@@ -426,7 +427,7 @@ To answer the aforementioned research questions, the study has the following req
 
 \subsection{Study Object} % (fold)
 
-We selected the WordPress REST API V2 for this study. WordPress is a blog-like open-source framework that is used by over 409 million people to visit 23.6 billion pages each month. The API allows programmatic access to list, create, update, and delete WordPress data such as blog posts, comments, users, images, tags, etc.
+We selected the WordPress REST API V2 for this study. WordPress is a blog-like open-source (R2) framework used by over 409 million people to visit 23.6 billion pages each month. The API allows programmatic access to list, create, update, and delete WordPress data such as blog posts, comments, users, images, tags, etc.
 
 The WordPress REST API V2 has been published and maintained since May 2015. Before January 2017, the WordPress REST API V2 was distributed as a plug-in where WordPress users could optionally install the API component. The following statistics are for the plug-in install numbers between May 2015 and October 2016:
 
