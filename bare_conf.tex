@@ -119,6 +119,7 @@
   \usepackage{listings}
   \usepackage[pdftex]{graphicx}
   \usepackage{url}
+
   % declare the path(s) where your graphic files are
   % \graphicspath{{../pdf/}{../jpeg/}}
   % and their extensions so you won't have to specify these with
@@ -425,7 +426,7 @@ To answer the aforementioned research questions, the study has the following req
 \end{itemize}
 
 
-\subsection{Study Object} % (fold)
+\subsection{Study API} % (fold)
 
 We selected the WordPress REST API V2 for this study. WordPress is a blog-like open-source (R2) framework used by over 409 million people to visit 23.6 billion pages each month. The API allows programmatic access to list, create, update, and delete WordPress data such as blog posts, comments, users, images, tags, etc.
 
@@ -506,8 +507,36 @@ To verify the response of an API call, the API client developers can use HTTP re
 
 To summarize, the tasks allow us to understand how REST API client developers approach API tasks of different complexity levels involving various input types and available output information with respect to the usage examples in the API documentation.
 
-\subsubsection{Subject Selection} % (fold)
-\subsubsection{Process} % (fold)
+\subsubsection{Participant Selection} % (fold)
+
+To satisfy the requirement of developers with REST API experience (R3), we have used the following criteria for recruiting the study participants:
+
+\begin{itemize}
+  \item Currently working as a software engineer.
+  \item At least 1 year of industry experience as a software engineer.
+  \item At least 1 year of industry experience with REST APIs.
+  \item No prior experience with WordPress REST API.
+\end{itemize}
+
+Participants were recruited through online announcements posted on Twitter, Facebook, and software developer focused mailing lists.
+
+\subsubsection{Process}
+
+Two pilot studies were performed to evaluate and understand an effective process for performing this study. The first pilot study involved four participants that were invited to join the first author on this paper in-person or using a video conferencing software. The study involved tasks using two APIs, the WordPress REST API V2 and the GMail REST API. Each participant was given one of the two APIs and a set of tasks to complete using the API within an hour. Participants were given an online answer form to record the answers to the tasks. The primary findings from this pilot are as follows: 1) asking participants to use an API to perform the tasks required significant overhead time for them to setup a development environment with the proper API credentials, 2) the intermediate trial attempts of using the API are potentially more valuable than the final answer as it allows us to understand API client developer information needs that may are not answered by the documentation, 3) the number of tasks for the study had to be reduced so the participants could complete the tasks within the one hour limit, and 4) for GMail API, participants used up a large portion of their time on setting up their API credentials that requires understanding of OAuth.
+
+
+\begin{figure*}[h!]
+\begin{center}
+\includegraphics[width=\linewidth,keepaspectratio]{api_explorer.png}
+\end{center}
+\caption{Screenshot of the web-based REST API explorer}
+\label{fig:api_explorer}
+\end{figure*}
+
+
+To overcome the shortcomings found from the first pilot study, we decided to develop a web-based REST API explorer as shown on Figure \ref{fig:api_explorer} that allows participants to use their browser to make the API calls without setting up any development environment. The web-based API explorer only requires the inputs I1-4, and displays the HTTP response headers and body on the click of a button. Thus the participants could focus on using the right input and verifying the output without having to write any code. The web-base REST API explorer also allowed us to automatically collect all the trial API calls that the participants make for each API task. A second pilot study involving seven new participants was performed to understand the features of the web-based REST API explorer in practice and to improve the user interface based on feedback from the participants. Participants completed the study on their own without having to meet in-person or over video conferencing. Only the WordPress REST API was used to focus on REST APIs without the required learning curve associated with OAuth. We found encouraging results from this pilot study as the collected data showed patterns of mistakes that API client developers make that can be reduced by adding usage examples in the API documentation.
+
+
 \subsubsection{Data Collection} % (fold)
 \subsubsection{Data Analysis: Success, Failure, Partial} % (fold)
 
