@@ -420,9 +420,9 @@ To answer the aforementioned research questions, the study has the following req
 
 \begin{itemize}
   \item \textbf{R1. Realistic.} We had to choose an existing REST API that is currently used by API client developers. Selecting a mature REST API for this study reduces the possibility of an underdeveloped solution that may be found if a new or a seldom used API is selected. A familiar domain needed to be selected so that participants are able to relate to the API features without requiring upfront training. In addition to selecting the API, we had to select tasks that are related to the core features provided by the API to represent reality.
-  \item \textbf{Open source.} To be able to understand the impact of usage examples, we needed to select an open-source API where we can add new examples to the documentation for performing this study. For proprietary APIs, it won't be possible to retrofit usage examples on existing API documentation without separating the examples from the documentation.
-  \item \textbf{R2. Time bound.} The total time spent by each participant is required to be time bound to measure productivity. As a result, the study needs to be setup such that participants are able to focus on performing the tasks minimizing any overhead.
-  \item \textbf{R3. Experienced developers.} Developers with prior experience on REST APIs need to be recruited as study participants to perform the study within a limited amount of time and in a realistic setup. Furthermore, to reduce a learning bias, only participants with no prior experince of using the WordPress REST API V2 are accepted for this study.
+  \item \textbf{R2. Open source.} To be able to understand the impact of usage examples, we needed to select an open-source API where we can add new examples to the documentation for performing this study. For proprietary APIs, it won't be possible to retrofit usage examples on existing API documentation without separating the examples from the documentation.
+  \item \textbf{R3. Time bound.} The total time spent by each participant is required to be time bound to measure productivity. As a result, the study needs to be setup such that participants are able to focus on performing the tasks minimizing any overhead.
+  \item \textbf{R4. Experienced developers.} Developers with prior experience on REST APIs need to be recruited as study participants to perform the study within a limited amount of time and in a realistic setup. Furthermore, to reduce a learning bias, only participants with no prior experince of using the WordPress REST API V2 are accepted for this study.
 \end{itemize}
 
 
@@ -525,7 +525,7 @@ Participants were recruited through online announcements posted on Twitter, Face
 Two pilot studies were performed to evaluate and understand an effective process for performing this study. The first pilot study involved four participants that were invited to join the first author on this paper in-person or using a video conferencing software. The study involved tasks using two APIs, the WordPress REST API V2 and the GMail REST API. Each participant was given one of the two APIs and a set of tasks to complete using the API within an hour. Participants were given an online answer form to record the answers to the tasks. The primary findings from this pilot are as follows: 1) asking participants to use an API to perform the tasks required significant overhead time for them to setup a development environment with the proper API credentials, 2) the intermediate trial attempts of using the API are potentially more valuable than the final answer as it allows us to understand API client developer information needs that may are not answered by the documentation, 3) the number of tasks for the study had to be reduced so the participants could complete the tasks within the one hour limit, and 4) for GMail API, participants used up a large portion of their time on setting up their API credentials that requires understanding of OAuth.
 
 
-\begin{figure*}[h!]
+\begin{figure*}[t]
 \begin{center}
 \includegraphics[width=\linewidth,keepaspectratio]{api_explorer.png}
 \end{center}
@@ -533,11 +533,37 @@ Two pilot studies were performed to evaluate and understand an effective process
 \label{fig:api_explorer}
 \end{figure*}
 
-
 To overcome the shortcomings found from the first pilot study, we decided to develop a web-based REST API explorer as shown on Figure \ref{fig:api_explorer} that allows participants to use their browser to make the API calls without setting up any development environment. The web-based API explorer only requires the inputs I1-4, and displays the HTTP response headers and body on the click of a button. Thus the participants could focus on using the right input and verifying the output without having to write any code. The web-base REST API explorer also allowed us to automatically collect all the trial API calls that the participants make for each API task. A second pilot study involving seven new participants was performed to understand the features of the web-based REST API explorer in practice and to improve the user interface based on feedback from the participants. Participants completed the study on their own without having to meet in-person or over video conferencing. Only the WordPress REST API was used to focus on REST APIs without the required learning curve associated with OAuth. We found encouraging results from this pilot study as the collected data showed patterns of mistakes that API client developers make that can be reduced by adding usage examples in the API documentation.
 
 
+\begin{figure*}[t]
+\begin{center}
+\includegraphics[width=\linewidth,keepaspectratio]{original.png}
+\end{center}
+\caption{Screenshot of the original WordPress REST API documentation}
+\label{fig:original}
+\end{figure*}
+
+\begin{figure*}[tb]
+\begin{center}
+\includegraphics[width=\linewidth,keepaspectratio]{forked.png}
+\end{center}
+\caption{Screenshot of the forked WordPress REST API documentation with a usage example}
+\label{fig:forked}
+\end{figure*}
+
+
+Based on the lessons learned from the pilot studies, we designed the actual study process as follows: the original WordPress REST API documentation was forked and a total of 3 API usage examples were added to show listing of blog posts with query parameters for filtering, a request to create a blog post and a request to update a blog post. Figure \ref{fig:original} shows a screenshot of the original API documentation related to T4 where the API client developers are provided with a reference table describing the different properties that can be used to create a $Post$ object\footnote{\url{http://v2.wp-api.org/reference/posts/}}. Figure \ref{fig:forked} shows a screenshot of the forked API documentation with a cURL based usage example. cURL is used because it's used by elsewhere in the original API documentation. In the forked API documentation, the example shows one possible API call with realistic values for the data that is described in the reference table and associated API response headers and body.
+
+Participants were divided into two groups, G1 and G2. G1 participants were provided with a link to the official API documentation on the web-based API explorer, and G2 participants were provided with a link to the forked API documentation with usage examples. The web-based API explorer allocated more participants to G1 compared to G2 because we wanted to better understand the impact of the lack of usage examples on API client developer productivity. However, each individual participant was randomly assigned to a group by the web-based API explorer. All participants were given the same set of API tasks and were requested to limit their participation time to a maximum of one hour. No task specific time limit was imposed because we wanted participants to spend sufficient time on each task without forcing them to move the next one. Participants were allowed to access the internet and external resources alongside the provided API documentation to perform the tasks as they'd normally use on a typical work day.
+
 \subsubsection{Data Collection} % (fold)
+
+The collected data for this study is both quantitative and qualitative. The quantitative part comprises of demographic information, statistics about the API tasks, and a numeric rating of the given API documentation to answer R1. We collected the demographic information to record the business and industry experience information. For each participant, we recorded all trial API calls with timestamps, and compared against the required API call to annotate the tasks answers as successful, partially successful, or unsuccessful. The quantitative data is used to measure REST API client developer productivity as a tuple of success rate, average number of trial API calls for each successful API call, and the average time taken for each successful API task completion by participants in G1 and G2.
+
+The data from qualitative analysis comprises of a text document that is exported from the database behind the web-based REST API explorer. For each API call made by the participants, inputs I1-4 along with the HTTP response headers and body are automatically saved on a database by the web-based API explorer. Additionally, the participants provide a free-form feedback about the experience of using the given REST API documentation to perform the tasks. The qualitative data was analyzed to answer R2.
+
+
 \subsubsection{Data Analysis: Success, Failure, Partial} % (fold)
 
 \section{Results}
