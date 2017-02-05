@@ -410,7 +410,7 @@ martin@cs.mcgill.ca}
 This research is aimed at answering the following research questions:
 
 \begin{itemize}
-  \item \textbf{RQ1}. What impact does usage examples have on REST API client developer productivity?
+  \item \textbf{RQ1}. What impact does usage examples have on REST API client developer productivity? In this study, we define API client developer productivity by the following metrics: a) number of API tasks performed successfully within a limited amount of time, b) number of trial API calls before a successful API call is found, and c) time spent to successfully complete an API task.
   \item \textbf{RQ2}. What problems API client developers face when using a REST API documentation that lacks usage examples?
 \end{itemize}
 
@@ -419,7 +419,7 @@ This research is aimed at answering the following research questions:
 To answer the aforementioned research questions, the study has the following requirements:
 
 \begin{itemize}
-  \item \textbf{R1. Realistic.} We had to choose an existing REST API that is currently used by API client developers. Selecting a mature REST API for this study reduces the possibility of an underdeveloped solution that may be found if a new or a seldom used API is selected. A familiar domain needed to be selected so that participants are able to relate to the API features without requiring upfront training. In addition to selecting the API, we had to select tasks that are related to the core features provided by the API to represent reality.
+  \item \textbf{R1. Representative API.} We had to choose an existing REST API that is currently used by API client developers. Selecting a mature REST API for this study reduces the possibility of an underdeveloped solution that may be found if a new or a seldom used API is selected. A familiar domain needed to be selected so that participants are able to relate to the API features without requiring upfront training. In addition to selecting the API, we had to select tasks that are related to the core features provided by the API to represent reality.
   \item \textbf{R2. Open source.} To be able to understand the impact of usage examples, we needed to select an open-source API where we can add new examples to the documentation for performing this study. For proprietary APIs, it won't be possible to retrofit usage examples on existing API documentation without separating the examples from the documentation.
   \item \textbf{R3. Time bound.} The total time spent by each participant is required to be time bound to measure productivity. As a result, the study needs to be setup such that participants are able to focus on performing the tasks minimizing any overhead.
   \item \textbf{R4. Experienced developers.} Developers with prior experience on REST APIs need to be recruited as study participants to perform the study within a limited amount of time and in a realistic setup. Furthermore, to reduce a learning bias, only participants with no prior experince of using the WordPress REST API V2 are accepted for this study.
@@ -437,7 +437,7 @@ The WordPress REST API V2 has been published and maintained since May 2015. Befo
   \item Average daily installs: approx. 500.
 \end{itemize}
 
-Starting January 2017, the WordPress REST API V2 is no longer required to be installed as a separate plug-in since it's pre-bundled with every WordPress install. As per the code repository on GitHub, there are a total of 99 and 46 contributors that had at least one commit to the code repository behind the API and and it's documentation, respectively. These properties satisfy R1, our requirements for being realistic.
+Starting January 2017, the WordPress REST API V2 is no longer required to be installed as a separate plug-in since it's pre-bundled with every WordPress install. As per the code repository on GitHub, there are a total of 99 and 46 contributors that had at least one commit to the code repository behind the API and and it's documentation, respectively. These properties satisfy R1, our requirements for using a representative API.
 
 By selecting an open-source project we are able to access the source-code to inspect the implementation and documentation technique of the WordPress REST API. The API implements a self-documenting feature where API developers expose API endpoints over HTTP OPTIONS verb to explain the API elements. To implement this feature, the API developers describe the API elements in the code. For example:
 
@@ -558,13 +558,20 @@ Based on the lessons learned from the pilot studies, we designed the actual stud
 Participants were divided into two groups, G1 and G2. G1 participants were provided with a link to the official API documentation on the web-based API explorer, and G2 participants were provided with a link to the forked API documentation with usage examples. The web-based API explorer allocated more participants to G1 compared to G2 because we wanted to better understand the impact of the lack of usage examples on API client developer productivity. However, each individual participant was randomly assigned to a group by the web-based API explorer. All participants were given the same set of API tasks and were requested to limit their participation time to a maximum of one hour. No task specific time limit was imposed because we wanted participants to spend sufficient time on each task without forcing them to move the next one. Participants were allowed to access the internet and external resources alongside the provided API documentation to perform the tasks as they'd normally use on a typical work day.
 
 \subsubsection{Data Collection} % (fold)
+The data collected by the web-based REST API explorer for each participant is exported into a text file as the raw data artifact. For each API task and each participant that attempted the task, the exported text file contains the request inputs I1-4 and associated API response headers and body for each API call made by the participant. For each participant, we recorded all trial API calls with timestamps. Additionally, the demographic information, experience rating and the free-form feedback for each participant is also included in the artifact.
 
-The collected data for this study is both quantitative and qualitative. The quantitative part comprises of demographic information, statistics about the API tasks, and a numeric rating of the given API documentation to answer R1. We collected the demographic information to record the business and industry experience information. For each participant, we recorded all trial API calls with timestamps, and compared against the required API call to annotate the tasks answers as successful, partially successful, or unsuccessful. The quantitative data is used to measure REST API client developer productivity as a tuple of success rate, average number of trial API calls for each successful API call, and the average time taken for each successful API task completion by participants in G1 and G2.
 
-The data from qualitative analysis comprises of a text document that is exported from the database behind the web-based REST API explorer. For each API call made by the participants, inputs I1-4 along with the HTTP response headers and body are automatically saved on a database by the web-based API explorer. Additionally, the participants provide a free-form feedback about the experience of using the given REST API documentation to perform the tasks. The qualitative data was analyzed to answer R2.
+\subsubsection{Data Analysis}
+The same data artifact is used to analyze both quantitatively and qualitatively to answer the aforementioned research questions. To answer RQ1, for each API task attempted by each participant, we annotated the artifact with one of the following labels: successful, partially successful, and unsuccessful. Task participations are marked successful when I1-4 matches the required values for performing the given task. If a participant is able to use the correct I1-4 for one of the two tasks required to complete a single task (T2), we marked it as a partially successful. Otherwise, it's marked as unsuccessful. Based on these annotations, the answers for RQ1 was computed using the following:
 
-\subsubsection{Data Analysis: Success, Failure, Partial} % (fold)
 
+success rate of group = (total number of successful tasks by group) / (number of participants in group * number of API tasks)
+
+API calls per success of group = (number of API calls annotated as successful) / (total number of trial API calls made by group)
+
+average time taken for success = (number of successful API tasks by group) / (total time spent by all participants in the group)
+
+To answer RQ2, we analyzed the data artifact qualitatively. The data artifact exported from the web-based REST API explorer included a table with raw data. For each row, the table contains the following columns: API task, participant identifier, timestamp, API trial number, I1-4, response headers and body. It allowed us to observe and categorize the different input values that the participants used to perform the given API tasks. The values for I1-4 used by the participants were manually coded to group the participant responses into categories. The categories help us determine the types of information that API client developers need in the API documentation to perform API tasks successfully. The analysis started with an empty set of codes and new codes were introduced to describe scenarios that didn't fall under  codes that were already applied. The first author on this paper applied the codes on the raw data artifact and the co-authors verified the codes randomly. To resolve disagreements, the authors discussed and updated the codes accordingly. The codes were then further categorized to higher level grouping to represent common problems faced by the study participants for each group.
 
 
 \section{Results}
