@@ -420,8 +420,7 @@ What does it mean? (expected) API developers should include usage examples in RE
 This research is aimed at answering the following research questions:
 
 \begin{itemize}
-  \item \textbf{RQ1}. What impact does usage examples have on REST API client developer productivity? In this study, we define API client developer productivity by the following metrics: a) number of API tasks performed successfully within a limited amount of time, b) number of trial API calls before a successful API call is found, and c) time spent to successfully complete an API task.
-  \item \textbf{RQ2}. What problems API client developers face when using a REST API documentation that lacks usage examples?
+  \item \textbf{RQ}. What obstacles API client developers face when using a REST API documentation that lacks usage examples?
 \end{itemize}
 
 \subsection{Requirements} % (fold)
@@ -572,7 +571,9 @@ The data collected by the web-based REST API explorer for each participant is ex
 
 
 \subsubsection{Data Analysis}
-The same data artifact is used to analyze both quantitatively and qualitatively to answer the aforementioned research questions. To answer RQ1, for each API task attempted by each participant, we annotated the artifact with one of the following labels: successful, partially successful, and unsuccessful. Task participations are marked successful when I1-4 matches the required values for performing the given task. If a participant is able to use the correct I1-4 for one of the two tasks required to complete a single task (T2), we marked it as a partially successful. Otherwise, it's marked as unsuccessful. Based on these annotations, the answers for RQ1 was computed using the following:
+The same data artifact is used to analyze both quantitatively and qualitatively to answer the aforementioned research question.We analyzed the data artifact qualitatively to understand the obstacles that REST API client developers face when using an API documentation that lacks usage examples. The data artifact exported from the web-based REST API explorer included a table with raw data. For each row, the table contains the following columns: API task, participant identifier, timestamp, API trial number, I1-4, response headers and body. It allowed us to observe and categorize the different input values that the participants used to perform the given API tasks. The values for I1-4 used by the participants were manually coded to group the participant responses into categories. The categories help us determine the types of information that API client developers need in the API documentation to perform API tasks successfully. The analysis started with an empty set of codes and new codes were introduced to describe scenarios that didn't fall under  codes that were already applied. The first author on this paper applied the codes on the raw data artifact and the co-authors verified the codes randomly. To resolve disagreements, the authors discussed and updated the codes accordingly. The codes were then further categorized to higher level grouping to represent common problems faced by the study participants for each group.
+
+For each API task attempted by each participant, we annotated the artifact with one of the following labels: successful, partially successful, and unsuccessful. Task participations are marked successful when I1-4 matches the required values for performing the given task. If a participant is able to use the correct I1-4 for one of the two tasks required to complete a single task (T2), we marked it as a partially successful. Otherwise, it's marked as unsuccessful. Based on these annotations, the answers for RQ1 was computed using the following:
 
 
 success rate of group = (total number of successful tasks by group) / (number of participants in group * number of API tasks)
@@ -581,22 +582,23 @@ API calls per success of group = (number of API calls annotated as successful) /
 
 average time taken for success = (number of successful API tasks by group) / (total time spent by all participants in the group)
 
-To answer RQ2, we analyzed the data artifact qualitatively. The data artifact exported from the web-based REST API explorer included a table with raw data. For each row, the table contains the following columns: API task, participant identifier, timestamp, API trial number, I1-4, response headers and body. It allowed us to observe and categorize the different input values that the participants used to perform the given API tasks. The values for I1-4 used by the participants were manually coded to group the participant responses into categories. The categories help us determine the types of information that API client developers need in the API documentation to perform API tasks successfully. The analysis started with an empty set of codes and new codes were introduced to describe scenarios that didn't fall under  codes that were already applied. The first author on this paper applied the codes on the raw data artifact and the co-authors verified the codes randomly. To resolve disagreements, the authors discussed and updated the codes accordingly. The codes were then further categorized to higher level grouping to represent common problems faced by the study participants for each group.
-
 
 \section{Results}
 
-\subsection{RQ1: REST API Client Developer Productivity} % (fold)
+\subsection{Qualitative Analysis Results} % (fold)
+
+  Observation and Implications
+    For each task, describe the results. Provide examples of failed attempts with counts, and relate to the documentation sources to share an observation. Imply what needs to be done.
+
+
+\subsection{Quantitative Analysis Results} % (fold)
 
 A graph showing the difference in productivity metrics between G1 and G2.
 Implications
 
-\subsection{RQ2: Common Problems Faced by REST API Client Developers} % (fold)
 
 % subsection rq1 (end)
 
-  Observation and Implications
-    For each task, describe the results. Provide examples of failed attempts with counts, and relate to the documentation sources to share an observation. Imply what needs to be done.
 
 
 \section{Threats to Validity}
