@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: controlled_study.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: IEEEabrv.bib
+Database file #2: refs.bib
+A bad cross reference---entry "Nasehi_what_makes"
+refers to entry "DBLP:conf/icsm/2012", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/icsm/2012"
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+You've used 12 entries,
+            4039 wiz_defined-function locations,
+            1318 strings with 18004 characters,
+and the built_in function-call counts, 10941 in all, are:
+= -- 871
+> -- 235
+< -- 98
++ -- 133
+- -- 36
+* -- 573
+:= -- 1588
+add.period$ -- 28
+call.type$ -- 12
+change.case$ -- 12
+chr.to.int$ -- 237
+cite$ -- 12
+duplicate$ -- 762
+empty$ -- 919
+format.name$ -- 48
+if$ -- 2549
+int.to.chr$ -- 0
+int.to.str$ -- 12
+missing$ -- 133
+newline$ -- 67
+num.names$ -- 12
+pop$ -- 303
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 833
+stack$ -- 0
+substring$ -- 564
+swap$ -- 643
+text.length$ -- 19
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 12
+warning$ -- 0
+while$ -- 54
+width$ -- 14
+write$ -- 154
+(There was 1 error message)
