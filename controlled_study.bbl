@@ -21,6 +21,10 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{Robillard_what_makes}
+M.~Robillard, ``What makes {API}s hard to learn? the answers of developers,''
+  \emph{Software, IEEE}, vol.~PP, no.~99, pp. 1--1, 2011.
+
 \bibitem{Robillard_a_field_study}
 M.~Robillard and R.~DeLine, ``\BIBforeignlanguage{English}{A field study of
   {API} learning obstacles},'' \emph{\BIBforeignlanguage{English}{Empirical
@@ -75,6 +79,25 @@ H.~Jiau and F.-P. Yang, ``\BIBforeignlanguage{English}{Facing up to the
   inequality of crowdsourced api documentation},''
   \emph{\BIBforeignlanguage{English}{ACM SIGSOFT Software Engineering Notes}},
   vol.~37, no.~1, pp. 1--9, 2012.
+
+\bibitem{rama}
+G.~M. Rama and A.~Kak, ``\BIBforeignlanguage{English}{Some structural measures
+  of api usability},'' \emph{\BIBforeignlanguage{English}{Software: Practice
+  and Experience}}, vol.~45, no.~1, pp. 75--110, 2015.
+
+\bibitem{scheller2015automated}
+T.~Scheller and E.~K{\"u}hn, ``Automated measurement of api usability: The
+  {API} concepts framework,'' \emph{Information and Software Technology},
+  vol.~61, pp. 145--162, 2015.
+
+\bibitem{Grill2012}
+\BIBentryALTinterwordspacing
+T.~Grill, O.~Polacek, and M.~Tscheligi, \emph{Methods towards API Usability: A
+  Structural Analysis of Usability Problem Categories}.\hskip 1em plus 0.5em
+  minus 0.4em\relax Berlin, Heidelberg: Springer Berlin Heidelberg, 2012, pp.
+  164--180. [Online]. Available:
+  \url{http://dx.doi.org/10.1007/978-3-642-34347-6_10}
+\BIBentrySTDinterwordspacing
 
 \bibitem{5609553}
 S.~M. Nasehi and F.~Maurer, ``Unit tests as api usage examples,'' in \emph{2010
