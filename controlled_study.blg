@@ -17,45 +17,45 @@ Warning--I didn't find a database entry for "DBLP:conf/icsm/2012"
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 16 entries,
+You've used 18 entries,
             4039 wiz_defined-function locations,
-            1349 strings with 18867 characters,
-and the built_in function-call counts, 14131 in all, are:
-= -- 1147
-> -- 295
-< -- 132
-+ -- 168
-- -- 44
-* -- 733
-:= -- 2077
-add.period$ -- 36
-call.type$ -- 16
-change.case$ -- 15
-chr.to.int$ -- 312
-cite$ -- 16
-duplicate$ -- 982
-empty$ -- 1161
-format.name$ -- 59
-if$ -- 3288
+            1366 strings with 19529 characters,
+and the built_in function-call counts, 16282 in all, are:
+= -- 1317
+> -- 361
+< -- 152
++ -- 204
+- -- 56
+* -- 845
+:= -- 2379
+add.period$ -- 41
+call.type$ -- 18
+change.case$ -- 17
+chr.to.int$ -- 360
+cite$ -- 18
+duplicate$ -- 1127
+empty$ -- 1324
+format.name$ -- 73
+if$ -- 3789
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 166
-newline$ -- 81
-num.names$ -- 16
-pop$ -- 368
+int.to.str$ -- 18
+missing$ -- 194
+newline$ -- 89
+num.names$ -- 18
+pop$ -- 432
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1083
+skip$ -- 1244
 stack$ -- 0
-substring$ -- 741
-swap$ -- 840
-text.length$ -- 28
+substring$ -- 855
+swap$ -- 970
+text.length$ -- 32
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 16
+type$ -- 18
 warning$ -- 0
-while$ -- 72
-width$ -- 18
-write$ -- 197
+while$ -- 82
+width$ -- 20
+write$ -- 221
 (There was 1 error message)

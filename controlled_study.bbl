@@ -44,6 +44,12 @@ E.~Duala-Ekoko and M.~P. Robillard, ``Asking and answering questions about
   \url{http://dl.acm.org/citation.cfm?id=2337223.2337255}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Myers_study}
+B.~Myers, S.~Jeong, Y.~Xie, J.~Beaton, J.~Stylos, R.~Ehret, J.~Karstens,
+  A.~Efeoglu, and D.~K. Busse, ``Studying the documentation of an api for
+  enterprise service-oriented architecture,'' \emph{J. Organ. End User
+  Comput.}, vol.~22, no.~1, pp. 23--51, 2010.
+
 \bibitem{6462686}
 L.~Wang, Y.~Zou, L.~Fang, B.~Xie, and F.~Yang, ``An exploratory study of api
   usage examples on the web,'' in \emph{2012 19th Asia-Pacific Software
@@ -97,6 +103,16 @@ T.~Grill, O.~Polacek, and M.~Tscheligi, \emph{Methods towards API Usability: A
   minus 0.4em\relax Berlin, Heidelberg: Springer Berlin Heidelberg, 2012, pp.
   164--180. [Online]. Available:
   \url{http://dx.doi.org/10.1007/978-3-642-34347-6_10}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Farooq:2010:AUP:1753326.1753677}
+\BIBentryALTinterwordspacing
+U.~Farooq, L.~Welicki, and D.~Zirkler, ``Api usability peer reviews: A method
+  for evaluating the usability of application programming interfaces,'' in
+  \emph{Proceedings of the SIGCHI Conference on Human Factors in Computing
+  Systems}, ser. CHI '10.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY,
+  USA: ACM, 2010, pp. 2327--2336. [Online]. Available:
+  \url{http://doi.acm.org/10.1145/1753326.1753677}
 \BIBentrySTDinterwordspacing
 
 \bibitem{5609553}
