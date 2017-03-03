@@ -2696,8 +2696,7 @@ Content-Type: application/json```
 - Time: ```16:21:40```
 - Method: ```GET```
 - PATH: ```posts```
-- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
-```
+- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU```
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2017-01-08T22:41:59","modified_gmt":"2017-01-08T22:41:59","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
@@ -3250,8 +3249,7 @@ Content-Type: application/json```
 - Method: ```POST```
 - PATH: ```posts```
 - Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
-Content-Type=application/json
-```
+Content-Type=application/json```
 - Request Body: ```{
 "title":" a random post",
 "content": "lorem ipsum",
@@ -3277,8 +3275,7 @@ Content-Type=application/json
 - Method: ```POST```
 - PATH: ```posts```
 - Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
-Content-Type=application/json
-```
+Content-Type=application/json```
 - Request Body: ```{"title":" a random post","content": "lorem ipsum","date"="2016-01-01"}```
 - Response Code: ```400```
 - Response Body: ```{"code":"empty_content","message":"Content, title, and excerpt are empty.","data":{"status":400}}```
@@ -3300,8 +3297,7 @@ Content-Type=application/json
 - Method: ```POST```
 - PATH: ```posts```
 - Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
-Content-Type=application/json
-```
+Content-Type=application/json```
 - Request Body: ```{"title":"a random post","content": "lorem ipsum","date"="2016-01-01"}```
 - Response Code: ```400```
 - Response Body: ```{"code":"empty_content","message":"Content, title, and excerpt are empty.","data":{"status":400}}```
@@ -3322,9 +3318,7 @@ Content-Type=application/json
 - Time: ```20:32:24```
 - Method: ```POST```
 - PATH: ```posts```
-- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
-
-```
+- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU```
 - Request Body: ```{"title":"a random post","content": "lorem ipsum","date"="2016-01-01"}```
 - Response Code: ```400```
 - Response Body: ```{"code":"empty_content","message":"Content, title, and excerpt are empty.","data":{"status":400}}```
@@ -3345,9 +3339,7 @@ Content-Type=application/json
 - Time: ```20:34:52```
 - Method: ```POST```
 - PATH: ```posts```
-- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
-
-```
+- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU```
 - Request Body: ```title='a random post'```
 - Response Code: ```201```
 - Response Body: ```{"id":253,"date":"2017-02-21T20:34:53","date_gmt":null,"guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=253","raw":"http:\/\/wp.spyrest.com\/?p=253"},"modified":"2017-02-21T20:34:53","modified_gmt":null,"password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=253","title":{"raw":"'a random post'","rendered":"&#8216;a random post&#8217;"},"content":{"raw":"","ren...```
@@ -3368,9 +3360,7 @@ Content-Type=application/json
 - Time: ```20:35:21```
 - Method: ```POST```
 - PATH: ```posts```
-- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
-
-```
+- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU```
 - Request Body: ```title=a random post```
 - Response Code: ```201```
 - Response Body: ```{"id":254,"date":"2017-02-21T20:35:21","date_gmt":null,"guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=254","raw":"http:\/\/wp.spyrest.com\/?p=254"},"modified":"2017-02-21T20:35:21","modified_gmt":null,"password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=254","title":{"raw":"a random post","rendered":"a random post"},"content":{"raw":"","rendered":"","prote...```
@@ -3391,9 +3381,7 @@ Content-Type=application/json
 - Time: ```20:35:39```
 - Method: ```POST```
 - PATH: ```posts```
-- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
-
-```
+- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU```
 - Request Body: ```title=a random post
 content=lorem ipsum```
 - Response Code: ```201```
@@ -3415,9 +3403,7 @@ content=lorem ipsum```
 - Time: ```20:36:11```
 - Method: ```POST```
 - PATH: ```posts```
-- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
-
-```
+- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU```
 - Request Body: ```title=a random post,
 content=lorem ipsum```
 - Response Code: ```201```
@@ -3439,9 +3425,7 @@ content=lorem ipsum```
 - Time: ```20:36:47```
 - Method: ```POST```
 - PATH: ```posts```
-- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
-
-```
+- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU```
 - Request Body: ```title=a random post&content=lorem ipsum```
 - Response Code: ```201```
 - Response Body: ```{"id":257,"date":"2017-02-21T20:36:48","date_gmt":null,"guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=257","raw":"http:\/\/wp.spyrest.com\/?p=257"},"modified":"2017-02-21T20:36:48","modified_gmt":null,"password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=257","title":{"raw":"a random post","rendered":"a random post"},"content":{"raw":"lorem ipsum","rendered...```
@@ -3462,9 +3446,7 @@ content=lorem ipsum```
 - Time: ```20:37:05```
 - Method: ```POST```
 - PATH: ```posts```
-- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
-
-```
+- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU```
 - Request Body: ```title=a random post&content=lorem ipsum&date=2017-02-21T20:35:39```
 - Response Code: ```201```
 - Response Body: ```{"id":258,"date":"2017-02-21T20:35:39","date_gmt":"2017-02-21T20:35:39","guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=258","raw":"http:\/\/wp.spyrest.com\/?p=258"},"modified":"2017-02-21T20:35:39","modified_gmt":"2017-02-21T20:35:39","password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=258","title":{"raw":"a random post","rendered":"a random post"},"conte...```
@@ -3485,9 +3467,7 @@ content=lorem ipsum```
 - Time: ```20:37:26```
 - Method: ```POST```
 - PATH: ```posts```
-- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
-
-```
+- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU```
 - Request Body: ```title=a random post&content=lorem ipsum&date=2016-01-01T00:00:00```
 - Response Code: ```201```
 - Response Body: ```{"id":259,"date":"2016-01-01T00:00:00","date_gmt":"2016-01-01T00:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=259","raw":"http:\/\/wp.spyrest.com\/?p=259"},"modified":"2016-01-01T00:00:00","modified_gmt":"2016-01-01T00:00:00","password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=259","title":{"raw":"a random post","rendered":"a random post"},"conte...```
@@ -3745,8 +3725,7 @@ Content-Type: application/json```
 "title":"a random post",
 "content":"lorem ipsum",
 "date":"2016-01-01T01:01:01.000"
-}
-```
+}```
 - Response Code: ```400```
 - Response Body: ```{"code":"empty_content","message":"Content, title, and excerpt are empty.","data":{"status":400}}```
 
@@ -3772,7 +3751,6 @@ Content-Type: application/json```
 "title":"a random post",
 "content":"lorem ipsum",
 "date":"2016-01-01T01:01:01.000"
-}
-```
+}```
 - Response Code: ```201```
 - Response Body: ```{"id":267,"date":"2016-01-01T01:01:01","date_gmt":"2016-01-01T01:01:01","guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=267","raw":"http:\/\/wp.spyrest.com\/?p=267"},"modified":"2016-01-01T01:01:01","modified_gmt":"2016-01-01T01:01:01","password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=267","title":{"raw":"a random post","rendered":"a random post"},"conte...```
