@@ -326,8 +326,7 @@ Content-Type: application/x-www-form-urlencoded```
 - Method: ```POST```
 - PATH: ```posts/190```
 - Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU 
-Content-Type: application/json
-```
+Content-Type: application/json```
 - Request Body: ```{"excerpt_raw":"My new excerpt"
 }```
 - Response Code: ```200```
@@ -350,8 +349,7 @@ Content-Type: application/json
 - Method: ```POST```
 - PATH: ```posts/190```
 - Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU 
-Content-Type: application/json
-```
+Content-Type: application/json```
 - Request Body: ```{"excerpt": "raw": "My new excerpt"
 }```
 - Response Code: ```200```
@@ -374,8 +372,7 @@ Content-Type: application/json
 - Method: ```POST```
 - PATH: ```posts/190```
 - Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU 
-Content-Type: application/json
-```
+Content-Type: application/json```
 - Request Body: ```{
 "ID":190,
 "excerpt_raw": "My new excerpt"
