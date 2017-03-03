@@ -1,0 +1,48 @@
+Paper outline
+
+Analysis
+  Coding vs. counting
+  
+  Quotes -> link to the problems
+  
+  Raw data
+    Participant info (expe, feed, rating)
+      report the experience -> participant selection
+  participant      p1 p2 
+  industry         5  8
+  rest api         3  2
+
+    for each task
+      for each trial attempt
+        4 inputs, output -> verdict (Success / Failure)
+    
+    comparison between two groups
+      success rate
+      number of failed trials
+      experience rating
+
+Results
+  Developers had problem using API request URL with right data type
+    Implication: API documentation should include it.
+    Examples of the observation -> link
+
+  Developers had problem using API request URL with arrays
+  Developers had problem using API response header info
+  Developers had problem using API request headers
+  Developers had problem using API request body 
+
+
+Coding
+  open coding, no starter set
+  Applying codes to describe an error in the participant input
+  Group the errors under higher level themes
+  Reach results
+
+  Inter-rater reliability ->  get the raw data, code it, and share with Craig and Frank
+
+
+
+
+
+
+  Correct followed by a correct
