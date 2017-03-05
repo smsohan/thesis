@@ -5,6 +5,11 @@
 #### Answer 1
 
 
+## Correct Answer
+```
+GET /posts?exclude=1,4
+
+```
 
 
 

@@ -1,5 +1,14 @@
 # Task:  Find the total number of Posts. Use the WordPress REST API find the total number of blog posts from the blog at http://wp.spyrest.com
 
+## Correct Answer
+
+```
+GET /posts
+GET /posts?page=1
+HEAD /posts
+```
+
+
 ### Participant: P2.1 using forked API documentation
 
 #### Answer 1

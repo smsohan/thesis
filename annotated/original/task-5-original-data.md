@@ -1,5 +1,28 @@
 # Task:  Publish a Post. Use the WordPress REST API to publish a new post with title 'a random post', content 'lorem ipsum' and published date of 'January 1, 2016' on the blog at http://wp.spyrest.com
 
+## Correct Answer
+
+```
+POST /posts
+
+Headers:
+  Authorization: (provided by the tool)
+  Content-Type: application/json (Case sensitive, to be added by participant)
+
+Body:
+  {
+    "title: "a random post",
+    "content: "lorem ipsum",
+    "date: "2010-01-01T02:00:00-10:00",
+    "status": "publish"
+  }
+
+```
+
+
+
+
+
 ### Participant: P1.1 using original API documentation
 
 #### Answer 1
