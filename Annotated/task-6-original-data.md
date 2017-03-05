@@ -9,7 +9,9 @@
 
 
 
-
+`Code: Wrong Path`
+`Code: Missing Headers`
+`Code: Wrong Body`
 
 
 
@@ -38,6 +40,7 @@
 
 
 
+`Code: Partially Correct Answer`
 
 
 
@@ -58,6 +61,8 @@
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Body`
 
 
 
@@ -80,6 +85,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Body`
 
 
 
@@ -97,6 +104,9 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Wrong Path`
+`Code: Missing Headers`
+`Code: Wrong Body`
 
 
 
@@ -123,7 +133,7 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
-
+`Code: Partially Correct Answer`
 
 
 
@@ -146,8 +156,7 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
-
-
+`Code: Partially Correct Answer`
 
 
 
@@ -166,6 +175,7 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Partially Correct Answer`
 
 
 
@@ -188,6 +198,7 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`CODE: Missing Headers`
 
 
 
@@ -206,8 +217,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
-
-
+`CODE: Missing Headers`
+`CODE: Wrong Body`
 
 
 
@@ -229,8 +240,9 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
-
-
+`CODE: Missing Headers`
+`CODE: Wrong Body`
+`CODE: Wrong Path`
 
 
 
@@ -254,7 +266,7 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
-
+`CODE: Partially Correct Answer`
 
 
 
@@ -273,7 +285,7 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
-
+`CODE: Missing Headers`
 
 
 
@@ -293,7 +305,7 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
-
+`CODE: Missing Headers`
 
 
 
@@ -316,7 +328,7 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
-
+`CODE: Correct Answer`
 
 
 
@@ -325,7 +337,7 @@ Content-Type: application/x-www-form-urlencoded```
 - Time: ```21:33:47```
 - Method: ```POST```
 - PATH: ```posts/190```
-- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU 
+- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
 Content-Type: application/json```
 - Request Body: ```{"excerpt_raw":"My new excerpt"
 }```
@@ -342,13 +354,13 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Repeat Correct Answer`
 
 
 - Time: ```21:34:28```
 - Method: ```POST```
 - PATH: ```posts/190```
-- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU 
+- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
 Content-Type: application/json```
 - Request Body: ```{"excerpt": "raw": "My new excerpt"
 }```
@@ -364,14 +376,14 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Repeat Correct Answer`
 
 
 
 - Time: ```21:37:09```
 - Method: ```POST```
 - PATH: ```posts/190```
-- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU 
+- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
 Content-Type: application/json```
 - Request Body: ```{
 "ID":190,
@@ -391,7 +403,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Partially Correct Answer`
 
 
 
@@ -411,7 +423,9 @@ Content-Type: application/json```
 
 
 
-
+`Code: Wrong Path`
+`Code: Missing Headers`
+`Code: Wrong Body`
 
 
 
@@ -432,6 +446,7 @@ Content-Type: application/json```
 
 
 
+`Code: Partially Correct Answer`
 
 
 
@@ -450,6 +465,9 @@ Content-Type: application/json```
 
 
 
+`Code: Wrong Path`
+`Code: Missing Headers`
+`Code: Wrong Body`
 
 
 
@@ -474,7 +492,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Partially Correct Answer`
 
 
 
@@ -490,8 +508,7 @@ Content-Type: application/json```
 
 
 
-
-
+`CODE: Partially Correct Answer`
 
 
 
@@ -516,6 +533,11 @@ Content-Type: application/json```
 
 
 
+`Code: Wrong Path`
+`Code: Missing Headers`
+`Code: Wrong Body`
+
+
 
 
 
@@ -536,6 +558,11 @@ Content-Type: application/json```
 
 
 
+
+
+`Code: Wrong Path`
+`Code: Missing Headers`
+`Code: Wrong Body`
 
 
 
@@ -560,7 +587,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Partially Correct Answer`
 
 
 
@@ -582,6 +609,10 @@ Content-Type: application/json```
 
 
 
+`CODE: Wrong Path`
+`CODE: Wrong Method`
+`CODE: Wrong Body`
+`CODE: Missing Headers`
 
 
 
@@ -600,10 +631,9 @@ Content-Type: application/json```
 
 
 
-
-
-
-
+`CODE: Wrong Path`
+`CODE: Wrong Body`
+`CODE: Missing Headers`
 
 
 - Time: ```22:39:11```
@@ -622,6 +652,9 @@ Content-Type: application/json```
 
 
 
+`CODE: Wrong Path`
+`CODE: Wrong Body`
+`CODE: Missing Headers`
 
 
 
@@ -639,6 +672,9 @@ Content-Type: application/json```
 
 
 
+`CODE: Wrong Path`
+`CODE: Wrong Body`
+`CODE: Missing Headers`
 
 
 
@@ -661,6 +697,9 @@ Content-Type: application/json```
 
 
 
+`CODE: Wrong Path`
+`CODE: Wrong Body`
+`CODE: Missing Headers`
 
 
 
@@ -679,6 +718,9 @@ Content-Type: application/json```
 
 
 
+`CODE: Wrong Path`
+`CODE: Wrong Body`
+`CODE: Missing Headers`
 
 
 
@@ -700,6 +742,9 @@ Content-Type: application/json```
 
 
 
+`CODE: Wrong Path`
+`CODE: Wrong Body`
+`CODE: Missing Headers`
 
 
 
@@ -722,6 +767,9 @@ Content-Type: application/json```
 
 
 
+`CODE: Wrong Path`
+`CODE: Wrong Body`
+`CODE: Missing Headers`
 
 
 
@@ -740,6 +788,9 @@ Content-Type: application/json```
 
 
 
+`CODE: Wrong Path`
+`CODE: Wrong Body`
+`CODE: Missing Headers`
 
 
 
@@ -759,12 +810,7 @@ Content-Type: application/json```
 
 
 
-
-
-
-
-
-
+`CODE: Partially Correct Answer`
 
 
 
@@ -784,6 +830,7 @@ Content-Type: application/json```
 
 
 
+`CODE: Partially Correct Answer`
 
 
 
@@ -804,6 +851,7 @@ Content-Type: application/json```
 
 
 
+`CODE: Partially Correct Answer`
 
 
 
@@ -823,6 +871,7 @@ Content-Type: application/json```
 
 
 
+`CODE: Partially Correct Answer`
 
 
 
@@ -844,6 +893,7 @@ Content-Type: application/json```
 
 
 
+`CODE: Wrong Answer`
 
 
 
@@ -864,7 +914,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Wrong Answer`
 
 
 
@@ -882,7 +932,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Wrong Answer`
 
 
 
@@ -903,7 +953,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Wrong Answer`
 
 
 
@@ -923,7 +973,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Wrong Answer`
 
 
 
@@ -942,7 +992,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Wrong Answer`
 
 
 
@@ -963,7 +1013,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Wrong Answer`
 
 
 
@@ -984,7 +1034,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Partially Correct Answer`
 
 
 
@@ -1004,7 +1054,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Missing Headers`
 
 
 
