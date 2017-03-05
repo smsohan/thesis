@@ -1,6 +1,6 @@
 # Task:  Update the excerpt of the Post you published to 'My new excerpt'. Use the WordPress REST API to update the excerpt for the post you created from the blog at http://wp.spyrest.com.
 
-### Participant: P1 using original API documentation
+### Participant: P1.1 using original API documentation
 
 #### Answer 1
 
@@ -22,13 +22,13 @@
 - Response Code: ```200```
 - Response Body: ```{"id":1,"date":"2016-04-03T21:02:06","date_gmt":"2016-04-03T21:02:06","guid":{"rendered":"http:\/\/107.170.206.224\/?p=1","raw":"http:\/\/107.170.206.224\/?p=1"},"modified":"2016-12-20T18:03:56","modified_gmt":"2016-12-20T18:03:56","password":"","slug":"hello-world","status":"publish","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/03\/hello-world\/","title":{"raw":"Hello world!","rend...```
 
-### Participant: P2 using original API documentation
+### Participant: P1.2 using original API documentation
 
-### Participant: P3 using original API documentation
+### Participant: P1.3 using original API documentation
 
-### Participant: P4 using original API documentation
+### Participant: P1.4 using original API documentation
 
-### Participant: P5 using original API documentation
+### Participant: P1.5 using original API documentation
 
 #### Answer 1
 
@@ -134,9 +134,9 @@ Content-Type: application/x-www-form-urlencoded```
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2016-09-18T19:34:40","modified_gmt":"2016-09-18T19:34:40","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
-### Participant: P6 using original API documentation
+### Participant: P1.6 using original API documentation
 
-### Participant: P7 using original API documentation
+### Participant: P1.7 using original API documentation
 
 #### Answer 1
 
@@ -241,9 +241,9 @@ Content-Type: application/x-www-form-urlencoded```
 - Response Code: ```200```
 - Response Body: ```{"id":182,"date":"2016-01-01T12:00:00","date_gmt":"2016-01-01T12:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=182","raw":"http:\/\/wp.spyrest.com\/?p=182"},"modified":"2016-12-29T16:45:04","modified_gmt":"2016-12-29T16:45:04","password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=182","title":{"raw":"a random title","rendered":"a random title"},"con...```
 
-### Participant: P8 using original API documentation
+### Participant: P1.8 using original API documentation
 
-### Participant: P9 using original API documentation
+### Participant: P1.9 using original API documentation
 
 #### Answer 1
 
@@ -380,7 +380,7 @@ Content-Type: application/json```
 - Response Code: ```200```
 - Response Body: ```{"id":190,"date":"2016-01-01T20:50:08","date_gmt":"2016-01-01T20:50:08","guid":{"rendered":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post\/","raw":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post\/"},"modified":"2017-01-08T21:37:11","modified_gmt":"2017-01-08T21:37:11","password":"","slug":"a-random-post","status":"publish","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/01\/01...```
 
-### Participant: P16 using original API documentation
+### Participant: P1.10 using original API documentation
 
 #### Answer 1
 
@@ -422,7 +422,7 @@ Content-Type: application/json```
 - Response Code: ```200```
 - Response Body: ```{"id":232,"date":"2016-01-01T00:00:00","date_gmt":"2016-01-01T00:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=232","raw":"http:\/\/wp.spyrest.com\/?p=232"},"modified":"2017-02-13T20:34:34","modified_gmt":"2017-02-13T20:34:34","password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=232","title":{"raw":"a random post","rendered":"a random post"},"conte...```
 
-### Participant: P17 using original API documentation
+### Participant: P1.11 using original API documentation
 
 #### Answer 1
 
@@ -464,7 +464,7 @@ Content-Type: application/json```
 - Response Code: ```200```
 - Response Body: ```{"id":213,"date":"2016-01-01T10:00:00","date_gmt":"2016-01-01T10:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=213","raw":"http:\/\/wp.spyrest.com\/?p=213"},"modified":"2017-02-13T20:10:23","modified_gmt":"2017-02-13T20:10:23","password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=213","title":{"raw":"a rondom post","rendered":"a rondom post"},"conte...```
 
-### Participant: P21 using original API documentation
+### Participant: P1.12 using original API documentation
 
 #### Answer 1
 
@@ -526,7 +526,7 @@ Content-Type: application/json```
 - Response Code: ```200```
 - Response Body: ```{"id":251,"date":"2016-01-01T05:00:00","date_gmt":"2016-01-01T05:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=251","raw":"http:\/\/wp.spyrest.com\/?p=251"},"modified":"2017-02-20T04:18:51","modified_gmt":"2017-02-20T04:18:51","password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=251","title":{"raw":"\"a random post\"","rendered":"&#8220;a random po...```
 
-### Participant: P23 using original API documentation
+### Participant: P1.13 using original API documentation
 
 #### Answer 1
 
@@ -549,9 +549,9 @@ Content-Type: application/json```
 - Response Code: ```200```
 - Response Body: ```{"id":259,"date":"2016-01-01T00:00:00","date_gmt":"2016-01-01T00:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=259","raw":"http:\/\/wp.spyrest.com\/?p=259"},"modified":"2017-02-21T20:38:52","modified_gmt":"2017-02-21T20:38:52","password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=259","title":{"raw":"a random post","rendered":"a random post"},"conte...```
 
-### Participant: P24 using original API documentation
+### Participant: P1.14 using original API documentation
 
-### Participant: P25 using original API documentation
+### Participant: P1.15 using original API documentation
 
 #### Answer 1
 
@@ -753,7 +753,7 @@ Content-Type: application/json```
 - Response Code: ```200```
 - Response Body: ```{"id":263,"date":"2017-02-22T22:49:50","date_gmt":null,"guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=263","raw":"http:\/\/wp.spyrest.com\/?p=263"},"modified":"2017-02-22T22:49:50","modified_gmt":"2017-02-22T22:49:50","password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=263","title":{"raw":"random post","rendered":"random post"},"content":{"raw":"lorem ips...```
 
-### Participant: P26 using original API documentation
+### Participant: P1.16 using original API documentation
 
 #### Answer 1
 

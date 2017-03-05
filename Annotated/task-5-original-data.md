@@ -1,6 +1,6 @@
 # Task:  Publish a Post. Use the WordPress REST API to publish a new post with title 'a random post', content 'lorem ipsum' and published date of 'January 1, 2016' on the blog at http://wp.spyrest.com
 
-### Participant: P1 using original API documentation
+### Participant: P1.1 using original API documentation
 
 #### Answer 1
 
@@ -62,7 +62,7 @@
 - Response Code: ```201```
 - Response Body: ```{"id":177,"date":"2016-12-20T18:06:38","date_gmt":null,"guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=177","raw":"http:\/\/wp.spyrest.com\/?p=177"},"modified":"2016-12-20T18:06:38","modified_gmt":null,"password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=177","title":{"raw":"\"a random post\"","rendered":"&#8220;a random post&#8221;"},"content":{"raw":"\"lo...```
 
-### Participant: P2 using original API documentation
+### Participant: P1.2 using original API documentation
 
 #### Answer 1
 
@@ -178,7 +178,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2016-09-18T19:34:40","modified_gmt":"2016-09-18T19:34:40","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
-### Participant: P3 using original API documentation
+### Participant: P1.3 using original API documentation
 
 #### Answer 1
 
@@ -306,7 +306,7 @@
 - Response Code: ```400```
 - Response Body: ```{"code":"empty_content","message":"Content, title, and excerpt are empty.","data":{"status":400}}```
 
-### Participant: P4 using original API documentation
+### Participant: P1.4 using original API documentation
 
 #### Answer 1
 
@@ -453,7 +453,7 @@
 - Response Code: ```400```
 - Response Body: ```{"code":"empty_content","message":"Content, title, and excerpt are empty.","data":{"status":400}}```
 
-### Participant: P5 using original API documentation
+### Participant: P1.5 using original API documentation
 
 #### Answer 1
 
@@ -504,7 +504,7 @@ Content-Type: application/x-www-form-urlencoded```
 - Response Code: ```201```
 - Response Body: ```{"id":180,"date":"2016-12-27T06:04:41","date_gmt":null,"guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=180","raw":"http:\/\/wp.spyrest.com\/?p=180"},"modified":"2016-12-27T06:04:41","modified_gmt":null,"password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=180","title":{"raw":"Creating the 5th post","rendered":"Creating the 5th post"},"content":{"raw":"A samp...```
 
-### Participant: P6 using original API documentation
+### Participant: P1.6 using original API documentation
 
 #### Answer 1
 
@@ -1046,7 +1046,7 @@ Content-Type: application/x-www-form-urlencoded```
 - Response Code: ```400```
 - Response Body: ```{"code":"empty_content","message":"Content, title, and excerpt are empty.","data":{"status":400}}```
 
-### Participant: P7 using original API documentation
+### Participant: P1.7 using original API documentation
 
 #### Answer 1
 
@@ -1299,7 +1299,7 @@ Content-Type: application/x-www-form-urlencoded```
 - Response Code: ```201```
 - Response Body: ```{"id":182,"date":"2016-01-01T12:00:00","date_gmt":"2016-01-01T12:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=182","raw":"http:\/\/wp.spyrest.com\/?p=182"},"modified":"2016-01-01T12:00:00","modified_gmt":"2016-01-01T12:00:00","password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=182","title":{"raw":"a random title","rendered":"a random title"},"con...```
 
-### Participant: P8 using original API documentation
+### Participant: P1.8 using original API documentation
 
 #### Answer 1
 
@@ -1472,7 +1472,7 @@ Content-Type: application/x-www-form-urlencoded```
 - Response Code: ```400```
 - Response Body: ```{"code":"rest_invalid_param","message":"Invalid parameter(s): date (The date you provided is invalid.)","data":{"status":400,"params":["date (The date you provided is invalid.)"]}}```
 
-### Participant: P9 using original API documentation
+### Participant: P1.9 using original API documentation
 
 #### Answer 1
 
@@ -1767,7 +1767,7 @@ Content-Type: application/json```
 - Response Code: ```201```
 - Response Body: ```{"id":190,"date":"2016-01-01T20:50:08","date_gmt":"2016-01-01T20:50:08","guid":{"rendered":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post\/","raw":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post\/"},"modified":"2016-01-01T20:50:08","modified_gmt":"2016-01-01T20:50:08","password":"","slug":"a-random-post","status":"publish","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/01\/01...```
 
-### Participant: P16 using original API documentation
+### Participant: P1.10 using original API documentation
 
 #### Answer 1
 
@@ -2291,7 +2291,7 @@ content-type: application/json```
 - Response Code: ```201```
 - Response Body: ```{"id":236,"date":"2016-01-01T00:00:00","date_gmt":"2016-01-01T00:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post\/","raw":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post\/"},"modified":"2016-01-01T00:00:00","modified_gmt":"2016-01-01T00:00:00","password":"","slug":"a-random-post","status":"publish","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/01\/01...```
 
-### Participant: P17 using original API documentation
+### Participant: P1.11 using original API documentation
 
 #### Answer 1
 
@@ -2336,7 +2336,7 @@ content-type: application/json```
 - Response Code: ```201```
 - Response Body: ```{"id":213,"date":"2016-01-01T10:00:00","date_gmt":"2016-01-01T10:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=213","raw":"http:\/\/wp.spyrest.com\/?p=213"},"modified":"2016-01-01T10:00:00","modified_gmt":"2016-01-01T10:00:00","password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=213","title":{"raw":"a rondom post","rendered":"a rondom post"},"conte...```
 
-### Participant: P21 using original API documentation
+### Participant: P1.12 using original API documentation
 
 #### Answer 1
 
@@ -2576,7 +2576,7 @@ Content-Type: application/json```
 - Response Code: ```201```
 - Response Body: ```{"id":251,"date":"2016-01-01T05:00:00","date_gmt":"2016-01-01T05:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=251","raw":"http:\/\/wp.spyrest.com\/?p=251"},"modified":"2016-01-01T05:00:00","modified_gmt":"2016-01-01T05:00:00","password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=251","title":{"raw":"\"a random post\"","rendered":"&#8220;a random po...```
 
-### Participant: P23 using original API documentation
+### Participant: P1.13 using original API documentation
 
 #### Answer 1
 
@@ -2938,9 +2938,9 @@ content=lorem ipsum```
 - Response Code: ```201```
 - Response Body: ```{"id":259,"date":"2016-01-01T00:00:00","date_gmt":"2016-01-01T00:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=259","raw":"http:\/\/wp.spyrest.com\/?p=259"},"modified":"2016-01-01T00:00:00","modified_gmt":"2016-01-01T00:00:00","password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=259","title":{"raw":"a random post","rendered":"a random post"},"conte...```
 
-### Participant: P24 using original API documentation
+### Participant: P1.14 using original API documentation
 
-### Participant: P25 using original API documentation
+### Participant: P1.15 using original API documentation
 
 #### Answer 1
 
@@ -2965,7 +2965,7 @@ content=lorem ipsum```
 - Response Code: ```201```
 - Response Body: ```{"id":261,"date":"2017-02-22T22:37:28","date_gmt":null,"guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=261","raw":"http:\/\/wp.spyrest.com\/?p=261"},"modified":"2017-02-22T22:37:28","modified_gmt":null,"password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=261","title":{"raw":"random post","rendered":"random post"},"content":{"raw":"lorem ipsum","rendered":"<...```
 
-### Participant: P26 using original API documentation
+### Participant: P1.16 using original API documentation
 
 #### Answer 1
 

@@ -1,6 +1,6 @@
 # Task:  Find the total number of Posts. Use the WordPress REST API find the total number of blog posts from the blog at http://wp.spyrest.com
 
-### Participant: P1 using original API documentation
+### Participant: P1.1 using original API documentation
 
 #### Answer 1
 
@@ -21,7 +21,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2016-09-18T19:34:40","modified_gmt":"2016-09-18T19:34:40","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
-### Participant: P2 using original API documentation
+### Participant: P1.2 using original API documentation
 
 #### Answer 1
 
@@ -175,7 +175,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2016-09-18T19:34:40","modified_gmt":"2016-09-18T19:34:40","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
-### Participant: P3 using original API documentation
+### Participant: P1.3 using original API documentation
 
 #### Answer 1
 
@@ -196,7 +196,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2016-09-18T19:34:40","modified_gmt":"2016-09-18T19:34:40","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
-### Participant: P4 using original API documentation
+### Participant: P1.4 using original API documentation
 
 #### Answer 1
 
@@ -331,7 +331,7 @@
 - Response Code: ```404```
 - Response Body: ```{"code":"rest_no_route","message":"No route was found matching the URL and request method","data":{"status":404}}```
 
-### Participant: P5 using original API documentation
+### Participant: P1.5 using original API documentation
 
 #### Answer 1
 
@@ -352,7 +352,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2016-09-18T19:34:40","modified_gmt":"2016-09-18T19:34:40","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
-### Participant: P6 using original API documentation
+### Participant: P1.6 using original API documentation
 
 #### Answer 1
 
@@ -392,7 +392,7 @@
 - Response Code: ```200```
 - Response Body: ```[]```
 
-### Participant: P7 using original API documentation
+### Participant: P1.7 using original API documentation
 
 #### Answer 1
 
@@ -451,7 +451,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2016-09-18T19:34:40","modified_gmt":"2016-09-18T19:34:40","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
-### Participant: P8 using original API documentation
+### Participant: P1.8 using original API documentation
 
 #### Answer 1
 
@@ -472,7 +472,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2016-09-18T19:34:40","modified_gmt":"2016-09-18T19:34:40","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
-### Participant: P9 using original API documentation
+### Participant: P1.9 using original API documentation
 
 #### Answer 1
 
@@ -512,7 +512,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2016-09-18T19:34:40","modified_gmt":"2016-09-18T19:34:40","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
-### Participant: P16 using original API documentation
+### Participant: P1.10 using original API documentation
 
 #### Answer 1
 
@@ -552,7 +552,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2017-01-08T22:41:59","modified_gmt":"2017-01-08T22:41:59","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
-### Participant: P17 using original API documentation
+### Participant: P1.11 using original API documentation
 
 #### Answer 1
 
@@ -592,7 +592,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2017-01-08T22:41:59","modified_gmt":"2017-01-08T22:41:59","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
-### Participant: P21 using original API documentation
+### Participant: P1.12 using original API documentation
 
 #### Answer 1
 
@@ -613,7 +613,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2017-01-08T22:41:59","modified_gmt":"2017-01-08T22:41:59","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
-### Participant: P23 using original API documentation
+### Participant: P1.13 using original API documentation
 
 #### Answer 1
 
@@ -634,11 +634,11 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2017-01-08T22:41:59","modified_gmt":"2017-01-08T22:41:59","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
-### Participant: P24 using original API documentation
+### Participant: P1.14 using original API documentation
 
-### Participant: P25 using original API documentation
+### Participant: P1.15 using original API documentation
 
-### Participant: P26 using original API documentation
+### Participant: P1.16 using original API documentation
 
 #### Answer 1
 

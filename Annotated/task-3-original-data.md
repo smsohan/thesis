@@ -1,6 +1,6 @@
 # Task:  List all Posts excluding ids 1 and 4. Use the WordPress REST API find a list of all the blog posts where the post id is not 1 or 4 from the blog at http://wp.spyrest.com
 
-### Participant: P1 using original API documentation
+### Participant: P1.1 using original API documentation
 
 #### Answer 1
 
@@ -135,7 +135,7 @@
 - Response Code: ```200```
 - Response Body: ```[]```
 
-### Participant: P2 using original API documentation
+### Participant: P1.2 using original API documentation
 
 #### Answer 1
 
@@ -367,7 +367,7 @@
 - Response Code: ```200```
 - Response Body: ```[]```
 
-### Participant: P3 using original API documentation
+### Participant: P1.3 using original API documentation
 
 #### Answer 1
 
@@ -407,7 +407,7 @@
 - Response Code: ```200```
 - Response Body: ```[]```
 
-### Participant: P4 using original API documentation
+### Participant: P1.4 using original API documentation
 
 #### Answer 1
 
@@ -504,7 +504,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2016-09-18T19:34:40","modified_gmt":"2016-09-18T19:34:40","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
-### Participant: P5 using original API documentation
+### Participant: P1.5 using original API documentation
 
 #### Answer 1
 
@@ -601,7 +601,7 @@
 - Response Code: ```200```
 - Response Body: ```[]```
 
-### Participant: P6 using original API documentation
+### Participant: P1.6 using original API documentation
 
 #### Answer 1
 
@@ -820,7 +820,7 @@
 - Response Code: ```200```
 - Response Body: ```[]```
 
-### Participant: P7 using original API documentation
+### Participant: P1.7 using original API documentation
 
 #### Answer 1
 
@@ -936,7 +936,7 @@
 - Response Code: ```200```
 - Response Body: ```[]```
 
-### Participant: P8 using original API documentation
+### Participant: P1.8 using original API documentation
 
 #### Answer 1
 
@@ -1033,7 +1033,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":1,"date":"2016-04-03T21:02:06","date_gmt":"2016-04-03T21:02:06","guid":{"rendered":"http:\/\/107.170.206.224\/?p=1"},"modified":"2016-12-20T18:03:56","modified_gmt":"2016-12-20T18:03:56","slug":"hello-world","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/03\/hello-world\/","title":{"rendered":"Hello world!"},"content":{"rendered":"<p>Welcome to WordPress. This is your first pos...```
 
-### Participant: P9 using original API documentation
+### Participant: P1.9 using original API documentation
 
 #### Answer 1
 
@@ -1092,7 +1092,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":188,"date":"2010-01-01T12:00:00","date_gmt":"2010-01-01T12:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/2010\/01\/01\/my-new-title-3\/"},"modified":"2010-01-01T12:00:00","modified_gmt":"2010-01-01T12:00:00","slug":"my-new-title-3","type":"post","link":"http:\/\/wp.spyrest.com\/2010\/01\/01\/my-new-title-3\/","title":{"rendered":"My New Title"},"content":{"rendered":"<p>My New Cont...```
 
-### Participant: P16 using original API documentation
+### Participant: P1.10 using original API documentation
 
 #### Answer 1
 
@@ -1170,7 +1170,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":209,"date":"2016-01-01T12:00:00","date_gmt":"2016-01-01T12:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post-2\/"},"modified":"2016-01-01T12:00:00","modified_gmt":"2016-01-01T12:00:00","slug":"a-random-post-2","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post-2\/","title":{"rendered":"a random post"},"content":{"rendered":"<p>lorem i...```
 
-### Participant: P17 using original API documentation
+### Participant: P1.11 using original API documentation
 
 #### Answer 1
 
@@ -1191,7 +1191,7 @@
 - Response Code: ```200```
 - Response Body: ```[]```
 
-### Participant: P21 using original API documentation
+### Participant: P1.12 using original API documentation
 
 #### Answer 1
 
@@ -1212,7 +1212,7 @@
 - Response Code: ```200```
 - Response Body: ```[]```
 
-### Participant: P23 using original API documentation
+### Participant: P1.13 using original API documentation
 
 #### Answer 1
 
@@ -1328,7 +1328,7 @@
 - Response Code: ```200```
 - Response Body: ```[]```
 
-### Participant: P24 using original API documentation
+### Participant: P1.14 using original API documentation
 
 #### Answer 1
 
@@ -1368,7 +1368,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2017-01-08T22:41:59","modified_gmt":"2017-01-08T22:41:59","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
-### Participant: P25 using original API documentation
+### Participant: P1.15 using original API documentation
 
 #### Answer 1
 
@@ -1389,7 +1389,7 @@
 - Response Code: ```200```
 - Response Body: ```[{"id":4,"date":"2016-04-07T20:50:08","date_gmt":"2016-04-07T20:50:08","guid":{"rendered":"http:\/\/107.170.206.224\/?p=4"},"modified":"2017-01-08T22:41:59","modified_gmt":"2017-01-08T22:41:59","slug":"the-api-documentation-experiement","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/04\/07\/the-api-documentation-experiement\/","title":{"rendered":"The REST API Documentation Experiement"},...```
 
-### Participant: P26 using original API documentation
+### Participant: P1.16 using original API documentation
 
 #### Answer 1
 
