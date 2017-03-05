@@ -1,6 +1,6 @@
 # Task:  Update the excerpt of the Post you published to 'My new excerpt'. Use the WordPress REST API to update the excerpt for the post you created from the blog at http://wp.spyrest.com.
 
-### Participant: P10 using forked API documentation
+### Participant: P2.1 using forked API documentation
 
 #### Answer 1
 
@@ -109,7 +109,7 @@ Content-Type: application/json```
 - Response Code: ```401```
 - Response Body: ```{"code":"rest_cannot_edit","message":"Sorry, you are not allowed to update this post.","data":{"status":401}}```
 
-### Participant: P11 using forked API documentation
+### Participant: P2.2 using forked API documentation
 
 #### Answer 1
 
@@ -134,7 +134,7 @@ Content-Type: application/json```
 - Response Code: ```200```
 - Response Body: ```{"id":200,"date":"2016-01-01T10:00:00","date_gmt":"2016-01-01T10:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post-6\/","raw":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post-6\/"},"modified":"2017-01-09T06:24:33","modified_gmt":"2017-01-09T06:24:33","password":"","slug":"a-random-post-6","status":"publish","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/...```
 
-### Participant: P12 using forked API documentation
+### Participant: P2.3 using forked API documentation
 
 #### Answer 1
 
@@ -215,9 +215,9 @@ Content-Type: application/json```
 - Response Code: ```200```
 - Response Body: ```{"id":203,"date":"2016-01-01T12:00:00","date_gmt":"2016-01-01T12:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post-8\/","raw":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post-8\/"},"modified":"2017-01-11T04:47:20","modified_gmt":"2017-01-11T04:47:20","password":"","slug":"a-random-post-8","status":"publish","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/...```
 
-### Participant: P13 using forked API documentation
+### Participant: P2.4 using forked API documentation
 
-### Participant: P14 using forked API documentation
+### Participant: P2.5 using forked API documentation
 
 #### Answer 1
 
@@ -261,7 +261,7 @@ Content-Type: application/json```
 - Response Code: ```200```
 - Response Body: ```{"id":205,"date":"2016-01-01T12:00:00","date_gmt":"2016-01-01T12:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post\/","raw":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post\/"},"modified":"2017-02-10T07:51:09","modified_gmt":"2017-02-10T07:51:09","password":"","slug":"a-random-post","status":"publish","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/01\/01...```
 
-### Participant: P15 using forked API documentation
+### Participant: P2.6 using forked API documentation
 
 #### Answer 1
 
@@ -384,7 +384,7 @@ Content-Type: application/json```
 - Response Code: ```200```
 - Response Body: ```{"id":207,"date":"2016-01-01T12:00:00","date_gmt":"2016-01-01T12:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=207","raw":"http:\/\/wp.spyrest.com\/?p=207"},"modified":"2017-02-12T21:52:10","modified_gmt":"2017-02-12T21:52:10","password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=207","title":{"raw":"a random post","rendered":"a random post"},"conte...```
 
-### Participant: P18 using forked API documentation
+### Participant: P2.7 using forked API documentation
 
 #### Answer 1
 
@@ -448,7 +448,7 @@ Content-Type: application/json```
 - Response Code: ```200```
 - Response Body: ```{"id":236,"date":"2016-01-01T00:00:00","date_gmt":"2016-01-01T00:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post\/"},"modified":"2017-02-15T16:24:39","modified_gmt":"2017-02-15T16:24:39","slug":"a-random-post","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post\/","title":{"rendered":"a random post"},"content":{"rendered":"<p>lorem ipsum<\/...```
 
-### Participant: P19 using forked API documentation
+### Participant: P2.8 using forked API documentation
 
 #### Answer 1
 
@@ -473,7 +473,7 @@ Content-Type: application/json; charset=UTF-8```
 - Response Code: ```201```
 - Response Body: ```{"id":238,"date":"2017-02-15T16:16:54","date_gmt":null,"guid":{"rendered":"http:\/\/wp.spyrest.com\/?p=238","raw":"http:\/\/wp.spyrest.com\/?p=238"},"modified":"2017-02-15T16:16:54","modified_gmt":null,"password":"","slug":"","status":"draft","type":"post","link":"http:\/\/wp.spyrest.com\/?p=238","title":{"raw":"","rendered":""},"content":{"raw":"","rendered":"","protected":false},"excerpt":{"r...```
 
-### Participant: P20 using forked API documentation
+### Participant: P2.9 using forked API documentation
 
 #### Answer 1
 
@@ -497,7 +497,7 @@ Content-Type: application/json```
 - Response Code: ```200```
 - Response Body: ```{"id":241,"date":"2016-01-01T12:00:00","date_gmt":"2016-01-01T12:00:00","guid":{"rendered":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post-4\/","raw":"http:\/\/wp.spyrest.com\/2016\/01\/01\/a-random-post-4\/"},"modified":"2017-02-16T11:53:37","modified_gmt":"2017-02-16T11:53:37","password":"","slug":"a-random-post-4","status":"publish","type":"post","link":"http:\/\/wp.spyrest.com\/2016\/...```
 
-### Participant: P22 using forked API documentation
+### Participant: P2.10 using forked API documentation
 
 #### Answer 1
 
