@@ -9,7 +9,7 @@
 
 
 
-
+`Code: Correct Answer`
 
 
 
@@ -38,7 +38,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Wrong Answer`
 
 
 
@@ -64,7 +64,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Correct Answer`
 
 
 
@@ -89,7 +89,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Wrong Date Format`
 
 
 
@@ -118,7 +118,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Correct Answer`
 
 
 
@@ -135,6 +135,8 @@ Content-Type: application/json```
 }```
 - Response Code: ```401```
 - Response Body: ```{"code":"rest_cannot_create","message":"Sorry, you are not allowed to create posts as this user.","data":{"status":401}}```
+
+`NOTE: This is the right API call. The API Ran into a bug and rendered with an intermittent failure.`
 
 #### Answer 3
 
@@ -423,7 +425,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Correct Answer`
 
 
 
@@ -451,7 +453,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Wrong Answer`
 
 
 
@@ -482,7 +484,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Correct Answer`
 
 
 
@@ -511,7 +513,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Confirm Correct Answer`
 
 
 
@@ -532,7 +534,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Missing Header`
 
 
 
@@ -556,14 +558,7 @@ Content-Type: application/json```
 #### Answer 2
 
 
-
-
-
-
-
-
-
-
+`Code: Missing Header`
 
 
 - Time: ```16:14:36```
@@ -589,7 +584,7 @@ Content-Length: 5000```
 
 
 
-
+`Code: Missing Header`
 
 
 
@@ -620,7 +615,7 @@ Content-Type: application/json; charset=UTF-8```
 
 
 
-
+`Code: Correct Answer`
 
 
 
@@ -652,7 +647,7 @@ Content-Type: application/json; charset=UTF-8```
 
 
 
-
+`Code: Correct Answer`
 
 
 
@@ -679,7 +674,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Missing Header`
 
 
 
@@ -703,7 +698,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Missing Header`
 
 
 
@@ -725,10 +720,7 @@ Content-Type: application/json```
 
 
 
-
-
-
-
+`Code: Missing Header`
 
 
 
