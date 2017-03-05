@@ -4,15 +4,9 @@
 
 #### Answer 1
 
-
-
-
-
-
-
-
-
-
+`Code: Missing Header`
+`Code: Wrong Path`
+`Code: Wrong Body`
 
 
 - Time: ```18:05:07```
@@ -30,6 +24,9 @@
 
 
 
+`Code: Missing Header`
+`Code: Wrong Path`
+`Code: Wrong Body`
 
 
 
@@ -49,6 +46,9 @@
 
 
 
+`Code: Missing Header`
+`Code: Wrong Path`
+`Code: Wrong Body`
 
 
 
@@ -71,6 +71,9 @@
 
 
 
+`Code: Missing Header`
+`Code: Wrong Path`
+`Code: Wrong Body`
 
 
 
@@ -91,6 +94,9 @@
 
 
 
+`Code: Missing Header`
+`Code: Wrong Path`
+`Code: Wrong Body`
 
 
 
@@ -110,6 +116,9 @@
 
 
 
+`Code: Missing Header`
+`Code: Wrong Path`
+`Code: Wrong Body`
 
 
 
@@ -133,6 +142,9 @@
 
 
 
+`Code: Missing Header`
+`Code: Wrong Path`
+`Code: Wrong Body`
 
 
 
@@ -148,6 +160,9 @@
 
 
 
+`Code: Missing Header`
+`Code: Wrong Path`
+`Code: Wrong Body`
 
 
 
@@ -171,8 +186,8 @@
 
 
 
-
-
+`Code: Missing Header`
+`Code: Wrong Date format`
 
 
 
@@ -197,6 +212,9 @@
 
 
 
+`Code: Missing Header`
+`Code: Wrong Path`
+`Code: Wrong Date format`
 
 
 
@@ -224,6 +242,8 @@
 
 
 
+`Code: Missing Header`
+`Code: Wrong Date format`
 
 
 
@@ -246,6 +266,8 @@
 
 
 
+`Code: Missing Header`
+`Code: Wrong Date format`
 
 
 
@@ -271,6 +293,8 @@
 
 
 
+`Code: Missing Header`
+`Code: Wrong Date format`
 
 
 
@@ -291,6 +315,8 @@
 
 
 
+`Code: Missing Header`
+`Code: Wrong Path`
 
 
 
@@ -314,6 +340,8 @@
 
 
 
+`Code: Missing Header`
+`Code: Wrong Date format`
 
 
 
@@ -335,9 +363,8 @@
 
 
 
-
-
-
+`Code: Missing Header`
+`Code: Wrong Date format`
 
 
 
@@ -360,6 +387,8 @@
 
 
 
+`Code: Missing Header`
+`Code: Wrong Date format`
 
 
 
@@ -381,6 +410,9 @@
 
 
 
+`Code: Missing Header`
+`Code: Wrong Path`
+`Code: Wrong Body`
 
 
 
@@ -405,7 +437,8 @@
 
 
 
-
+`Code: Missing Header`
+`Code: Wrong Date format`
 
 
 
@@ -430,6 +463,8 @@
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -454,7 +489,8 @@ content=A sample content for the 5th post```
 
 
 
-
+`Code: Missing Header`
+`Code: Wrong Path`
 
 
 
@@ -477,6 +513,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Date format`
 
 
 
@@ -487,9 +525,9 @@ Content-Type: application/x-www-form-urlencoded```
 - Method: ```POST```
 - PATH: ```posts```
 - Request Body: ```{
- title: 'a random post', 
- content 'lorem ipsum', 
- date: 'January 1, 2016' 
+ title: 'a random post',
+ content 'lorem ipsum',
+ date: 'January 1, 2016'
 }```
 - Response Code: ```401```
 - Response Body: ```{"code":"rest_cannot_create","message":"Sorry, you are not allowed to create new posts.","data":{"status":401}}```
@@ -499,6 +537,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Date format`
 
 
 
@@ -512,9 +552,9 @@ Content-Type: application/x-www-form-urlencoded```
 - PATH: ```posts```
 - Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU```
 - Request Body: ```{
- "title": "a random post", 
- "content": "lorem ipsum", 
- "date": "January 1, 2016" 
+ "title": "a random post",
+ "content": "lorem ipsum",
+ "date": "January 1, 2016"
 }```
 - Response Code: ```400```
 - Response Body: ```{"code":"empty_content","message":"Content, title, and excerpt are empty.","data":{"status":400}}```
@@ -526,8 +566,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
-
-
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -550,6 +590,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -574,6 +616,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -593,7 +637,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
-
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -621,6 +666,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -641,6 +688,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -667,6 +716,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -693,6 +744,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -716,6 +769,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -740,9 +795,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
-
-
-
+`Code: Missing Header`
+`Code: Wrong Date Format`
 
 
 
@@ -755,7 +809,7 @@ Content-Type: application/x-www-form-urlencoded```
  title:"a random post",
  content:"lorem ipsum",
  excerpt:"an excerpt",
- date:"January 1, 2016" 
+ date:"January 1, 2016"
 }```
 - Response Code: ```400```
 - Response Body: ```{"code":"empty_content","message":"Content, title, and excerpt are empty.","data":{"status":400}}```
@@ -766,6 +820,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Date Format`
 
 
 
@@ -792,6 +848,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Date Format`
 
 
 
@@ -815,6 +873,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Date Format`
 
 
 
@@ -841,6 +901,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Date Format`
 
 
 
@@ -866,6 +928,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Date Format`
 
 
 
@@ -892,6 +956,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Date Format`
 
 
 
@@ -920,6 +986,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -941,6 +1009,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -961,6 +1031,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -985,6 +1057,9 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Wrong Method`
+`Code: Wrong Path`
+`Code: Wrong Body`
 
 
 
@@ -1001,7 +1076,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
-
+`Code: Missing Headers`
+`Code: Wrong Date Format`
 
 
 
@@ -1028,6 +1104,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Date Format`
 
 
 
@@ -1063,6 +1141,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Date Format`
 
 
 
@@ -1094,6 +1174,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Date Format`
 
 
 
@@ -1120,6 +1202,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Date Format`
 
 
 
@@ -1147,6 +1231,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Body`
 
 
 
@@ -1169,7 +1255,9 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
-
+`Code: Missing Headers`
+`Code: Wrong Path`
+`Code: Wrong Body`
 
 
 
@@ -1196,6 +1284,9 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Path`
+`Code: Wrong Body`
 
 
 
@@ -1217,6 +1308,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Body`
 
 
 
@@ -1239,6 +1332,9 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Body`
+`Code: Wrong Path`
 
 
 
@@ -1260,6 +1356,10 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Body`
+`Code: Wrong Path`
+`Code: Wrong Date Format`
 
 
 
@@ -1280,7 +1380,10 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
-
+`Code: Missing Headers`
+`Code: Wrong Body`
+`Code: Wrong Path`
+`Code: Wrong Date Format`
 
 
 
@@ -1303,6 +1406,10 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Body`
+`Code: Wrong Path`
+`Code: Wrong Date Format`
 
 
 
@@ -1324,6 +1431,10 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Body`
+`Code: Wrong Path`
+`Code: Wrong Date Format`
 
 
 
@@ -1345,6 +1456,10 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Body`
+`Code: Wrong Path`
+`Code: Wrong Date Format`
 
 
 
@@ -1368,6 +1483,8 @@ Content-Type: application/x-www-form-urlencoded```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Date Format`
 
 
 
@@ -1393,6 +1510,8 @@ date:"January 1, 2016"
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Date Format`
 
 
 
@@ -1417,6 +1536,8 @@ date:"January 1, 2016"
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Date Format`
 
 
 
@@ -1444,6 +1565,8 @@ date:"January 1, 2016"
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Date Format`
 
 
 
@@ -1471,6 +1594,8 @@ date:"January 1, 2016"
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Date Format`
 
 
 
@@ -1497,6 +1622,8 @@ date:"January 1, 2016"
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Date Format`
 
 
 
@@ -1523,8 +1650,7 @@ date:"January 1, 2016"
 
 
 
-
-
+`Code: Missing Headers`
 
 
 - Time: ```21:21:26```
@@ -1548,6 +1674,7 @@ date:"January 1, 2016"
 
 
 
+`Code: Missing Headers`
 
 
 
@@ -1572,6 +1699,7 @@ Content-Type: application/json```
 
 
 
+`Code: Wrong Body`
 
 
 
@@ -1579,7 +1707,7 @@ Content-Type: application/json```
 - Time: ```21:22:35```
 - Method: ```POST```
 - PATH: ```posts```
-- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU 
+- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
 Content-Type: application/json```
 - Request Body: ```{”title”:”a random post”,
 ”content_raw”:”lorem ipsum”,”excerpt_raw”:”Excerpt”,
@@ -1597,14 +1725,14 @@ Content-Type: application/json```
 
 
 
-
+`Code: Wrong Body`
 
 
 
 - Time: ```21:24:33```
 - Method: ```POST```
 - PATH: ```posts```
-- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU 
+- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
 Content-Type: application/json```
 - Request Body: ```{"title":"a random post",
 "content_raw":"lorem ipsum","excerpt_raw":"Excerpt",
@@ -1623,13 +1751,13 @@ Content-Type: application/json```
 
 
 
-
+`Code: Correct Answer`
 
 
 - Time: ```21:29:48```
 - Method: ```POST```
 - PATH: ```posts```
-- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU 
+- Request Headers: ```Authorization: Basic c3B5cmVzdDowT1BqIHRCQTcgUUtGUiBNaEFU
 Content-Type: application/json```
 - Request Body: ```{"title":"a random post",
 "content_raw":"lorem ipsum","excerpt_raw":"Excerpt",
@@ -1649,8 +1777,8 @@ Content-Type: application/json```
 
 
 
-
-
+`Code: Missing Headers`
+`Code: Wrong Body`
 
 
 
@@ -1669,6 +1797,9 @@ Content-Type: application/json```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Body`
+`Code: Wrong Path`
 
 
 
@@ -1688,6 +1819,9 @@ Content-Type: application/json```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Body`
+`Code: Wrong Path`
 
 
 
@@ -1709,8 +1843,9 @@ Content-Type: application/json```
 
 
 
-
-
+`Code: Missing Headers`
+`Code: Wrong Body`
+`Code: Wrong Path`
 
 
 
@@ -1730,6 +1865,9 @@ Content-Type: application/json```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Body`
+`Code: Wrong Path`
 
 
 
@@ -1751,6 +1889,9 @@ Content-Type: application/json```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Body`
+`Code: Wrong Path`
 
 
 
@@ -1770,6 +1911,8 @@ Content-Type: application/json```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Path`
 
 
 
@@ -1797,6 +1940,9 @@ Content-Type: application/json```
 
 
 
+`Code: Missing Headers`
+`Code: Wrong Body`
+`Code: Wrong Path`
 
 
 
@@ -1821,7 +1967,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Missing Headers`
 
 
 
@@ -1847,8 +1993,7 @@ content-type: "application/json"```
 
 
 
-
-
+`Code: Wrong Header`
 
 
 - Time: ```20:18:18```
@@ -1873,7 +2018,7 @@ content-type: "application/json"```
 
 
 
-
+`Code: Wrong Header`
 
 
 
@@ -1898,7 +2043,8 @@ content-type: application/json```
 
 
 
-
+`Code: Wrong Header`
+`Code: Wrong Body`
 
 
 
@@ -1926,7 +2072,8 @@ content-type: application/json```
 
 
 
-
+`Code: Wrong Header`
+`Code: Wrong Body`
 
 
 
@@ -1952,7 +2099,8 @@ content-type : application/json```
 
 
 
-
+`Code: Wrong Header`
+`Code: Wrong Body`
 
 
 
@@ -1978,7 +2126,7 @@ content-type: application/json```
 
 
 
-
+`Code: Wrong Header`
 
 
 
@@ -2009,6 +2157,8 @@ content-type: 'application/json'```
 
 
 
+`Code: Wrong Header`
+`Code: Wrong Body`
 
 
 - Time: ```01:34:00```
@@ -2034,7 +2184,8 @@ content-type: application/json```
 
 
 
-
+`Code: Wrong Header`
+`Code: Wrong Body`
 
 
 
@@ -2061,6 +2212,8 @@ content-type: application/json```
 
 
 
+`Code: Wrong Header`
+`Code: Wrong Body`
 
 
 
@@ -2085,6 +2238,8 @@ content-type: application/json```
 
 
 
+`Code: Wrong Header`
+`Code: Wrong Body`
 
 
 
@@ -2115,6 +2270,8 @@ content-type: application/json```
 
 
 
+`Code: Wrong Header`
+`Code: Wrong Body`
 
 
 
@@ -2142,8 +2299,7 @@ content-type: application/json```
 
 
 
-
-
+`Code: missing Header`
 
 
 
@@ -2166,6 +2322,9 @@ content-type: application/json```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Path`
+`Code: Wrong Body`
 
 
 
@@ -2188,6 +2347,8 @@ content-type: application/json```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Date Format`
 
 
 
@@ -2210,6 +2371,8 @@ content-type: application/json```
 
 
 
+
+`Code: Wrong Date Format`
 
 
 
@@ -2236,10 +2399,7 @@ Content-Type: "application/json```
 
 
 
-
-
-
-
+`Code: Wrong Date Format`
 
 
 
@@ -2265,7 +2425,10 @@ Content-Type: application/json```
 
 
 
-
+`Code: Wrong Date Format`
+`Code: Wrong Path`
+`Code: Wrong Body`
+`Code: Missing Header`
 
 
 
@@ -2288,7 +2451,11 @@ Content-Type: application/json```
 
 
 
+`Code: Wrong Date Format`
+`Code: Wrong Path`
+`Code: Wrong Body`
 
+`Code: Missing Header`
 
 
 
@@ -2309,7 +2476,10 @@ Content-Type: application/json```
 
 
 
-
+`Code: Wrong Date Format`
+`Code: Wrong Path`
+`Code: Wrong Body`
+`Code: Missing Header`
 
 
 - Time: ```04:09:48```
@@ -2326,6 +2496,10 @@ Content-Type: application/json```
 
 
 
+`Code: Wrong Date Format`
+`Code: Wrong Path`
+`Code: Wrong Body`
+`Code: Missing Header`
 
 
 
@@ -2346,8 +2520,9 @@ Content-Type: application/json```
 
 
 
-
-
+`Code: Wrong Path`
+`Code: Wrong Body`
+`Code: Missing Header`
 
 
 
@@ -2365,7 +2540,9 @@ Content-Type: application/json```
 
 
 
-
+`Code: Wrong Path`
+`Code: Wrong Body`
+`Code: Missing Header`
 
 
 
@@ -2384,9 +2561,9 @@ Content-Type: application/json```
 
 
 
-
-
-
+`Code: Wrong Path`
+`Code: Wrong Body`
+`Code: Missing Header`
 
 
 
@@ -2407,6 +2584,10 @@ Content-Type: application/json```
 
 
 
+`Code: Wrong Date Format`
+`Code: Wrong Path`
+`Code: Wrong Body`
+`Code: Missing Header`
 
 
 
@@ -2428,7 +2609,9 @@ Content-Type: application/json```
 
 
 
-
+`Code: Missing Header`
+`Code: Wrong Body`
+`Code: Wrong Date Format`
 
 
 
@@ -2450,6 +2633,9 @@ Content-Type: application/json```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
+`Code: Wrong Date Format`
 
 
 
@@ -2471,6 +2657,9 @@ Content-Type: application/json```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
+`Code: Wrong Date Format`
 
 
 
@@ -2495,6 +2684,9 @@ Content-Type: application/json```
 
 
 
+`Code: Wrong Header`
+`Code: Wrong Body`
+`Code: Wrong Date Format`
 
 
 
@@ -2517,8 +2709,9 @@ Content-Type=application/json```
 
 
 
-
-
+`Code: Wrong Header`
+`Code: Wrong Body`
+`Code: Wrong Date Format`
 
 
 
@@ -2540,7 +2733,9 @@ Content-Type=application/json```
 
 
 
-
+`Code: Wrong Header`
+`Code: Wrong Body`
+`Code: Wrong Date Format`
 
 
 
@@ -2561,6 +2756,9 @@ Content-Type=application/json```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
+`Code: Wrong Date Format`
 
 
 
@@ -2585,6 +2783,9 @@ Content-Type=application/json```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
+
 
 
 
@@ -2606,6 +2807,8 @@ Content-Type=application/json```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -2626,6 +2829,8 @@ Content-Type=application/json```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -2649,6 +2854,8 @@ content=lorem ipsum```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -2669,6 +2876,8 @@ content=lorem ipsum```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -2691,6 +2900,8 @@ content=lorem ipsum```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -2711,6 +2922,8 @@ content=lorem ipsum```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
 
 
 
@@ -2737,6 +2950,9 @@ content=lorem ipsum```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Body`
+`Code: Wrong Path`
 
 
 
@@ -2758,6 +2974,10 @@ content=lorem ipsum```
 
 
 
+
+`Code: Missing Header`
+`Code: Wrong Date Format`
+`Code: Wrong Body`
 
 
 
@@ -2782,6 +3002,9 @@ content=lorem ipsum```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Date Format`
+`Code: Wrong Body`
 
 
 
@@ -2809,6 +3032,9 @@ content=lorem ipsum```
 
 
 
+`Code: Missing Header`
+`Code: Wrong Date Format`
+`Code: Wrong Body`
 
 
 
@@ -2831,7 +3057,8 @@ Content: lorem ipsum```
 
 
 
-
+`Code: Wrong Body`
+`Code: Wrong Date Format`
 
 
 
@@ -2859,7 +3086,8 @@ Content-Type: application/json```
 
 
 
-
+`Code: Wrong Body`
+`Code: Wrong Date Format`
 
 
 
@@ -2887,7 +3115,8 @@ Content-Type: application/json```
 
 
 
-
+`Code: Wrong Body`
+`Code: Wrong Date Format`
 
 
 
@@ -2913,7 +3142,8 @@ Content-Type: application/json```
 
 
 
-
+`Code: Wrong Body`
+`Code: Wrong Date Format`
 
 
 
@@ -2939,6 +3169,7 @@ Content-Type: application/json```
 
 
 
+`Code: Wrong Body`
 
 
 
