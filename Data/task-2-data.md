@@ -1,5 +1,13 @@
 # Task:  Find all posts by author Spyrest. Use the WordPress REST API find a list of all the blog posts by author Spyrest from the blog at http://wp.spyrest.com
 
+
+## Correct Answers
+```
+GET /users
+GET /posts?author=1
+```
+
+
 ### Participant: P1 using original API documentation
 
 #### Answer 1

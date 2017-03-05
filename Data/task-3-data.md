@@ -1,5 +1,12 @@
 # Task:  List all Posts excluding ids 1 and 4. Use the WordPress REST API find a list of all the blog posts where the post id is not 1 or 4 from the blog at http://wp.spyrest.com
 
+## Correct Answer
+
+```
+GET /posts?excude=1,4
+```
+
+
 ### Participant: P1 using original API documentation
 
 #### Answer 1

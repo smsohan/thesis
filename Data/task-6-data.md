@@ -1,5 +1,18 @@
 # Task:  Update the excerpt of the Post you published to 'My new excerpt'. Use the WordPress REST API to update the excerpt for the post you created from the blog at http://wp.spyrest.com.
 
+
+## Correct Answer
+
+```
+POST /posts/<post.id>
+
+Headers: Content-Type: application/json
+
+Body: {"excerpt": "My new excerpt"}
+
+```
+
+
 ### Participant: P1 using original API documentation
 
 #### Answer 1
