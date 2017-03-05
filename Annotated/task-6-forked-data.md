@@ -10,7 +10,7 @@
 
 
 
-
+`CODE: Partially Correct Answer`
 
 
 
@@ -32,7 +32,7 @@
 
 
 
-
+`CODE: Wrong Answer`
 
 
 - Time: ```01:42:41```
@@ -49,7 +49,7 @@
 
 
 
-
+`CODE: Wrong Path`
 
 
 
@@ -72,7 +72,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Wrong Path`
 
 
 
@@ -95,7 +95,8 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Wrong Method`
+`CODE: Wrong Path`
 
 
 
@@ -119,6 +120,7 @@ Content-Type: application/json```
 
 
 
+`CODE: Correct Answer`
 
 
 
@@ -142,7 +144,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Partially Correct Answer`
 
 
 
@@ -170,7 +172,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Wrong path`
 
 
 
@@ -196,7 +198,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Correct Answer`
 
 
 
@@ -226,7 +228,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Partially Correct Answer`
 
 
 
@@ -245,7 +247,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Correct Answer`
 
 
 
@@ -269,7 +271,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Partially Correct Answer`
 
 
 
@@ -290,8 +292,7 @@ Content-Type: application/json```
 
 
 
-
-
+`CODE: Wrong Path`
 
 
 - Time: ```21:49:27```
@@ -310,7 +311,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Wrong Path`
 
 
 
@@ -330,7 +331,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Partially Correct Answer`
 
 
 
@@ -350,7 +351,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Partially Correct Answer`
 
 
 
@@ -368,7 +369,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Correct Answer`
 
 
 
@@ -393,7 +394,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Partially Correct Answer`
 
 
 
@@ -415,7 +416,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Partially Correct Answer`
 
 
 - Time: ```16:24:39```
@@ -435,7 +436,7 @@ Content-Type: application/json```
 
 
 
-
+`Code: Partially Correct Answer`
 
 
 
@@ -457,7 +458,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Wrong path`
 
 
 
@@ -480,7 +481,7 @@ Content-Type: application/json; charset=UTF-8```
 
 
 
-
+`CODE: Correct Answer`
 
 
 
@@ -506,7 +507,7 @@ Content-Type: application/json```
 
 
 
-
+`CODE: Partially Correct Answer`
 
 
 
