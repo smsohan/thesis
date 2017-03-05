@@ -3,10 +3,17 @@
 
 ## Correct Answers
 ```
+Partial:
+
 GET /users
+GET /users/1
+GET /users?search
+GET /posts
+
+
+Correct Answer
 GET /posts?author=1
 ```
-
 
 ### Participant: P1.1 using original API documentation
 
