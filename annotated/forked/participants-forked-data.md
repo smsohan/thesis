@@ -1,3 +1,18 @@
+Extracted Quotes:
+
+```
+P2.1
+  The documentation did not provide helpful information on what the error might mean, and it didn't show require parameters, etc.
+
+P2.10
+  The curl example was good to know how exactly to call the APIs.
+
+P2.9
+  Documentation is written quite nicely with the examples which are easy to understand.
+```
+
+
+
 ## P2.1
 
 `CODE: API  bug`

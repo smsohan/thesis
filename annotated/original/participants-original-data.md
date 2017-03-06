@@ -1,3 +1,22 @@
+Extracted Quotes:
+
+```
+P1.10
+ For example, in order to publish a post, I had to go through lots of try and error to see my new post, even though I was getting 201 for every request.
+
+P1.12
+  For example, the date format specifies IS8601, but to me, I had to google that format to get it right... Examples would really help - with a sample request and a sample response.
+
+P1.13
+  This time spent would have been minimal/trivial had there been API usage examples in the documentation.
+
+P1.8
+  Got hung up trying to figure out the formatting of the date (which doesn't appear to be ISO8601, despite what it says)
+
+P.15
+  I do not see the expected output and output format. So for programmers basically I have to make a call to see the output.
+```
+
 ## P1.1
 
 `CODE: False Positive`
