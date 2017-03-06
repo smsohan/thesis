@@ -329,7 +329,13 @@ average time taken for success = (number of successful API tasks by group) / (to
 \label{graph:productivity}
 \end{figure}
 
-% subsection rq1 (end)
+We present a summary of the quantitative results as found by analyzing a total of 539 API calls (385 from G1, 152 from G2) made by the participants from this study in Figure \ref{graph:productivity}. The graph juxtaposes the average number of trial API calls made by each group against their rate of success in performing the given tasks T2-T6. The average number of trial API calls and success rate for each group is computed using the following formulas:
+
+AverageTrialAPICall(task, group) = Total number of API calls made by group on task / Number of participants in group
+
+SuccessRate(task, group) = Number of participants that correctly completed task / Number of participants in group
+
+In Figure \ref{graph:productivity} we see that, for the simpler tasks T2 and T3, G1 had used more trial API calls on average and reached successful answers with a lower percentage compared to G2. For T4, where the participants are required to inspect a HTTP response header, G2 needed more API calls on average, but also yielded 24\% higher success rate. For the more complicated tasks T5 and T6, we see that participants in G1 had very low success rate and very high number of average API trials compared to G2. The data here clearly depicts that without usage examples REST API client developers require more trial and error attempts yet resulting in lower success rates, and the situation gets worse for relatively complicated tasks. Based on these results, we recommend REST API developers to study the usability of their API documentation with prospective API client developers and provide required usage examples in the documentation.
 
 
 
