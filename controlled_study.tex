@@ -288,6 +288,8 @@ average time taken for success = (number of successful API tasks by group) / (to
 \usetikzlibrary{patterns}
 \pgfplotstableread[col sep=comma]{groupone.csv}\groupone
 
+\begin{figure}
+
 \begin{tikzpicture}
     \begin{axis}[
         ybar,
@@ -296,7 +298,6 @@ average time taken for success = (number of successful API tasks by group) / (to
         legend style={at={(0.5,-0.15)},
         anchor=north,legend columns=-1},
         ylabel=Average Trial API Calls,
-        title=Comparison of Trial vs. Successful API Calls,
         width=2.8in
     ]
     \addplot[pattern=crosshatch dots, pattern color=gray] table [col sep=comma, x expr=\coordindex, y=AverageAPICalls] {groupone.csv};
@@ -311,7 +312,8 @@ average time taken for success = (number of successful API tasks by group) / (to
       ymin=0, ymax=100,
       ylabel= Success Rate,
       yticklabel={\pgfmathparse{\tick}\pgfmathprintnumber{\pgfmathresult}\%},
-      width=2.8in
+      width=2.8in,
+      legend style={at={(1.0,1.25)},anchor=north east}
     ]
     \addplot[dashed,mark=*,gray] table [col sep=comma, x expr=\coordindex, y=SuccessRate] {groupone_success.csv};
     \addlegendentry{G1 Success Rate}
@@ -323,6 +325,8 @@ average time taken for success = (number of successful API tasks by group) / (to
 
 \end{tikzpicture}
 
+\caption{DUMMY Comparison of Trial vs. Successful API Calls}
+\end{figure}
 
 % subsection rq1 (end)
 
