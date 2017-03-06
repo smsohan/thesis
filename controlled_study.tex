@@ -316,10 +316,10 @@ average time taken for success = (number of successful API tasks by group) / (to
       legend style={at={(1.0,1.25)},anchor=north east}
     ]
     \addplot[dashed,mark=*,gray] table [col sep=comma, x expr=\coordindex, y=SuccessRate] {groupone_success.csv};
-    \addlegendentry{G1 Success Rate}
+    \addlegendentry{G1: Using Original}
 
     \addplot[smooth,mark=*,black] table [col sep=comma, x expr=\coordindex, y=SuccessRate] {grouptwo_success.csv};
-      \addlegendentry{G2 Success Rate}
+      \addlegendentry{G2: Using Forked}
     \end{axis}
 
 
