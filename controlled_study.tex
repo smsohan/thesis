@@ -313,23 +313,11 @@ average time taken for success = (number of successful API tasks by group) / (to
       yticklabel={\pgfmathparse{\tick}\pgfmathprintnumber{\pgfmathresult}\%},
       width=2.8in
     ]
-    \addplot[dashed,mark=*,gray]
-      coordinates{
-        (0,0)
-        (0.0148,48)
-        (0.0295,66)
-        (0.0441,66)
-        (0.059,45.0)
-    }; \addlegendentry{G1 Success Rate}
+    \addplot[dashed,mark=*,gray] table [col sep=comma, x expr=\coordindex, y=SuccessRate] {groupone_success.csv};
+    \addlegendentry{G1 Success Rate}
 
-    \addplot[smooth,mark=*,black]
-      coordinates{
-        (0,0)
-        (0.0148,20)
-        (0.0295,10)
-        (0.0441,6)
-        (0.059,5.0)
-    }; \addlegendentry{G2 Success Rate}
+    \addplot[smooth,mark=*,black] table [col sep=comma, x expr=\coordindex, y=SuccessRate] {grouptwo_success.csv};
+      \addlegendentry{G2 Success Rate}
     \end{axis}
 
 
