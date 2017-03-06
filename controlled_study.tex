@@ -6,6 +6,8 @@
   \usepackage{listings}
   \usepackage[pdftex]{graphicx}
   \usepackage{url}
+  \usepackage{tikz,pgfplots,pgfplotstable}
+  \usepgfplotslibrary{statistics}
 
 \else
 \fi
@@ -282,8 +284,56 @@ average time taken for success = (number of successful API tasks by group) / (to
 
 \subsection{Quantitative Analysis Results} % (fold)
 
-A graph showing the difference in productivity metrics between G1 and G2.
-Implications
+\pgfplotsset{compat=1.14}
+\usetikzlibrary{patterns}
+\pgfplotstableread[col sep=comma]{groupone.csv}\groupone
+
+\begin{tikzpicture}
+    \begin{axis}[
+        ybar,
+        xtick=data,
+        xticklabels from table={\groupone}{Task},
+        legend style={at={(0.5,-0.15)},
+        anchor=north,legend columns=-1},
+        ylabel=Average Trial API Calls,
+        title=Comparison of Trial vs. Successful API Calls,
+        width=2.8in
+    ]
+    \addplot[pattern=crosshatch dots, pattern color=gray] table [col sep=comma, x expr=\coordindex, y=AverageAPICalls] {groupone.csv};
+    \addplot[draw=black] table [col sep=comma, x expr=\coordindex, y=AverageAPICalls] {grouptwo.csv};
+    \legend{G1: Using Original, G2: Using Forked}
+    \end{axis}
+
+
+    \begin{axis}[
+      axis y line*=right,
+      axis x line=none,
+      ymin=0, ymax=100,
+      ylabel= Success Rate,
+      yticklabel={\pgfmathparse{\tick}\pgfmathprintnumber{\pgfmathresult}\%},
+      width=2.8in
+    ]
+    \addplot[dashed,mark=*,gray]
+      coordinates{
+        (0,0)
+        (0.0148,48)
+        (0.0295,66)
+        (0.0441,66)
+        (0.059,45.0)
+    }; \addlegendentry{G1 Success Rate}
+
+    \addplot[smooth,mark=*,black]
+      coordinates{
+        (0,0)
+        (0.0148,20)
+        (0.0295,10)
+        (0.0441,6)
+        (0.059,5.0)
+    }; \addlegendentry{G2 Success Rate}
+    \end{axis}
+
+
+\end{tikzpicture}
 
 
 % subsection rq1 (end)
