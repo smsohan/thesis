@@ -46,7 +46,7 @@ martin@cs.mcgill.ca}
 
 What is the the problem? Effort and cost associated to REST API documentation with usage examples.
 Why is this a problem? Cost vs. benefit of usage examples is not known. What to include in the examples?
-What have we done? Performed an empirical study with 20 professional software engineers with REST API experience to understand how their productivity and types of problems faced changes with respect to usage examples.
+What have we done? Performed an empirical study with 26 professional software engineers with REST API experience to understand how their productivity and types of problems faced changes with respect to usage examples.
 What have we learned? (Hoping) examples help developer perform task with fewer problems with greater success, with fewer errors, and faster in terms of time.
 What does it mean? (expected) API developers should include usage examples in REST API documentation that include specific examples based on the problems faced.
 
@@ -263,15 +263,21 @@ average time taken for success = (number of successful API tasks by group) / (to
 
 \subsection{Qualitative Analysis Results} % (fold)
 
-  Key Observations
+\textbf{Observation 1.} API client developers face problem with using right data type without examples. To successfully complete T1 participants had to use an integer ID representing an $Author$ object given the author name. In the original API documentation, the following is mentioned about the author parameter: ``author: Limit result set to posts assigned to specific authors.'' The documentation doesn't mention that the data type required is the numeric author ID, not the author name. We found 10 of the 16 participants from G1 made API calls with the author name instead of the ID. P1.12 mentioned the following: \textbf{``...to find posts for the author, I had to inspect the response to see that indeed the $author\_id$ was in there''}. The forked documentation showed one example of using numeric ID. 3 of the 10 participants from G2 ran into the same error. When faced with this error, participants used trial and error to eventually complete the task.
 
-  API client developers face problem with using the right data type
-    Proof: Number of codes in task 2 for G1 vs. G2
-    Implication: Example to show a happy path scenario
+\textbf{Implication 1.} REST API documentation needs to include examples of data types for each API field to satisfy API client developer information need.
 
-  API client developers face problem with using the right data format
-    Proof: Number of codes in task 3 for G1 vs. G2
-    Implication: Example showing expected data format
+\textbf{Observation 2.} API client developers face problem with using the right data format without examples. Tasks T3 required the use of a correct format to represent an array of numeric post IDs to be excluded using the API. The original documentation mentions the following about this API query parameter: ``exclude: Ensure result set excludes specific IDs.'' Participants attempted to solve this task using multiple different formats for specifying the array. For example: they tried with $exclude=[1,4]$, $exclude=1\&4$, $exclude=4\&\&exclude=1$, $id!=1\&id!=4$ and other alternatives before eventually finding the right format as follows $exclude=1,4$. Participant P1.6 mentioned the following: \textbf{``It was difficult to figure out whether some of the inputs needed to be arrays or just a comma-separated list.''} 7 out of the 16 participants in G1 faced this error. The forked documentation showed one example of using multiple IDs and all G2 participants could use the right format.
+
+Task T5 also required the participants to use an ISO8601 formatted date for publishing a post with a specific date. Even though the documentation mentions ISO8601 format, it doesn't provide an example. So, participants had to use online search. P1.8 mentioned the following: \textbf{``Got hung up trying to figure out the formatting of the date (which doesn't appear to be ISO8601, despite what it says)''}. After analyzing the response, we found that P1.8 used the ISO8601 formatted date in the API calls, but didn't provide the $second$ portion of the time as required by the API. 8 of the 16 participants in G1 had an error in the date formats. With an example, 1 of the 10 participants had the same error from G2.
+
+\textbf{Implication 2.} REST API developers need to include examples showing the valid data format for the API elements.
+
+
+\textbf{Observation 3.} REST API client developers face problem with using request headers without usage examples. Tasks T5 and T6 required the use of a HTTP request header named $Content-Type$
+
+
+
 
   API client developers face problem with using request headers
     Proof: Number of codes in task 4 for G1 vs. G2
