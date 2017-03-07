@@ -274,18 +274,18 @@ Task T5 also required the participants to use an ISO8601 formatted date for publ
 \textbf{Implication 2.} REST API developers need to include examples showing the valid data format for the API elements.
 
 
-\textbf{Observation 3.} REST API client developers face problem with using request headers without usage examples. Tasks T5 and T6 required the use of a HTTP request header named $Content-Type$
+\textbf{Observation 3.} REST API client developers face problem with using request headers without usage examples. Tasks T5 and T6 required the use of a HTTP request header named $Content-Type$. In the original API documentation, the following was mentioned: ``The API uses JSON exclusively as the request and response format, including error responses.''. Experienced software engineers still had problem using this HTTP header as we found from the participants in G1. P1.12 mentioned the following: \textbf{``I didn't know how to specify application/json so that I could send POST data via the body instead in the URL parameters... Examples would really help - with a sample request and a sample response.''} We were surprised to see that 14 of the 15 participants that attempted T5 and T6 from G1 had the error of not specifying the $Content-Type$ header even though they have years of experience with REST APIs. In contrast, 2 out of the 10 participants from G2 failed used this header correctly as indicated in the example in the forked documentation. Moreover, 1 of the 2 G2 participants that didn't use the header first time, later used it correctly on a subsequent attempt.
+
+\textbf{Implication 3.} If API requests need to use HTTP Request headers, in addition to the request method and body, REST API develpers need to include examples of the HTTP headers.
+
+\textbf{Observation 4.} API client developers face problem with performing API tasks that require multiple API calls. Tasks T2 and T6 required the use of multiple API calls to complete successfully. Both tasks require an initial API call to find data using the API that is needed make a second API call. For example, P1.5 mentioned the following about T6, \textbf{``The post I created is not visible and not editable, though I got 201. Not sure why''}. After analyzing the response, we observed that P1.5 was able to create a blog post, but failed to publish it because it didn't have the $publish$ status. As a result, the post was not returned via the API for T6. P2.2 mentioned the following about T2: \textbf{``In case of search posts by author, it's not clear how to find the author\_id. Although, I realized that users and authors are same in this case.''}
+
+\textbf{Implication 4.} If there are prerequisites for making an API call, REST API developers need to provide examples showing how to get the prerequisites in the API documentation.
 
 
+\textbf{Observation 5.} REST API client developers want usage examples along with the definition of API elements. From analyzing the participant feedback, we've observed usage examples mentioned as the most frequent topic of interest. 11 of the 16 G2 participants mentioned the lack of examples with HTTP headers, request and response as the primary problem with the API documentation. On the other hand, 7 out of the 10 G2 participants mentioned the examples being helpful from the forked documentation.
 
-
-  API client developers face problem with using request headers
-    Proof: Number of codes in task 4 for G1 vs. G2
-    Implication: Example showing all 4 inputs
-
-  API client developers face problem with using inter-dependent APIs
-    Proof: Number of successful cases on G1. vs. G2
-    Implication: Example showing dependency
+\textbf{Implication 5.} REST API developers need to provide usage examples showing sample requests and responses with HTTP headers and body for API actions to help API usability.
 
 
 \subsection{Quantitative Analysis Results} % (fold)
