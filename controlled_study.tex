@@ -272,42 +272,13 @@ average time taken for success = (number of successful API tasks by group) / (to
 
 \section{Results}
 \label{sec:results}
-\subsection{Qualitative Analysis Results} % (fold)
 
-\textbf{Observation 1.} REST API client developers want usage examples along with the definition of API elements. From analyzing the participant feedback, we've observed usage examples mentioned as the most frequent and central topic of interest. 11 of the 16 G2 participants mentioned the lack of examples with HTTP headers, request and response as the primary problem with the API documentation. On the other hand, 7 out of the 10 G2 participants mentioned the examples being helpful from the forked documentation. This is also supported by our quantitative analysis as discussed later in this section.
-
-\textbf{Implication 1.} REST API developers need to provide usage examples showing sample requests and responses with HTTP headers and body for API actions to help API usability.
-
-
-\textbf{Observation 2.} API client developers face problem with using right data type without examples. To successfully complete T1 participants had to use an integer ID representing an $Author$ object given the author name. In the original API documentation, the following is mentioned about the author parameter: ``author: Limit result set to posts assigned to specific authors.'' The documentation doesn't mention that the data type required is the numeric author ID, not the author name. We found 10 of the 16 participants from G1 made API calls with the author name instead of the ID. P1.12 mentioned the following: \textbf{``...to find posts for the author, I had to inspect the response to see that indeed the $author\_id$ was in there''}. The forked documentation showed one example of using numeric ID. 3 of the 10 participants from G2 ran into the same error. When faced with this error, participants used trial and error to eventually complete the task.
-
-\textbf{Implication 2.} REST API documentation needs to include examples of data types for each API field to satisfy API client developer information need.
-
-\textbf{Observation 3.} API client developers face problem with using the right data format without examples. Tasks T3 required the use of a correct format to represent an array of numeric post IDs to be excluded using the API. The original documentation mentions the following about this API query parameter: ``exclude: Ensure result set excludes specific IDs.'' Participants attempted to solve this task using multiple different formats for specifying the array. For example: they tried with $exclude=[1,4]$, $exclude=1\&4$, $exclude=4\&\&exclude=1$, $id!=1\&id!=4$ and other alternatives before eventually finding the right format as follows $exclude=1,4$. Participant P1.6 mentioned the following: \textbf{``It was difficult to figure out whether some of the inputs needed to be arrays or just a comma-separated list.''} 7 out of the 16 participants in G1 faced this error. The forked documentation showed one example of using multiple IDs and all G2 participants could use the right format.
-
-Task T5 also required the participants to use an ISO8601 formatted date for publishing a post with a specific date. Even though the documentation mentions ISO8601 format, it doesn't provide an example. So, participants had to use online search. P1.8 mentioned the following: \textbf{``Got hung up trying to figure out the formatting of the date (which doesn't appear to be ISO8601, despite what it says)''}. After analyzing the response, we found that P1.8 used the ISO8601 formatted date in the API calls, but didn't provide the $second$ portion of the time as required by the API. 8 of the 16 participants in G1 had an error in the date formats. With an example, 1 of the 10 participants had the same error from G2.
-
-\textbf{Implication 3.} REST API developers need to include examples showing the valid data format for the API elements.
-
-
-\textbf{Observation 4.} REST API client developers face problem with using request headers without usage examples. Tasks T5 and T6 required the use of a HTTP request header named $Content-Type$. In the original API documentation, the following was mentioned: ``The API uses JSON exclusively as the request and response format, including error responses.''. Experienced software engineers still had problem using this HTTP header as we found from the participants in G1. P1.12 mentioned the following: \textbf{``I didn't know how to specify application/json so that I could send POST data via the body instead in the URL parameters... Examples would really help - with a sample request and a sample response.''} We were surprised to see that 14 of the 15 participants that attempted T5 and T6 from G1 had the error of not specifying the $Content-Type$ header even though they have years of experience with REST APIs. In contrast, 2 out of the 10 participants from G2 failed used this header correctly as indicated in the example in the forked documentation. Moreover, 1 of the 2 G2 participants that didn't use the header first time, later used it correctly on a subsequent attempt.
-
-\textbf{Implication 4.} If API requests need to use HTTP Request headers, in addition to the request method and body, REST API develpers need to include examples of the HTTP headers.
-
-\textbf{Observation 5.} API client developers face problem with performing API tasks that require multiple API calls. Tasks T2 and T6 required the use of multiple API calls to complete successfully. Both tasks require an initial API call to find data using the API that is needed make a second API call. For example, P1.5 mentioned the following about T6, \textbf{``The post I created is not visible and not editable, though I got 201. Not sure why''}. After analyzing the response, we observed that P1.5 was able to create a blog post, but failed to publish it because it didn't have the $publish$ status. As a result, the post was not returned via the API for T6. P2.2 mentioned the following about T2: \textbf{``In case of search posts by author, it's not clear how to find the author\_id. Although, I realized that users and authors are same in this case.''}
-
-\textbf{Implication 5.} If there are prerequisites for making an API call, REST API developers need to provide examples showing how to get the prerequisites in the API documentation.
-
-
-To summarize, we recommend API developers to consider usage examples as an essential requirement for REST API documentation. As such, sufficient resources and a high priority should be devoted to generate and maintain the usage examples. Based on our observations, we recommend REST API documentation tools to provide first-class support for including usage examples with realistic data.
-
-\subsection{Quantitative Analysis Results} % (fold)
 
 \pgfplotsset{compat=1.14}
 \usetikzlibrary{patterns}
 \pgfplotstableread[col sep=comma]{groupone.csv}\groupone
 
-\begin{figure*}
+\begin{figure*}[htb]
 
 \centering
 
@@ -374,6 +345,37 @@ To summarize, we recommend API developers to consider usage examples as an essen
 \caption{Quantitative Comparison between G1 and G2}
 \label{fig:comparison}
 \end{figure*}
+\subsection{Qualitative Analysis Results} % (fold)
+
+\textbf{Observation 1.} REST API client developers want usage examples along with the definition of API elements. From analyzing the participant feedback, we've observed usage examples mentioned as the most frequent and central topic of interest. 11 of the 16 G2 participants mentioned the lack of examples with HTTP headers, request and response as the primary problem with the API documentation. On the other hand, 7 out of the 10 G2 participants mentioned the examples being helpful from the forked documentation. This is also supported by our quantitative analysis as discussed later in this section.
+
+\textbf{Implication 1.} REST API developers need to provide usage examples showing sample requests and responses with HTTP headers and body for API actions to help API usability.
+
+
+\textbf{Observation 2.} API client developers face problem with using right data type without examples. To successfully complete T1 participants had to use an integer ID representing an $Author$ object given the author name. In the original API documentation, the following is mentioned about the author parameter: ``author: Limit result set to posts assigned to specific authors.'' The documentation doesn't mention that the data type required is the numeric author ID, not the author name. We found 10 of the 16 participants from G1 made API calls with the author name instead of the ID. P1.12 mentioned the following: \textbf{``...to find posts for the author, I had to inspect the response to see that indeed the $author\_id$ was in there''}. The forked documentation showed one example of using numeric ID. 3 of the 10 participants from G2 ran into the same error. When faced with this error, participants used trial and error to eventually complete the task.
+
+\textbf{Implication 2.} REST API documentation needs to include examples of data types for each API field to satisfy API client developer information need.
+
+\textbf{Observation 3.} API client developers face problem with using the right data format without examples. Tasks T3 required the use of a correct format to represent an array of numeric post IDs to be excluded using the API. The original documentation mentions the following about this API query parameter: ``exclude: Ensure result set excludes specific IDs.'' Participants attempted to solve this task using multiple different formats for specifying the array. For example: they tried with $exclude=[1,4]$, $exclude=1\&4$, $exclude=4\&\&exclude=1$, $id!=1\&id!=4$ and other alternatives before eventually finding the right format as follows $exclude=1,4$. Participant P1.6 mentioned the following: \textbf{``It was difficult to figure out whether some of the inputs needed to be arrays or just a comma-separated list.''} 7 out of the 16 participants in G1 faced this error. The forked documentation showed one example of using multiple IDs and all G2 participants could use the right format.
+
+Task T5 also required the participants to use an ISO8601 formatted date for publishing a post with a specific date. Even though the documentation mentions ISO8601 format, it doesn't provide an example. So, participants had to use online search. P1.8 mentioned the following: \textbf{``Got hung up trying to figure out the formatting of the date (which doesn't appear to be ISO8601, despite what it says)''}. After analyzing the response, we found that P1.8 used the ISO8601 formatted date in the API calls, but didn't provide the $second$ portion of the time as required by the API. 8 of the 16 participants in G1 had an error in the date formats. With an example, 1 of the 10 participants had the same error from G2.
+
+\textbf{Implication 3.} REST API developers need to include examples showing the valid data format for the API elements.
+
+
+\textbf{Observation 4.} REST API client developers face problem with using request headers without usage examples. Tasks T5 and T6 required the use of a HTTP request header named $Content-Type$. In the original API documentation, the following was mentioned: ``The API uses JSON exclusively as the request and response format, including error responses.''. Experienced software engineers still had problem using this HTTP header as we found from the participants in G1. P1.12 mentioned the following: \textbf{``I didn't know how to specify application/json so that I could send POST data via the body instead in the URL parameters... Examples would really help - with a sample request and a sample response.''} We were surprised to see that 14 of the 15 participants that attempted T5 and T6 from G1 had the error of not specifying the $Content-Type$ header even though they have years of experience with REST APIs. In contrast, 2 out of the 10 participants from G2 failed used this header correctly as indicated in the example in the forked documentation. Moreover, 1 of the 2 G2 participants that didn't use the header first time, later used it correctly on a subsequent attempt.
+
+\textbf{Implication 4.} If API requests need to use HTTP Request headers, in addition to the request method and body, REST API develpers need to include examples of the HTTP headers.
+
+\textbf{Observation 5.} API client developers face problem with performing API tasks that require multiple API calls. Tasks T2 and T6 required the use of multiple API calls to complete successfully. Both tasks require an initial API call to find data using the API that is needed make a second API call. For example, P1.5 mentioned the following about T6, \textbf{``The post I created is not visible and not editable, though I got 201. Not sure why''}. After analyzing the response, we observed that P1.5 was able to create a blog post, but failed to publish it because it didn't have the $publish$ status. As a result, the post was not returned via the API for T6. P2.2 mentioned the following about T2: \textbf{``In case of search posts by author, it's not clear how to find the author\_id. Although, I realized that users and authors are same in this case.''}
+
+\textbf{Implication 5.} If there are prerequisites for making an API call, REST API developers need to provide examples showing how to get the prerequisites in the API documentation.
+
+
+To summarize, we recommend API developers to consider usage examples as an essential requirement for REST API documentation. As such, sufficient resources and a high priority should be devoted to generate and maintain the usage examples. Based on our observations, we recommend REST API documentation tools to provide first-class support for including usage examples with realistic data.
+
+\subsection{Quantitative Analysis Results} % (fold)
+
 
 We present a summary of the quantitative results as found by analyzing a total of 539 API calls (385 from G1, 152 from G2) made by the participants from this study in Figure \ref{fig:comparison}. Figure \ref{graph:productivity} juxtaposes the average number of trial API calls made by each group against their rate of success in performing the given tasks T2-T6. The average number of trial API calls and success rate for each group is computed using the following formulas:
 
