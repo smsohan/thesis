@@ -291,7 +291,7 @@ To summarize, we recommend API developers to consider usage examples as an essen
 \usetikzlibrary{patterns}
 \pgfplotstableread[col sep=comma]{groupone.csv}\groupone
 
-\begin{figure}
+\begin{figure*}
 
 \centering
 
@@ -340,6 +340,31 @@ To summarize, we recommend API developers to consider usage examples as an essen
 \centering
 
 \begin{tikzpicture}
+    \begin{axis}[
+        ybar,
+        xtick=data,
+        xticklabels from table={\groupone}{Task},
+        legend style={at={(0.5,-0.15)},
+        anchor=north,legend columns=-1},
+        ylabel=Average Time Spent (minutes),
+        width=2.8in
+    ]
+    \addplot[pattern=crosshatch dots, pattern color=gray] table [col sep=comma, x expr=\coordindex, y=Time] {groupone_time.csv};
+    \addplot[draw=black] table [col sep=comma, x expr=\coordindex, y=Time] {grouptwo_time.csv};
+    \legend{G1: Using Original, G2: Using Forked}
+    \end{axis}
+
+\end{tikzpicture}
+\caption{Average Time Spent}
+\label{graph:time}
+
+\end{subfigure}
+
+
+\begin{subfigure}{0.5\textwidth}
+\centering
+
+\begin{tikzpicture}
   \begin{axis}
     [
     ytick={1,2,3},
@@ -374,7 +399,7 @@ To summarize, we recommend API developers to consider usage examples as an essen
 
 \caption{Quantitative Comparison between G1 and G2}
 \label{fig:comparison}
-\end{figure}
+\end{figure*}
 
 We present a summary of the quantitative results as found by analyzing a total of 539 API calls (385 from G1, 152 from G2) made by the participants from this study in Figure \ref{fig:comparison}. Figure \ref{graph:productivity} juxtaposes the average number of trial API calls made by each group against their rate of success in performing the given tasks T2-T6. The average number of trial API calls and success rate for each group is computed using the following formulas:
 
