@@ -52,9 +52,25 @@ Generating and maintaining REST API documentation with usage examples can be a t
 \IEEEpeerreviewmaketitle
 
 \section{Introduction}
-\section{Methodolody}
+Researchers have emphasized API documentation as key factor that impacts API usability both positively and negatively. To improve API documentation, researchers have recommended incorporating usage examples in the API documentation. REST APIs are used as the predominant application integration mechanism over the Internet. Generating and maintaining REST API documentation with usage examples can be an expensive process because most API documentation tools have a lack of support for capturing realistic usage examples.
+
+In a resource constrained environment, it is important to understand the value of usage examples on REST API usability to allocate sufficient attention and efforts towards incorporating examples in the API documentation. While it is no surprise that examples help API client developers, REST API developers need to know what to include in the examples and why. To our knowledge, there's a lack of published papers that investigated the impact of different types of content that can be included as usage examples in REST API documentation.
+
+The documentation of REST APIs has distinctive features compared to the documentation of local APIs such as Java libraries. For example, local API documentation commonly comprises of describing the modules, classes and interfaces with their methods. On the other hand, REST API documentation needs to include information about HTTP headers, request and response body and the data representation formats such as JSON, XML, etc. In our work we have focused on understanding the impact of usage examples within the realm of the distinctive REST API features.
+
+We have designed and performed a controlled study with experienced software engineers. Participants were divided into two groups and given the same set of API tasks to complete. One group was given the official WordPress REST API documentation and another group was given a forked version of the documentation where three usage examples were added. Using a novel technique, we have collected 539 API calls made by the participants. We have analyzed the data and observed recurring obstacles faced by the participants while performing the API tasks using the official documentation that lacks usage examples. Our contributions on this paper is as follows:
+
+\begin{itemize}
+  \item We provide a list of obstacles that REST API client developers face while performing API tasks using documentation that lacks usage examples.
+  \item We provide a list of recommendations for REST developers to be used as a guideline to incorporate usage examples in the API documentation.
+  \item We provide an empirical evidence that usage examples in REST API documentation helps API client developers perform API tasks with higher developer satisfaction, less time, and better success rate.
+\end{itemize}
+
+The remainder of this paper is organized as follows: In Section \ref{sec:method} we discuss our research goals, requirements, the object of the study and the participant selection, the study setup, data collection and analysis methods. In Section \ref{sec:results} we discuss the results of our analysis. We discuss the threats to validity and provide a summary of the related work in Sections \ref{sec:threat} and  \ref{sec:related_work} respectively.
+
+\section{Methodology}
+\label{sec:method}
 \subsection{Research Goals}
-user
 This research is aimed at answering the following research questions:
 
 \begin{itemize}
@@ -255,7 +271,7 @@ average time taken for success = (number of successful API tasks by group) / (to
 
 
 \section{Results}
-
+\label{sec:results}
 \subsection{Qualitative Analysis Results} % (fold)
 
 \textbf{Observation 1.} REST API client developers want usage examples along with the definition of API elements. From analyzing the participant feedback, we've observed usage examples mentioned as the most frequent and central topic of interest. 11 of the 16 G2 participants mentioned the lack of examples with HTTP headers, request and response as the primary problem with the API documentation. On the other hand, 7 out of the 10 G2 participants mentioned the examples being helpful from the forked documentation. This is also supported by our quantitative analysis as discussed later in this section.
@@ -409,13 +425,12 @@ Based on these results, we recommend REST API developers to study the usability 
 
 
 \section{Threats to Validity}
-  API Selection
-  Task Selection
-  Participant Selection
-  Experiment Design
+\label{sec:threat}
+  The selection of the API, the tasks, and the participants may introduce selection bias. We have developed and followed a set of requirements as discussed earlier on this paper to reduce this bias. This study needs to be replicated with different sets of APIs, tasks, and participants to generalize the results. The analysis of the raw data may introduce a bias. To reduce this, we have involved multiple researchers in the analysis process.
+
 
 \section{Related Work}
-
+\label{sec:related_work}
 \subsubsection{API Learning Obstacles}
   Researchers have published several papers on the topic of API learning obstacles. Robillard et al. used a mixed approach of surveys and in-person interviews with professional software engineers to understand the API learning obstacles \cite{Robillard_what_makes} \cite{Robillard_a_field_study}. They found that API documentation was related to one of the most severe obstacles for API learnabilty and recommended considering five factors for API documentation as follows: documentation of intent, code examples, matching APIs with scenarios, penetrability of the API, and format and presentation. Gias et al. surveyed 323 professional software engineers to understand the factors that fail a API documentation \cite{g_uddin}. They identified ambiguity, incompleteness, and incorrectness as the three severest problems that lead API documentations to fail to answer the information needs of developers. Duala-Ekoko et al. performed a study with twenty programmers to understand the types of questions that developers have while using an unfamiliar API \cite{Duala-Ekoko:2012:AAQ:2337223.2337255}. They categorized the API related information needs into twenty generic questions that can be used to analyze the quality of API documentation. Myers et al. performed a study of enterprise SOA API usability and found that the study participants had limited success finding the relevant API elements to perform an API task \cite{Myers_study}. Among other factors, they recommended providing code examples in the API documentation to help API client developers with sample solutions to different patterns of API tasks.
 
@@ -435,6 +450,8 @@ Several authors published the results of controlled studies on the topic of API 
 Our work in this paper is based on a controlled study and shares part of the setup that were used by the aforementioned API related controlled studies with the following differences: our goal is to understand the obstacles faced by API client developers without usage examples;  we focus on REST APIs instead of a local API; and, the participants are professional software engineers.
 
 \section{Conclusion}
+In this paper, we presented a set of problems that experienced REST API client developers face while performing API tasks using API documentation that lacks usage examples. We identified that, without examples, REST API client developers have trouble using the correct data types, correct data formats, and required HTTP headers and request body. We've also presented empirical evidence that adding usage examples it is possible to reduce mistakes, improve success rate and developer satisfaction of using the API. Practitioners can follow our guidelines while documenting REST APIs to improve API usability.
+
 \section*{Acknowledgment}
 
 \bibliographystyle{IEEEtran}
