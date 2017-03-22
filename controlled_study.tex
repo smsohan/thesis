@@ -13,11 +13,18 @@
   \usepgfplotslibrary{statistics}
 \else
 \fi
-\hyphenation{op-tical net-works semi-conduc-tor}
-
 
 \begin{document}
 \title{A Study of the Effectiveness of Usage Examples in REST API Documentation}
+
+\author{\IEEEauthorblockN{Placeholder Author Name}
+\IEEEauthorblockA{
+Placeholder Department\\
+Placeholder Affiliation\\
+Placeholder Address\\
+Placeholder Email}
+}
+
 
 % \author{\IEEEauthorblockN{S M Sohan, Frank Maurer\IEEEauthorrefmark{1}}
 % \IEEEauthorblockA{\IEEEauthorrefmark{1}
@@ -43,7 +50,7 @@
 \maketitle
 
 \begin{abstract}
-Generating and maintaining REST API documentation with usage examples can be a time consuming and expensive process for evolving APIs. Most REST API documentation tools focus on automating the documentation of the API objects, but require manual effort for capturing usage examples. Consequently, REST API developers need to know the cost vs. benefit of providing usage examples in the documentation to prioritize the documentation efforts. To this end, we have performed a controlled study with 26 experienced software engineers to understand problems that REST API client developers face while using an API without usage examples. We found that REST API client developers face productivity problems with using correct data types, data formats, required HTTP headers and request body when documentation lacks usage examples. By following the REST API documentation guidelines from this paper, REST API developers can reduce the errors, improve success rate and satisfaction of API client developers.
+Generating and maintaining REST API documentation with usage examples can be a time consuming and expensive process for evolving APIs. Most REST API documentation tools focus on automating the documentation of the API objects, but require manual effort for capturing usage examples. Consequently, REST API developers need to know the cost vs. benefit of providing usage examples in the documentation to prioritize the documentation efforts. To this end, we have performed a controlled study with 26 experienced software engineers to understand problems that REST API client developers face while using an API without usage examples. We found that REST API client developers face productivity problems with using correct data types, data formats, required HTTP headers and request body when documentation lacks usage examples. By following the REST API documentation suggestions from this paper, REST API developers can reduce the errors, improve success rate and satisfaction of API client developers.
 
 
 \end{abstract}
@@ -75,7 +82,7 @@ The remainder of this paper is organized as follows: In Section \ref{sec:goal} w
 
 \section{Research Question}
 \label{sec:goal}
-This research is aimed at answering the following research question:
+This research is aimed at answering the following question:
 
 \begin{itemize}
   \item \textbf{RQ}. What obstacles API client developers face when using a REST API documentation that lacks usage examples?
@@ -453,7 +460,7 @@ Rama et al. presented a set of formulas for computing a measure of API usability
 Nasehi et al. performed a controlled study to understand if API unit tests can be used to provide as usage examples to facilitate API client developers \cite{5609553}. The researchers found that the examples from the unit tests helped understanding the API concepts better but it was challenging for the participants to locate relevant examples. Endrikat et al. performed a controlled study with four groups of participants to understand the impact of API documentation on APIs that are implemented using programming languages with static and dynamic type systems \cite{Endrikat:2014:ADS:2568225.2568299}. Participants were given a set of failing unit tests and were asked to make them pass by writing code using the studied API. They found that the participant group using a statically typed API with explicit documentation could get the tests to pass in less time than the other groups. Ellis et al. performed a controlled study with two groups of developers to understand the impact of using a constructor vs. a factory method design pattern on API client development time \cite{Ellis:2007:FPA:1248820.1248863}. They found that API client developers needed more time to complete API tasks using factory method compared to using a constructor. Our work in this paper is based on a controlled study and shares part of the setup that were used by the aforementioned controlled studies with the following differences: our goal is to understand the obstacles faced by API client developers without usage examples;  we focus on REST APIs instead of local APIs; and, the participants are all professional software engineers.
 
 \section{Conclusion}
-In this paper, we presented a set of problems that experienced REST API client developers face while performing API tasks using API documentation that lacks usage examples. We identified that, without examples, REST API client developers have trouble using the correct data types, correct data formats, and required HTTP headers and request body. We've also presented empirical evidence that by adding usage examples makes it possible to reduce mistakes, improve success rate and developer satisfaction of using the API. Practitioners can follow our implications while documenting REST APIs to improve API usability.
+In this paper, we presented a set of problems that experienced REST API client developers face while performing API tasks using API documentation that lacks usage examples. We identified that, without examples, REST API client developers have trouble using the correct data types, correct data formats, and required HTTP headers and request body. We've also presented empirical evidence that by adding usage examples makes it possible to reduce mistakes, improve success rate and developer satisfaction of using the API. Practitioners can follow our implications as a set of guidelines while documenting REST APIs to improve API usability.
 
 \section*{Acknowledgment}
 We are grateful to our participants for their valuable time on this study. We thank the University of Calgary for funding this research.
