@@ -63,6 +63,7 @@ API; REST; Documentation; Usage Examples; Empirical Study; Controlled Study; Pro
 
 \IEEEpeerreviewmaketitle
 
+
 \section{Introduction}
 REST APIs are used as the predominant application integration mechanism over the Internet. Generating and maintaining REST API documentation with usage examples can be an expensive process because most API documentation tools do not support effective usage examples. Researchers have emphasized API documentation as a key factor that impacts API usability both positively and negatively. To improve API documentation, researchers have recommended incorporating usage examples in the API documentation.
 
@@ -416,23 +417,55 @@ Based on these results, we recommend REST API developers to study the usability 
 
 \textbf{Observation: Use of Data Type.} Without usage examples, we observed 10 of the 16 G1 participants used incorrect data type of $String$ instead of $Integer$. To successfully complete T1, participants had to use an integer ID representing an $Author$ object given the author name. In the original API documentation, the following is mentioned about the author parameter: ``author: Limit result set to posts assigned to specific authors.'' The documentation doesn't mention that the data type required is the numeric author ID, not the author name. P1.12 mentioned the following: \textit{``...to find posts for the author, I had to inspect the response to see that indeed the $author\_id$ was in there''}. The enhanced documentation showed one example of using numeric ID. 3 of the 10 participants from G2 ran into the same error. When faced with this error, participants used trial and error to eventually complete the task.
 
+\hspace{-5mm}
+\fbox{
+\begin{minipage}{0.95\linewidth}
+
 \textbf{Implication 1.} REST API documentation needs to include examples of data types such as Integer, String, and Array for each API field to satisfy API client developer information need.
+
+\end{minipage}
+}
+\vspace{0.5mm}
+
 
 \textbf{Observation: Use of Data Format.} We observed participants in G1 faced obstacles using correct data formats for Date and Array type data in API requests without usage examples. Tasks T3 required the use of a correct format to represent an array of numeric post IDs to be excluded using the API. The original documentation mentions the following about this API query parameter: ``exclude: Ensure result set excludes specific IDs.'' Participants attempted to solve this task using multiple different formats for specifying the array. For example: they tried with $exclude=[1,4]$, $exclude=1\&4$, $exclude=4\&\&exclude=1$, $id!=1\&id!=4$ and other alternatives before eventually finding the right format as follows $exclude=1,4$. Participant P1.6 mentioned the following: \textit{``It was difficult to figure out whether some of the inputs needed to be arrays or just a comma-separated list.''}. 7 out of the 16 participants in G1 faced this error. The enhanced documentation showed one example of using multiple IDs and all G2 participants could use the right format.
 
 Task T5 also required the participants to use an ISO8601 formatted date for publishing a post with a specific date. Even though the original documentation mentions ISO8601 format, it doesn't provide an example. Instead of using ``2016-01-01T00:00:00-00:00'', participants from G1 used date formats as follows: ``January 1, 2016'', ``2016-01-01T12:00:00'', ``20160101'', etc. P1.8 mentioned the following: \textit{``Got hung up trying to figure out the formatting of the date (which doesn't appear to be ISO8601, despite what it says)''}. After analyzing the response, we found that P1.8 used the ISO8601 formatted date in the API calls, but didn't provide the $second$ portion of the time as required by the API. 8 of the 16 participants in G1 had an error in the date formats. With an example, 1 of the 10 participants had the same error from G2.
 
-\textbf{Implication 2.} REST API developers need to include examples showing the valid data format for the API elements.
+\vspace{1mm}
+\hspace{-5mm}
+\fbox{
+\begin{minipage}{0.95\linewidth}
 
+\textbf{Implication 2.} REST API developers need to include examples showing the valid data format for the API elements.
+\end{minipage}
+}
+\vspace{0.5mm}
 
 \textbf{Observation: Use of Request Headers.} We were surprised to see that 14 of the 15 G1 participants that tried T5 and T6 faced problem using correct request headers without usage examples. Tasks T5 and T6 required the use of a HTTP request header named $Content-Type$. In the original API documentation, the following was mentioned: ``The API uses JSON exclusively as the request and response format, including error responses.''. Experienced software engineers still had problem using this HTTP header as we found from the participants in G1. P1.12 mentioned the following: \textit{``I didn't know how to specify application/json so that I could send POST data via the body instead in the URL parameters... Examples would really help - with a sample request and a sample response.''}  Even though G1 participants have years of experience with REST APIs, only one of them could use the $Content-Type$ header correctly without example. In contrast, 2 out of the 10 participants from G2 failed to use this header correctly as indicated in the example in the enhanced documentation. Moreover, 1 of the 2 G2 participants that didn't use the header first time, later used it correctly on a subsequent attempt.
 
+\vspace{1mm}
+\hspace{-5mm}
+\fbox{
+\begin{minipage}{0.95\linewidth}
+
+
 \textbf{Implication 3.} If API requests need to use HTTP Request headers, in addition to the request method and body, REST API develpers need to include examples of the HTTP headers.
+\end{minipage}
+}
+\vspace{0.5mm}
 
 \textbf{Observation: Use of Interdependent API Calls.} We observed the G1 participants had problem completing API tasks that require multiple API calls without usage examples. Tasks T2 and T6 required the use of multiple API calls to complete successfully. Both tasks require an initial API call to find data using the API that is needed make a second API call. For example, P1.5 mentioned the following about T6, \textit{``The post I created is not visible and not editable, though I got 201. Not sure why''}. After analyzing the response, we observed that P1.5 was able to create a blog post, but failed to publish it because it didn't have the $publish$ status. As a result, the post was not returned via the API for T6. P2.2 mentioned the following about T2: \textit{``In case of search posts by author, it's not clear how to find the author\_id. Although, I realized that users and authors are same in this case.''}
 
-\textbf{Implication 4.} If there are prerequisites for making an API call, REST API developers need to provide examples showing how to get the prerequisites in the API documentation.
+\vspace{1mm}
+\hspace{-5mm}
+\fbox{
+\begin{minipage}{0.95\linewidth}
 
+\textbf{Implication 4.} If there are prerequisites for making an API call, REST API developers need to provide examples showing how to get the prerequisites in the API documentation.
+\end{minipage}
+}
+\vspace{0.5mm}
 
 To summarize, we recommend API developers to consider usage examples as an essential requirement for REST API documentation. As such, sufficient resources and a high priority should be devoted to generate and maintain the usage examples. Based on our observations, we recommend REST API documentation tools to provide first-class support for including usage examples with realistic data.
 
