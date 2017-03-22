@@ -36,10 +36,9 @@ G.~Uddin and M.~P. Robillard, ``How {API} documentation fails,'' \emph{IEEE
 
 \bibitem{Duala-Ekoko:2012:AAQ:2337223.2337255}
 E.~Duala-Ekoko and M.~P. Robillard, ``Asking and answering questions about
-  unfamiliar {APIs}: An exploratory study,'' in \emph{Proceedings of the 34th
-  International Conference on Software Engineering}, ser. ICSE '12.\hskip 1em
-  plus 0.5em minus 0.4em\relax Piscataway, NJ, USA: IEEE Press, 2012, pp.
-  266--276.
+  unfamiliar {APIs}: An exploratory study,'' in \emph{Proc. of the
+  International Conference on Software Engineering}.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE Press, 2012, pp. 266--276.
 
 \bibitem{Myers_study}
 B.~Myers, S.~Jeong, Y.~Xie, J.~Beaton, J.~Stylos, R.~Ehret, J.~Karstens,
@@ -100,27 +99,24 @@ T.~Grill, O.~Polacek, and M.~Tscheligi, \emph{Methods towards {API} Usability:
 \bibitem{Farooq:2010:AUP:1753326.1753677}
 U.~Farooq, L.~Welicki, and D.~Zirkler, ``{API} usability peer reviews: A method
   for evaluating the usability of application programming interfaces,'' in
-  \emph{Proceedings of the SIGCHI Conference on Human Factors in Computing
-  Systems}, ser. CHI '10.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY,
-  USA: ACM, 2010, pp. 2327--2336.
+  \emph{Proc. of the SIGCHI Conference on Human Factors in Computing
+  Systems}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2010, pp. 2327--2336.
 
 \bibitem{5609553}
 S.~M. Nasehi and F.~Maurer, ``Unit tests as {API} usage examples,'' in
-  \emph{2010 IEEE International Conference on Software Maintenance}, Sept 2010,
-  pp. 1--10.
+  \emph{Proc. of International Conference on Software Maintenance}.\hskip 1em
+  plus 0.5em minus 0.4em\relax IEEE, Sept 2010, pp. 1--10.
 
 \bibitem{Endrikat:2014:ADS:2568225.2568299}
 S.~Endrikat, S.~Hanenberg, R.~Robbes, and A.~Stefik, ``How do {API}
-  documentation and static typing affect api usability?'' in \emph{Proceedings
-  of the 36th International Conference on Software Engineering}, ser. ICSE
-  2014.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2014,
-  pp. 632--642.
+  documentation and static typing affect api usability?'' in \emph{Proc. of the
+  International Conference on Software Engineering}.\hskip 1em plus 0.5em minus
+  0.4em\relax ACM, 2014, pp. 632--642.
 
 \bibitem{Ellis:2007:FPA:1248820.1248863}
 B.~Ellis, J.~Stylos, and B.~Myers, ``The factory pattern in {API} design: A
-  usability evaluation,'' in \emph{Proceedings of the 29th International
-  Conference on Software Engineering}, ser. ICSE '07.\hskip 1em plus 0.5em
-  minus 0.4em\relax Washington, DC, USA: IEEE Computer Society, 2007, pp.
-  302--312.
+  usability evaluation,'' in \emph{Proc. of International Conference on
+  Software Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE Computer
+  Society, 2007, pp. 302--312.
 
 \end{thebibliography}

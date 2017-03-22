@@ -21,15 +21,15 @@ I'm skipping whatever remains of this entry
  : @article
  :         {Hoffman_api_documentation,
 I'm skipping whatever remains of this entry
-"{" immediately follows a field name---line 436 of file refs.bib
+"{" immediately follows a field name---line 435 of file refs.bib
  : @inproceedings
  :               {Jadeite,
 I'm skipping whatever remains of this entry
-"{" immediately follows a field name---line 460 of file refs.bib
+"{" immediately follows a field name---line 459 of file refs.bib
  : @inproceedings
  :               {Verborgh_functional,
 I'm skipping whatever remains of this entry
-"{" immediately follows a field name---line 483 of file refs.bib
+"{" immediately follows a field name---line 482 of file refs.bib
  : @INPROCEEDINGS
  :               {Ning_omnivoke,
 I'm skipping whatever remains of this entry
@@ -43,37 +43,37 @@ Warning--I didn't find a database entry for "DBLP:conf/icsm/2012"
 Done.
 You've used 18 entries,
             4039 wiz_defined-function locations,
-            1360 strings with 19299 characters,
-and the built_in function-call counts, 16048 in all, are:
-= -- 1281
+            1355 strings with 19147 characters,
+and the built_in function-call counts, 15902 in all, are:
+= -- 1257
 > -- 361
 < -- 152
 + -- 204
 - -- 56
-* -- 815
-:= -- 2295
-add.period$ -- 41
+* -- 796
+:= -- 2261
+add.period$ -- 42
 call.type$ -- 18
 change.case$ -- 17
 chr.to.int$ -- 360
 cite$ -- 18
-duplicate$ -- 1127
-empty$ -- 1324
+duplicate$ -- 1119
+empty$ -- 1320
 format.name$ -- 73
-if$ -- 3753
+if$ -- 3722
 int.to.chr$ -- 0
 int.to.str$ -- 18
-missing$ -- 194
+missing$ -- 191
 newline$ -- 77
 num.names$ -- 18
-pop$ -- 438
+pop$ -- 441
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1226
+skip$ -- 1217
 stack$ -- 0
 substring$ -- 855
-swap$ -- 964
+swap$ -- 950
 text.length$ -- 32
 text.prefix$ -- 0
 top$ -- 5
@@ -81,5 +81,5 @@ type$ -- 18
 warning$ -- 0
 while$ -- 82
 width$ -- 20
-write$ -- 203
+write$ -- 199
 (There were 7 error messages)
