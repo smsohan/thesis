@@ -9,6 +9,30 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: IEEEabrv.bib
 Database file #2: refs.bib
+"{" immediately follows a field name---line 285 of file refs.bib
+ : @INPROCEEDINGS
+ :               {Espinha_web,
+I'm skipping whatever remains of this entry
+"{" immediately follows a field name---line 327 of file refs.bib
+ : @INPROCEEDINGS
+ :               {zuo6928972,
+I'm skipping whatever remains of this entry
+"{" immediately follows a field name---line 367 of file refs.bib
+ : @article
+ :         {Hoffman_api_documentation,
+I'm skipping whatever remains of this entry
+"{" immediately follows a field name---line 452 of file refs.bib
+ : @inproceedings
+ :               {Jadeite,
+I'm skipping whatever remains of this entry
+"{" immediately follows a field name---line 476 of file refs.bib
+ : @inproceedings
+ :               {Verborgh_functional,
+I'm skipping whatever remains of this entry
+"{" immediately follows a field name---line 499 of file refs.bib
+ : @INPROCEEDINGS
+ :               {Ning_omnivoke,
+I'm skipping whatever remains of this entry
 A bad cross reference---entry "Nasehi_what_makes"
 refers to entry "DBLP:conf/icsm/2012", which doesn't exist
 Warning--I didn't find a database entry for "DBLP:conf/icsm/2012"
@@ -19,15 +43,15 @@ Warning--I didn't find a database entry for "DBLP:conf/icsm/2012"
 Done.
 You've used 18 entries,
             4039 wiz_defined-function locations,
-            1366 strings with 19531 characters,
-and the built_in function-call counts, 16282 in all, are:
-= -- 1317
+            1361 strings with 19326 characters,
+and the built_in function-call counts, 16087 in all, are:
+= -- 1287
 > -- 361
 < -- 152
 + -- 204
 - -- 56
-* -- 845
-:= -- 2379
+* -- 820
+:= -- 2309
 add.period$ -- 41
 call.type$ -- 18
 change.case$ -- 17
@@ -36,20 +60,20 @@ cite$ -- 18
 duplicate$ -- 1127
 empty$ -- 1324
 format.name$ -- 73
-if$ -- 3789
+if$ -- 3759
 int.to.chr$ -- 0
 int.to.str$ -- 18
 missing$ -- 194
-newline$ -- 89
+newline$ -- 79
 num.names$ -- 18
-pop$ -- 432
+pop$ -- 437
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1244
+skip$ -- 1229
 stack$ -- 0
 substring$ -- 855
-swap$ -- 970
+swap$ -- 965
 text.length$ -- 32
 text.prefix$ -- 0
 top$ -- 5
@@ -57,5 +81,5 @@ type$ -- 18
 warning$ -- 0
 while$ -- 82
 width$ -- 20
-write$ -- 221
-(There was 1 error message)
+write$ -- 206
+(There were 7 error messages)

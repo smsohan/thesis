@@ -72,13 +72,11 @@ C.~Treude and M.~Robillard, ``Augmenting api documentation with insights from
   Engineering}, ser. ICSE '16, New York, NY, USA, 2016, pp. 392--403.
 
 \bibitem{Kim:2009:AEJ:1747491.1747552}
-\BIBentryALTinterwordspacing
 J.~Kim, S.~Lee, S.-w. Hwang, and S.~Kim, ``Adding examples into java
   documents,'' in \emph{Proceedings of the 2009 IEEE/ACM International
   Conference on Automated Software Engineering}, ser. ASE '09.\hskip 1em plus
   0.5em minus 0.4em\relax Washington, DC, USA: IEEE Computer Society, 2009, pp.
-  540--544. [Online]. Available: \url{http://dx.doi.org/10.1109/ASE.2009.39}
-\BIBentrySTDinterwordspacing
+  540--544.
 
 \bibitem{jiau}
 H.~Jiau and F.-P. Yang, ``\BIBforeignlanguage{English}{Facing up to the
@@ -97,44 +95,33 @@ T.~Scheller and E.~K{\"u}hn, ``Automated measurement of api usability: The
   vol.~61, pp. 145--162, 2015.
 
 \bibitem{Grill2012}
-\BIBentryALTinterwordspacing
 T.~Grill, O.~Polacek, and M.~Tscheligi, \emph{Methods towards API Usability: A
   Structural Analysis of Usability Problem Categories}.\hskip 1em plus 0.5em
   minus 0.4em\relax Berlin, Heidelberg: Springer Berlin Heidelberg, 2012, pp.
-  164--180. [Online]. Available:
-  \url{http://dx.doi.org/10.1007/978-3-642-34347-6_10}
-\BIBentrySTDinterwordspacing
+  164--180.
 
 \bibitem{Farooq:2010:AUP:1753326.1753677}
-\BIBentryALTinterwordspacing
 U.~Farooq, L.~Welicki, and D.~Zirkler, ``Api usability peer reviews: A method
   for evaluating the usability of application programming interfaces,'' in
   \emph{Proceedings of the SIGCHI Conference on Human Factors in Computing
   Systems}, ser. CHI '10.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY,
-  USA: ACM, 2010, pp. 2327--2336. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/1753326.1753677}
-\BIBentrySTDinterwordspacing
+  USA: ACM, 2010, pp. 2327--2336.
 
 \bibitem{5609553}
 S.~M. Nasehi and F.~Maurer, ``Unit tests as api usage examples,'' in \emph{2010
   IEEE International Conference on Software Maintenance}, Sept 2010, pp. 1--10.
 
 \bibitem{Endrikat:2014:ADS:2568225.2568299}
-\BIBentryALTinterwordspacing
 S.~Endrikat, S.~Hanenberg, R.~Robbes, and A.~Stefik, ``How do api documentation
   and static typing affect api usability?'' in \emph{Proceedings of the 36th
   International Conference on Software Engineering}, ser. ICSE 2014.\hskip 1em
   plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2014, pp. 632--642.
-  [Online]. Available: \url{http://doi.acm.org/10.1145/2568225.2568299}
-\BIBentrySTDinterwordspacing
 
 \bibitem{Ellis:2007:FPA:1248820.1248863}
-\BIBentryALTinterwordspacing
 B.~Ellis, J.~Stylos, and B.~Myers, ``The factory pattern in api design: A
   usability evaluation,'' in \emph{Proceedings of the 29th International
   Conference on Software Engineering}, ser. ICSE '07.\hskip 1em plus 0.5em
   minus 0.4em\relax Washington, DC, USA: IEEE Computer Society, 2007, pp.
-  302--312. [Online]. Available: \url{http://dx.doi.org/10.1109/ICSE.2007.85}
-\BIBentrySTDinterwordspacing
+  302--312.
 
 \end{thebibliography}
