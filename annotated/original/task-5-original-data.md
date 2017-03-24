@@ -10,12 +10,7 @@ Headers:
   Content-Type: application/json (Case sensitive, to be added by participant)
 
 Body:
-  {
-    "title: "a random post",
-    "content: "lorem ipsum",
-    "date: "2010-01-01T02:00:00-10:00",
-    "status": "publish"
-  }
+  {"title: "a random post","content: "lorem ipsum","date: "2010-01-01T02:00:00-10:00","status": "publish"}
 
 ```
 

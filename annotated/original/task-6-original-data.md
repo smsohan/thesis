@@ -20,9 +20,7 @@ Headers:
 
 
 Body:
-  {
-    "excerpt": 'My new excerpt'
-  }
+  {"excerpt": 'My new excerpt'}
 
 
 ```
