@@ -361,7 +361,7 @@ For each API task attempted by each participant, we annotated the artifact with 
 
 We present a summary of the quantitative results as found by analyzing a total of 539 API calls (385 from G1, 152 from G2) made by the participants from this study in Fig. \ref{fig:comparison}. Fig. \ref{graph:productivity} juxtaposes the average number of trial API calls made by each group against their rate of success in performing the given tasks T2-T6. The average number of trial API calls and success rate for each group is computed using the aforementioned formulas.
 
-Even though it is expected that G2 would outperform G1 with an enhanced documentation, we were surprised to see the extent of the difference in effort vs. success of the two groups. In Fig. \ref{graph:productivity} and \ref{graph:time} we see that, for the simpler tasks, T2 and T3, G1 required more time and more trial API calls and reached successful answers with a lower percentage compared to G2. For T4, where the participants are required to inspect an HTTP response header, G2 executed more API calls on average due to P2.7 who made 11 API calls even though reached the successful call on the 3rd attempt. For the more complex tasks T5 and T6, we see that participants in G1 had very low success rate and very high number of average API trials compared to G2. We observed a p-value of 0.0003 for the success rates using Fisher test, and p-values of 0.017  and 0.003 for the trial API calls and time spent using Wilcoxon rank sum test. The data here confirms that without usage examples developers spend more time and execute more trial attempts yet have lower success rates.
+Even though it is expected that G2 would outperform G1 with an enhanced documentation, we were surprised to see the extent of the difference in effort vs. success of the two groups. In Fig. \ref{graph:productivity} and \ref{graph:time} we see that, for the simpler tasks, T2 and T3, G1 required more time and more trial API calls and reached successful answers with a lower percentage compared to G2. For T4, where the participants are required to inspect an HTTP response header, G2 executed more API calls on average due to P2.7 who made 11 API calls even though reached the successful call on the 3rd attempt. For the more complex tasks T5 and T6, we see that participants in G1 had very low success rate and very high number of average API trials compared to G2. We observed a p-value of 0.0003 for the success rates using Fisher test, and p-values of 0.017  and 0.051 for the trial API calls and time spent using Wilcoxon rank sum test. The data here confirms that without usage examples developers spend more time and execute more trial attempts yet have lower success rates.
 
 \begin{figure}[h]
 \centering
@@ -399,9 +399,9 @@ Even though it is expected that G2 would outperform G1 with an enhanced document
 
 \end{figure}
 
-In Fig. \ref{fig:rating}, we see that the G2 participants provided higher satisfaction rating compared to G1 participants. P1.1 provided a satisfaction rating of 9, and analyzing the participant feedback against the success, we see a false positive case, where the participant perceived that the tasks were successfully completed even though only 2 of the 5 tasks were correctly answered. Other than this case, the satisfaction ratings provided by G1 participants consistently fall behind the G2 participants' ratings.
+In Fig. \ref{fig:rating}, we see that the G2 participants provided higher satisfaction rating compared to G1 participants (with a p-value of 0.003 using Wilcoxon rank sum test). P1.1 provided a satisfaction rating of 9, and analyzing the participant feedback against the success, we see a false positive case, where the participant perceived that the tasks were successfully completed even though only 2 of the 5 tasks were correctly answered. Other than this case, the satisfaction ratings provided by G1 participants consistently fall behind the G2 participants' ratings.
 
-The results provide an initial quantification of the impact of examples for typical REST-API usage tasks. This quantification is preliminary evidence that can help justify future investment in API documentation.
+These results support using a more qualitative approach due to our limited number of participants. The results provide an initial quantification of the impact of examples for typical REST-API usage tasks. This quantification is preliminary evidence that can help justify future investment in API documentation.
 
 
 \subsection{Qualitative Analysis Results} % (fold)
@@ -465,7 +465,7 @@ To summarize, we recommend API developers to consider usage examples as an essen
 
 \section{Threats to Validity}
 \label{sec:threat}
-The selection of the API, the tasks, and the participants may introduce selection bias. It is possible that there are obstacles we do not know about that could be more severe, but were not observed because of our task selection. The analysis of the raw data may introduce a bias. To reduce this, we have involved multiple researchers a repeatable coding scheme. A more complete API documentation without adding usage examples may provide  insights from our findings.
+The selection of the API, the tasks, and the participants may introduce selection bias. It is possible that there are obstacles we do not know about that could be more severe, but were not observed because of our task selection. The analysis of the raw data may introduce a bias. To reduce this, we have involved multiple researchers and a repeatable coding scheme. A more complete API documentation without adding usage examples may provide  insights from our findings.
 
 \section{Related Work}
 \label{sec:related_work}
