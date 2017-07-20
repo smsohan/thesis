@@ -282,12 +282,12 @@ The data collected by the web-based REST API explorer for each participant is ex
         xticklabels from table={\groupone}{Task},
         legend style={at={(0.5,-0.15)},
         anchor=north,legend columns=-1},
-        ylabel=Average Trial API Calls (Frequency),
+        ylabel=Avg. Trial API Calls (Frequency),
         width=2.8in
     ]
     \addplot[pattern=crosshatch dots, pattern color=gray] table [col sep=comma, x expr=\coordindex, y=AverageAPICalls] {groupone.csv};
     \addplot[draw=black] table [col sep=comma, x expr=\coordindex, y=AverageAPICalls] {grouptwo.csv};
-    \legend{G1: Using Original, G2: Using Enhanced}
+    \legend{G1 Avg. Trial API Calls, G2 Avg. Trial API Calls}
     \end{axis}
 
 
@@ -301,10 +301,10 @@ The data collected by the web-based REST API explorer for each participant is ex
       legend style={at={(1.0,1.25)},anchor=north east},
     ]
     \addplot[dashed,mark=*,gray] table [col sep=comma, x expr=\coordindex, y=SuccessRate] {groupone_success.csv};
-    \addlegendentry{G1: Using Original}
+    \addlegendentry{G1 Success Rate}
 
     \addplot[smooth,mark=*,black] table [col sep=comma, x expr=\coordindex, y=SuccessRate] {grouptwo_success.csv};
-      \addlegendentry{G2: Using Enhanced}
+      \addlegendentry{G2 Success Rate}
     \end{axis}
 \end{tikzpicture}
 \caption{Trial vs. Successful API Calls}
@@ -319,12 +319,12 @@ The data collected by the web-based REST API explorer for each participant is ex
         xticklabels from table={\groupone}{Task},
         legend style={at={(0.5,-0.15)},
         anchor=north,legend columns=-1},
-        ylabel=Average Time Spent (minutes),
+        ylabel=Avg. Time Spent (minutes),
         width=2.8in
     ]
     \addplot[pattern=crosshatch dots, pattern color=gray] table [col sep=comma, x expr=\coordindex, y=Time] {groupone_time.csv};
     \addplot[draw=black] table [col sep=comma, x expr=\coordindex, y=Time] {grouptwo_time.csv};
-    \legend{G1: Using Original, G2: Using Enhanced}
+    \legend{G1 Avg. Time Spent, G2 Avg. Time Spent}
     \end{axis}
 
 \end{tikzpicture}
