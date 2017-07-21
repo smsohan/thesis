@@ -139,9 +139,9 @@ On Listing \ref{wordpress_code}, line 4 specifies that this is a schema definiti
 
 The WordPress team leverages this self-documenting feature to generate and publish the official API documentation as an HTML website. Fig. \ref{fig:schema} shows a screenshot of the published documentation for the \lstinline{date} attribute of the \lstinline{Post} API element.\footnote{\url{http://v2.wp-api.org/reference/posts/}}
 
-\begin{figure}[h!]
+\begin{figure}
   \begin{center}
-    \includegraphics[width=\linewidth,keepaspectratio]{schema.png}
+    \fbox{\includegraphics[width=\linewidth,keepaspectratio]{schema.png}}
   \end{center}
   \caption{Screenshot of documentation for Post/date}
   \label{fig:schema}
@@ -274,7 +274,7 @@ The data collected by the web-based REST API explorer for each participant is ex
 
 \pgfplotsset{compat=1.14}
 \usetikzlibrary{patterns}
-\pgfplotstableread[col sep=comma]{groupone.csv}\groupone
+\pgfplotstableread[col sep=comma]{controlled_study/groupone.csv}\groupone
 
 \begin{figure*}[htb]
 
@@ -499,7 +499,7 @@ In this paper, we presented a set of problems that experienced REST API client d
 We are grateful to our participants for their valuable time on this study. We thank our university for funding this research.
 
 \bibliographystyle{IEEEtran}
-\bibliography{IEEEabrv,refs}
+\bibliography{controlled_study/IEEEabrv,controlled_study/refs}
 
 
 %\end{document}

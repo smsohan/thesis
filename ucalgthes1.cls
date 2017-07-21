@@ -26,7 +26,7 @@
 %%% IDENTIFICATION
 \NeedsTeXFormat{LaTeX2e}[1996/12/01]
 \ProvidesClass{ucalgthes1}[1998/03/01 v1.0 University of Calgary Thesis Class]
-\RequirePackage{setspace}%[200/12/01] %(NM2005) replacing old doublespace.sty %singlespace,onehalfspace and doublespacing options. (nm2007 commented out)%
+%\RequirePackage{setspace}[200/12/01] %(NM2005) replacing old doublespace.sty %singlespace,onehalfspace and doublespacing options. (nm2007 commented out)%
 
 %%% DECLARATION OF OPTIONS
 %  The type size option is handled by reading a different (THESxx.CLO)
@@ -82,8 +82,8 @@
 
 \ProcessOptions
 
-\input setspace.sty %(NM 2005 setspace.sty replacing doublespace.sty)(nm 2007 commented out)
-%\input doublespace.sty %(nm 2007 re-instated)
+%\input setspace.sty %(NM 2005 setspace.sty replacing doublespace.sty)(nm 2007 commented out)
+\input doublespace.sty %(nm 2007 re-instated)
 \input thes1\@ptsize.clo\relax
 
 
