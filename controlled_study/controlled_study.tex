@@ -52,7 +52,7 @@
 
 %\maketitle
 
-\section{abstract}
+\section{Abstract}
 Generating and maintaining REST API documentation with usage examples can be a time consuming and expensive process for evolving APIs. Most REST API documentation tools focus on automating the documentation of the API objects, but require manual effort for capturing usage examples. Consequently, REST API developers need to know the cost vs. benefit of providing usage examples in the documentation to prioritize the documentation efforts. To this end, we have performed a controlled study with 26 experienced software engineers to understand problems that REST API client developers face while using an API without usage examples. We found that REST API client developers face productivity problems with using correct data types, data formats, required HTTP headers and request body when documentation lacks usage examples. By following the REST API documentation suggestions from this paper, REST API developers can reduce the errors, improve success rate and satisfaction of API client developers.
 
 
@@ -206,10 +206,11 @@ We recruited a total of 26 participants from sixteen different companies and six
 Bangladesh) through online announcements posted on Twitter, Facebook, and software developer focused mailing lists. Table \ref{table:participants} shows a summary of the experience level of the participants in each group.
 
 \begin{table}[!tbh]
+  \centering
   \caption{Participant Profile}
   \label{table:participants}
 
-\begin{tabular}{|p{0.8in} p{.6in} p{0.7in} p{0.7in}|}
+  \begin{tabular}{|p{1.5in} p{1in} p{1.5in} p{1.5in}|}
 
 \hline
 & & \textbf{Group 1} & \textbf{Group 2}\\
@@ -239,16 +240,16 @@ Bangladesh) through online announcements posted on Twitter, Facebook, and softwa
 \begin{figure*}[htp]
 \centering
 
-\begin{subfigure}[t]{4in}
+\begin{subfigure}[t]{5in}
 \centering
-\includegraphics[width=4in]{original.png}
+\includegraphics[width=5in]{original.png}
 \caption{Original API Documentation}
 \label{fig:original}
 \end{subfigure}
 ~
-\begin{subfigure}[t]{3in}
+\begin{subfigure}[t]{5in}
 \centering
-\includegraphics[width=2.7in]{forked.png}
+\includegraphics[width=5in]{forked.png}
 \caption{API Documentation Enhanced with an Example}
 \label{fig:enhanced}
 \end{subfigure}
@@ -272,15 +273,29 @@ We divided the participants into two groups, G1 and G2. The participants in the 
 The data collected by the web-based REST API explorer for each participant is exported into a text file as the raw data artifact. For each API task and each participant that attempted the task, the exported text file contains the request inputs I1-4 and associated API response headers and body for each API call made by the participant. For each participant, we recorded all trial API calls with timestamps. Additionally, the demographic information, experience rating and the free-form feedback for each participant is also included in the artifact.
 
 
+
+\subsubsection{Data Analysis}
+We analyzed the data artifact qualitatively to understand the obstacles that REST API client developers face when using an API documentation that lacks usage examples. We exported a table of data from the web-based REST API explorer. For each row, the table contains the following columns: API task, participant identifier, timestamp, API trial number, I1-4, response headers and body. The values for I1-4 used by the participants were manually coded to group the participant responses into categories. The categories help us determine the information type that API client developers need in the API documentation to perform API tasks. The analysis started with an empty set of codes and new codes were introduced to describe scenarios that did not fall under existing codes. The first author applied the codes on the raw data artifact and provided a coding scheme comprising 11 codes to a co-author. The co-author applied the codes to 82/539 API calls (10\% confidence interval with 95\% confidence level). The two authors validated the codes against each other to evaluate consistency. The initial coding from the co-author had discrepancies in 4 / 11 codes for 27 / 82 API call samples. After discussing the coding scheme, the discrepancies were resolved as the definition of the terms became clearer.
+
+For each API task attempted by each participant, we annotated the artifact with one of the following labels: successful, partially successful, and unsuccessful. Task participations are marked successful when I1-4 matches the required values for performing the given task. If a participant is able to use the correct I1-4 for one of the two tasks required to complete a single task (T2), we marked it as partially successful. Otherwise, it's marked as unsuccessful. Based on these annotations, the following formulas were used to compute the quantitative results:
+
+
+
+\textbf{Success Rate (Task, Group)} = (No. of participants that successfully completed Task) / (No. of participants in Group)
+
+\textbf{Average Trial API Calls (Task, Group)} = (No. of API calls made by Group on Task) / (No. of participants in Group).
+
+\textbf{Average Time Spent (Task, Group)} = (Time spent by Group on Task) / (No. of participants in Group)
+
 \pgfplotsset{compat=1.14}
 \usetikzlibrary{patterns}
 \pgfplotstableread[col sep=comma]{controlled_study/groupone.csv}\groupone
 
-\begin{figure*}[htb]
+\begin{figure*}[!h]
 
 \centering
 
-\begin{subfigure}[b]{0.5\textwidth}
+\begin{subfigure}[b]{\textwidth}
 \centering
 \begin{tikzpicture}
     \begin{axis}[
@@ -317,7 +332,7 @@ The data collected by the web-based REST API explorer for each participant is ex
 \caption{Trial vs. Successful API Calls}
 \label{graph:productivity}
 \end{subfigure}
-\begin{subfigure}[b]{0.4\textwidth}
+\begin{subfigure}[b]{\textwidth}
 \centering
 \begin{tikzpicture}
     \begin{axis}[
@@ -343,20 +358,6 @@ The data collected by the web-based REST API explorer for each participant is ex
 \caption{Quantitative Comparison between G1 and G2}
 \label{fig:comparison}
 \end{figure*}
-
-
-\subsubsection{Data Analysis}
-We analyzed the data artifact qualitatively to understand the obstacles that REST API client developers face when using an API documentation that lacks usage examples. We exported a table of data from the web-based REST API explorer. For each row, the table contains the following columns: API task, participant identifier, timestamp, API trial number, I1-4, response headers and body. The values for I1-4 used by the participants were manually coded to group the participant responses into categories. The categories help us determine the information type that API client developers need in the API documentation to perform API tasks. The analysis started with an empty set of codes and new codes were introduced to describe scenarios that did not fall under existing codes. The first author applied the codes on the raw data artifact and provided a coding scheme comprising 11 codes to a co-author. The co-author applied the codes to 82/539 API calls (10\% confidence interval with 95\% confidence level). The two authors validated the codes against each other to evaluate consistency. The initial coding from the co-author had discrepancies in 4 / 11 codes for 27 / 82 API call samples. After discussing the coding scheme, the discrepancies were resolved as the definition of the terms became clearer.
-
-For each API task attempted by each participant, we annotated the artifact with one of the following labels: successful, partially successful, and unsuccessful. Task participations are marked successful when I1-4 matches the required values for performing the given task. If a participant is able to use the correct I1-4 for one of the two tasks required to complete a single task (T2), we marked it as partially successful. Otherwise, it's marked as unsuccessful. Based on these annotations, the following formulas were used to compute the quantitative results:
-
-
-
-\textbf{Success Rate (Task, Group)} = (No. of participants that successfully completed Task) / (No. of participants in Group)
-
-\textbf{Average Trial API Calls (Task, Group)} = (No. of API calls made by Group on Task) / (No. of participants in Group).
-
-\textbf{Average Time Spent (Task, Group)} = (Time spent by Group on Task) / (No. of participants in Group)
 
 
 \section{Results}
@@ -418,6 +419,7 @@ In their free-form feedback, 11 of the 16 G1 participants mentioned the lack of 
 
 \textbf{Observation 1. Use of Data Type.} Without usage examples, we observed 10 of the 16 G1 participants used incorrect data type of \lstinline{String} instead of \lstinline{Integer}. To successfully complete T1, participants had to use an integer ID representing an \lstinline{Author} object given the author name. In the original API documentation, the following is mentioned about the author parameter: ``author: Limit result set to posts assigned to specific authors.'' The documentation does not mention that the data type required is the numeric author ID, not the author name. P1.12 mentioned the following: \textit{``...to find posts for the author, I had to inspect the response to see that indeed the $author\_id$ was in there''}. The enhanced documentation showed one example of using numeric ID. 3 of the 10 participants from G2 ran into the same error. When faced with this error, participants used trial and error to eventually complete the task.
 
+\vspace{10mm}
 \hspace{-5mm}
 \fbox{
 \begin{minipage}{0.95\linewidth}
@@ -426,14 +428,13 @@ In their free-form feedback, 11 of the 16 G1 participants mentioned the lack of 
 
 \end{minipage}
 }
-\vspace{0.5mm}
-
+\vspace{10mm}
 
 \textbf{Observation 2. Use of Data Format.} We observed participants in G1 faced obstacles using correct data formats for \lstinline{Date} and \lstinline{Array} type data in API requests without usage examples. Tasks T3 required the use of a correct format to represent an array of numeric post IDs to be excluded using the API. The original documentation mentions the following about this API query parameter: ``exclude: Ensure result set excludes specific IDs.'' Participants attempted to solve this task using multiple different formats for specifying the array. For example: they tried with \lstinline{exclude=[1,4], exclude=1&4, exclude=4&&exclude=1, id!=1&id!=4} and other alternatives before eventually finding the right format as follows \lstinline{exclude=1,4}. Participant P1.6 mentioned the following: \textit{``It was difficult to figure out whether some of the inputs needed to be arrays or just a comma-separated list.''}. Seven of the 16 participants in G1 faced this error. The enhanced documentation showed one example of using multiple IDs and all G2 participants could use the right format.
 
 Task T5 also required the participants to use an the ISO8601 formatted date for publishing a post with a specific date. Even though the original documentation mentions ISO8601 format, it does not provide an example. Instead of using \lstinline{2016-01-01T00:00:00-00:00}, participants from G1 used date formats as follows: \lstinline{January 1, 2016, 2016-01-01T12:00:00, 20160101}. P1.8 mentioned the following: \textit{``Got hung up trying to figure out the formatting of the date (which doesn't appear to be ISO8601, despite what it says)''}. After analyzing the response, we found that P1.8 used the ISO8601 formatted date in the API calls, but did not provide the required \lstinline{second} portion of the time. Eight of the 16 participants in G1 had an error in the date formats. With an example, 1 of the 10 participants had the same error from G2.
 
-\vspace{1mm}
+\vspace{10mm}
 \hspace{-5mm}
 \fbox{
 \begin{minipage}{0.95\linewidth}
@@ -441,11 +442,11 @@ Task T5 also required the participants to use an the ISO8601 formatted date for 
 \textbf{Recommendation 2.} REST API developers need to include examples showing the valid data format for the API elements.
 \end{minipage}
 }
-\vspace{0.5mm}
+\vspace{10mm}
 
 \textbf{Observation 3. Use of Request Headers.} We were surprised to see that 14 of the 15 G1 participants that tried T5 and T6 faced problem using correct request headers without usage examples. Tasks T5 and T6 required the use of a HTTP request header named \lstinline{Content-Type}. In the original API documentation, the following was mentioned: ``The API uses JSON exclusively as the request and response format, including error responses.''. Experienced software engineers still had problem using this HTTP header as we found from the participants in G1. P1.12 mentioned the following: \textit{``I didn't know how to specify application/json so that I could send POST data via the body instead in the URL parameters... Examples would really help - with a sample request and a sample response.''}  Even though G1 participants have years of experience with REST APIs, only one of them could use the \lstinline{Content-Type} header correctly without example. In contrast, 2 out of the 10 participants from G2 failed to use this header correctly as indicated in the example in the enhanced documentation. Moreover, 1 of the 2 G2 participants that did not use the header the first time, later used it correctly on a subsequent attempt.
 
-\vspace{1mm}
+\vspace{10mm}
 \hspace{-5mm}
 \fbox{
 \begin{minipage}{0.95\linewidth}
@@ -454,11 +455,11 @@ Task T5 also required the participants to use an the ISO8601 formatted date for 
 \textbf{Recommendation 3.} If API requests need to use HTTP Request headers, in addition to the request method and body, REST API develpers need to include examples of the HTTP headers.
 \end{minipage}
 }
-\vspace{0.5mm}
+\vspace{10mm}
 
 \textbf{Observation 4. Use of Interdependent API Calls.} We observed the G1 participants had problem completing API tasks that require multiple API calls without usage examples. Tasks T2 and T6 required the use of multiple API calls to complete successfully. Both tasks require an initial API call to find data using the API that is needed make a second API call. For example, P1.5 mentioned the following about T6, \textit{``The post I created is not visible and not editable, though I got 201. Not sure why''}. After analyzing the response, we observed that P1.5 was able to create a blog post, but failed to publish it because it did not have the \lstinline{publish} status. As a result, the post was not returned via the API for T6. P2.2 mentioned the following about T2: \textit{``In case of search posts by author, it's not clear how to find the author\_id. Although, I realized that users and authors are same in this case.''}
 
-\vspace{1mm}
+\vspace{10mm}
 \hspace{-5mm}
 \fbox{
 \begin{minipage}{0.95\linewidth}
@@ -466,7 +467,7 @@ Task T5 also required the participants to use an the ISO8601 formatted date for 
 \textbf{Recommendation 4.} If there are prerequisites for making an API call, REST API developers need to provide examples showing how to get the prerequisites in the API documentation.
 \end{minipage}
 }
-\vspace{0.5mm}
+\vspace{10mm}
 
 To summarize, we recommend API developers to consider usage examples as an essential requirement for REST API documentation. As such, sufficient resources and a high priority should be devoted to generate and maintain the usage examples. Based on our observations, we recommend REST API documentation tools to provide first-class support for including usage examples with realistic data.
 
@@ -500,8 +501,5 @@ We are grateful to our participants for their valuable time on this study. We th
 
 \bibliographystyle{IEEEtran}
 \bibliography{controlled_study/IEEEabrv,controlled_study/refs}
-
-
-%\end{document}
 
 

@@ -1,7 +1,7 @@
 set -e
 git clean -fX
 pdflatex root.tex
-bibtex root.aux
+bibtex controlled_study/controlled_study.aux
 pdflatex root.tex
 pdflatex root.tex
-skim root.pdf
+/Applications/Skim.app/Contents/MacOS/Skim root.pdf
