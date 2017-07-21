@@ -1,0 +1,38 @@
+% \begin{tikzpicture}
+%   \begin{axis}[
+%     title=\dataSourceName\ API Changes,
+%     date coordinates in=x,
+%     stack plots=y,
+%     area style,
+%     xtick = data,
+%     xlabel={Release Dates},
+%     ylabel={No. of Changes},
+%     xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
+%     enlarge x limits=false,
+%     height=0.25\textheight,
+%     width=0.9\linewidth,
+%     legend style={legend pos=north west,font=\tiny, legend columns=2}
+%     ]
+    \addplot[fill=green] table[x=Date, y=AddAPIElements]{plotdata/\dataSourceFileName}
+    \closedcycle;
+    \addplot[fill=red] table[x=Date, y=RemoveAPIElements]{plotdata/\dataSourceFileName}
+    \closedcycle;
+    \addplot[fill=orange] table[x=Date, y=ChangeAPIElements]{plotdata/\dataSourceFileName}
+    \closedcycle;
+    \addplot[fill=gray] table[x=Date, y=ChangeFieldDataType]{plotdata/\dataSourceFileName}
+    \closedcycle;
+    \addplot[fill=violet] table[x=Date, y=ErrorConditionChange]{plotdata/\dataSourceFileName}
+    \closedcycle;
+    \addplot[fill=yellow] table[x=Date, y=ChangeAuthentication]{plotdata/\dataSourceFileName}
+    \closedcycle;
+    \addplot[fill=magenta] table[x=Date, y=BehaviorChange]{plotdata/\dataSourceFileName}
+    \closedcycle;
+    \addplot[fill=blue] table[x=Date, y=ChangeAuthorization]{plotdata/\dataSourceFileName}
+    \closedcycle;
+
+    \legend{AddAPIElements, RemoveAPIElements, ChangeAPIElements,
+        ChangeFieldDataType, ErrorConditionChange,
+        ChangeAuthentication, BehaviorChange, ChangeAuthorization}
+
+%   \end{axis}
+% \end{tikzpicture}
