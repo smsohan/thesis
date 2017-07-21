@@ -19,6 +19,7 @@
 
 
 \documentclass[12pt]{ucalgthes1}
+\usepackage[pdftex]{graphicx}
 \usepackage[letterpaper,top=1in, bottom= 1in, left= 1in, right= 1in]{geometry}
 %\usepackage{fancyhdr}
 %\fancyhead{}
@@ -28,6 +29,13 @@
 %Define other usepackages here
 \usepackage{hyperref}
 \usepackage{mathptmx}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{subcaption}
+\usepackage{tikz,pgfplots,pgfplotstable}
+\usepackage{mathtools}
+\usepgfplotslibrary{statistics}
+\usepackage{courier}
 \title{Title of Thesis (title case, double spaced, no more than 240 characters. No bold font or symbols, except Greek) \\ \bigskip
 Thesis Title Second Line }
 %
@@ -132,14 +140,10 @@ Paragraph 3
 \listofsymbols
 \pagestyle{plain}
 \clearpage
-
+\newcommand*{\RootPath}{../thesis}%
 
 \pagenumbering{arabic}
-\include{chapter1}
-%\include{chapter2}
-%\include{chapter3}
-%\include{chapter4}
-%\include{chapter5}
+\graphicspath{{controlled_study/}}
+\include{controlled_study/controlled_study}
 \appendix
-\include{appendix1}
 \end{document}

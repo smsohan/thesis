@@ -1,72 +1,68 @@
 
-\documentclass[conference]{IEEEtran}
+%\documentclass[conference]{IEEEtran}
 
 
-\ifCLASSINFOpdf
-  \usepackage{listings}
-  \usepackage[pdftex]{graphicx}
-  \usepackage{url}
-  % \usepackage{caption}
-  \usepackage{subcaption}
-  \usepackage{tikz,pgfplots,pgfplotstable}
-  \usepackage{mathtools}
-  \usepgfplotslibrary{statistics}
-  \usepackage{courier}
-\else
-\fi
+%\ifCLASSINFOpdf
+  %\usepackage{listings}
+  %\usepackage[pdftex]{graphicx}
+  %\usepackage{url}
+  %\usepackage{subcaption}
+  %\usepackage{tikz,pgfplots,pgfplotstable}
+  %\usepackage{mathtools}
+  %\usepgfplotslibrary{statistics}
+  %\usepackage{courier}
+%\else
+%\fi
 
-\makeatletter
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
-\def\ps@IEEEtitlepagestyle{%
-  \def\@oddfoot{\mycopyrightnotice}%
-  \def\@evenfoot{}%
-}
-\def\mycopyrightnotice{%
-  {\footnotesize 978-1-5386-0443-4/17/\$31.00 ©2017 IEEE\hfill}% <--- Change here
-  \gdef\mycopyrightnotice{}% just in case
-}
+%\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%\def\ps@IEEEtitlepagestyle{%
+  %\def\@oddfoot{\mycopyrightnotice}%
+  %\def\@evenfoot{}%
+%}
+%\def\mycopyrightnotice{%
+  %{\footnotesize 978-1-5386-0443-4/17/\$31.00 ©2017 IEEE\hfill}% <--- Change here
+  %\gdef\mycopyrightnotice{}% just in case
+%}
+%\begin{document}
+%\title{A Study of the Effectiveness of Usage Examples in REST API Documentation}
+\chapter{A Study of the Effectiveness of Usage Examples in REST API Documentation}
 
-\begin{document}
-\title{A Study of the Effectiveness of Usage Examples in REST API Documentation}
 
+ %\author{\IEEEauthorblockN{S M Sohan, Frank Maurer\IEEEauthorrefmark{1}}
+ %\IEEEauthorblockA{\IEEEauthorrefmark{1}
+ %Dept. of Computer Science\\
+ %University of Calgary\\
+ %Canada\\
+ %\{smsohan, frank.maurer\}@ucalgary.ca}
+ %\and
+ %\IEEEauthorblockN{Craig Anslow}
+ %\IEEEauthorblockA{School of Eng. and Computer Science\\
+ %Victoria University of Wellington\\
+ %New Zealand\\
+ %craig@ecs.vuw.ac.nz}
+ %\and
+ %\IEEEauthorblockN{Martin P. Robillard}
+ %\IEEEauthorblockA{
+ %School of Computer Science\\
+ %McGill University\\
+ %Canada\\
+ %martin@cs.mcgill.ca}
+ %}
 
- \author{\IEEEauthorblockN{S M Sohan, Frank Maurer\IEEEauthorrefmark{1}}
- \IEEEauthorblockA{\IEEEauthorrefmark{1}
- Dept. of Computer Science\\
- University of Calgary\\
- Canada\\
- \{smsohan, frank.maurer\}@ucalgary.ca}
- \and
- \IEEEauthorblockN{Craig Anslow}
- \IEEEauthorblockA{School of Eng. and Computer Science\\
- Victoria University of Wellington\\
- New Zealand\\
- craig@ecs.vuw.ac.nz}
- \and
- \IEEEauthorblockN{Martin P. Robillard}
- \IEEEauthorblockA{
- School of Computer Science\\
- McGill University\\
- Canada\\
- martin@cs.mcgill.ca}
- }
+%\maketitle
 
-\maketitle
-
-\begin{abstract}
+\section{abstract}
 Generating and maintaining REST API documentation with usage examples can be a time consuming and expensive process for evolving APIs. Most REST API documentation tools focus on automating the documentation of the API objects, but require manual effort for capturing usage examples. Consequently, REST API developers need to know the cost vs. benefit of providing usage examples in the documentation to prioritize the documentation efforts. To this end, we have performed a controlled study with 26 experienced software engineers to understand problems that REST API client developers face while using an API without usage examples. We found that REST API client developers face productivity problems with using correct data types, data formats, required HTTP headers and request body when documentation lacks usage examples. By following the REST API documentation suggestions from this paper, REST API developers can reduce the errors, improve success rate and satisfaction of API client developers.
 
 
-\end{abstract}
 
+%\begin{IEEEkeywords}
+%API; REST; Documentation; Usage Examples; Empirical Study; Controlled Study; Productivity;
 
+%\end{IEEEkeywords}
 
-\begin{IEEEkeywords}
-API; REST; Documentation; Usage Examples; Empirical Study; Controlled Study; Productivity;
-
-\end{IEEEkeywords}
-
-\IEEEpeerreviewmaketitle
+%\IEEEpeerreviewmaketitle
 
 
 \section{Introduction}
@@ -144,11 +140,11 @@ On Listing \ref{wordpress_code}, line 4 specifies that this is a schema definiti
 The WordPress team leverages this self-documenting feature to generate and publish the official API documentation as an HTML website. Fig. \ref{fig:schema} shows a screenshot of the published documentation for the \lstinline{date} attribute of the \lstinline{Post} API element.\footnote{\url{http://v2.wp-api.org/reference/posts/}}
 
 \begin{figure}[h!]
-\begin{center}
-\fbox{\includegraphics[width=\linewidth,keepaspectratio]{schema.png}}
-\end{center}
-\caption{Screenshot of documentation for Post/date}
-\label{fig:schema}
+  \begin{center}
+    \includegraphics[width=\linewidth,keepaspectratio]{schema.png}
+  \end{center}
+  \caption{Screenshot of documentation for Post/date}
+  \label{fig:schema}
 \end{figure}
 
 In addition to the auto-generated documentation of the the schema and API actions, contributors add custom content to provide prosaic overviews and usage examples.
@@ -506,6 +502,6 @@ We are grateful to our participants for their valuable time on this study. We th
 \bibliography{IEEEabrv,refs}
 
 
-\end{document}
+%\end{document}
 
 
