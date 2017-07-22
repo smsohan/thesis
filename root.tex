@@ -17,7 +17,14 @@
 \newcommand{\newblock}{}
 \usepackage{eurosym}
 \usepackage{multirow}
-
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\lstset{upquote=true}
+\usepackage{float}
+\floatstyle{boxed}
+\usepackage{blindtext}
+\let\labelindent\relax
+\usepackage{enumitem}
 \title{Title of Thesis (title case, double spaced, no more than 240 characters. No bold font or symbols, except Greek) \\ \bigskip
 Thesis Title Second Line }
 %
@@ -125,9 +132,11 @@ Paragraph 3
 
 \pagenumbering{arabic}
 \graphicspath{{controlled_study/}, {case_study/}}
+\graphicspath{{controlled_study/}, {case_study/}, {cisco_study/}}
 \pgfplotsset{table/search path={controlled_study,case_study}}
 \renewcommand\bibname{References}
 \include{case_study/case_study}
+\include{cisco_study/cisco_study}
 \include{controlled_study/controlled_study}
 \appendix
 \end{document}
