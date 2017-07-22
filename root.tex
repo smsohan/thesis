@@ -30,18 +30,18 @@
 \usepackage{mdframed}
 %\usepackage{balance}
 \usepackage{enumitem}
-\title{Title of Thesis (title case, double spaced, no more than 240 characters. No bold font or symbols, except Greek) \\ \bigskip
-Thesis Title Second Line }
+
+\title{Automated Example Oriented REST API Documenation}
 %
 %            Insert the correct information between the {}
 %
-\author{Student's Full Name}
-\thesisyear{year}
+\author{S M Sohan}
+\thesisyear{2017}
 \thesis{thesis}    % the word dissertation can be inserted between {}
-\newcommand{\thesistitle}{Title of Thesis}
-\monthname{month name}
-\dept{GRADUATE PROGRAM IN "NAME OF PROGRAM"}
-\degree{"FULL NAME OF DEGREE e.g.: DOCTOR OF PHILOSOPHY"}
+\newcommand{\thesistitle}{Automated Example Oriented REST API Documenation}
+\monthname{September}
+\dept{GRADUATE PROGRAM IN COMPUTER SCIENCE}
+\degree{DOCTOR OF PHILOSOPHY}
 %
 %                    End of supplied information
 %
@@ -49,68 +49,44 @@ Thesis Title Second Line }
 \makethesistitle
 \pagenumbering{roman}     % resets page counter to one
 \setcounter{page}{2}
-%\chapter*{UNIVERSITY OF CALGARY \\ FACULTY OF GRADUATE STUDIES}
-%\thispagestyle{empty}
-%The undersigned certify that they have read, and recommend
-%to the Faculty of Graduate Studies for acceptance, a \Thesis\ entitled
-%``\thesistitle'' submitted by \Author\
-%in partial fulfillment of the requirements for the degree of
-%\Degree.\\
+\chapter*{UNIVERSITY OF CALGARY \\ FACULTY OF GRADUATE STUDIES}
+\thispagestyle{empty}
+The undersigned certify that they have read, and recommend
+to the Faculty of Graduate Studies for acceptance, a \Thesis\ entitled
+``\thesistitle'' submitted by \Author\
+in partial fulfillment of the requirements for the degree of
+\Degree.\\
 
 %
 %                 Substitute  List of Examiners
 %
-%\begin{signing}{Department of Academic Computing}
-%\signline
-%Chairman, Dr.~John D.~Doe \\
-%Department of Academic Computing \\
-%Services  \\
-%\signline
-%Chairman, Dr.~John D.~Doe \\
-%Department of Academic Computing \\
-%Services  \\
-%\signline
-%Chairman, Dr.~John D.~Doe \\
-%Department of Academic Computing \\
-%Services  \\
-%\signline
-%Chairman, Dr.~John D.~Doe \\
-%Department of Academic Computing \\
-%Services  \\
-%\newsigncolumn         use this command to start a new column if necessary
-%\newsigncolumn
-%\signline
-%Chairman, Dr.~John D.~Doe \\
-%Department of Academic Computing \\
-%Services  \\
-%\signline
-%Dr.~Jane Smith \\
-%Department of Academic Computing  \\
-
-%\signline
-%Dr.~A.~B.~Brown \\
-%Department of Academic Computing  \\
-%\end{signing}
+\begin{signing}{Department of Computer Science}
+\signline
+Dr. Frank Maurer \\
+Supervisor\\
+Department of Computer Science \\
+University of Calgary \\
+Canada\\
+\signline
+Dr. Mea Wang\\
+Supervisory Committee Member\\
+Department of Computer Science \\
+University of Calgary \\
+Canada\\
+\signline
+Dr. Craig Anslow\\
+Supervisory Committee Member\\
+School of Eng. and Computer Science \\
+Victoria University of Wellington\\
+New Zealand\\
+\end{signing}
 %
 \newpage
 \phantomsection
 \altchapter{\bf{Abstract}}
-Paragraph 1
-
-Paragraph 2
-
-Paragragh 3
-
-This page is required for all graduate theses.  An abstract is a short paragraph explaining the major points and conclusions of your thesis.  For master's theses, the abstract can be no more than 150 words long, while doctoral abstracts can be no longer than 350 words.
-
 \newpage
 \phantomsection
 \altchapter{\bf{Acknowledgements}}
-Paragraph 1
-
-Paragraph 2
-
-Paragraph 3
 
 \begin{singlespace}
 \newpage
@@ -139,10 +115,13 @@ Paragraph 3
 \graphicspath{{controlled_study/}, {case_study/}, {cisco_study/}, {spy_rest/}, {demo_paper/}}
 \pgfplotsset{table/search path={controlled_study,case_study}}
 \renewcommand\bibname{References}
+\chapter{Introduction}
+
 \include{case_study/case_study}
 \include{spy_rest/spy_rest}
 \include{demo_paper/demo_paper}
 \include{cisco_study/cisco_study}
 \include{controlled_study/controlled_study}
+\chapter{Conclusion}
 \appendix
 \end{document}

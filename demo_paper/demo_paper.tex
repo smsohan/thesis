@@ -76,7 +76,7 @@ The web interface of SpyREST provides a hierarchical navigation for RESTful API 
 SpyREST is composed of three main components as shown in Fig. \ref{fig:components}. The ``Spy'' component is the customized HTTP proxy server. This component is written using NodeJS. The Spy has internal logic to decode HTTP request URL and headers and auto-detect API versions for the commonly used version identifier patterns. Table \ref{table:versions} shows examples of auto detected versions from accept HTTP header and URLs.
 
 \begin{table}[!tbh]
-  \caption{Examples of auto detected versions}
+  \caption{Examples of Auto Detected Versions}
   \begin{tabular}{|p{0.2\linewidth}|p{0.5\linewidth}|p{0.2\linewidth}|}
     \hline
     \textbf{Type} & \textbf{Example Value} & \textbf{Detected version}\\
@@ -118,7 +118,7 @@ All three SpyREST components are released as Docker containers. Docker is a ligh
       \caption{API documentation examples section}
       \label{fig:examples}
     \end{subfigure}
-    \caption{SpyREST Screen shots showing auto generated API documentation}
+    \caption{SpyREST Screenshots Showing Auto Generated API Documentation}
     \label{fig:spyrest_screenshots}
   \end{mdframed}
 \end{figure*}
@@ -133,7 +133,7 @@ To manually generate documentation for the \texttt{GET /notifications} API, a de
 
 To use SpyREST for auto-generating documentation of an API, a developer only needs to make the example API calls via the Spy proxy server with custom HTTP headers for human readable descriptions for the API example. Custom edits to the auto generated documentation may be made by using the Markdown editor. Fig \ref{fig:spyrest_screenshots} shows a partial screen shot of SpyREST generated documentation for this API given four example API calls. SpyREST fully automates the steps S2-S5, and S7-S8 as follows: S2) the Spy proxy server records the HTTP traffic, S3) the Spy automatically strips off repeated items from the arrays in the response body, S4) the Spy does not save any \texttt{Authorization} header, S5) the Web App renders the documentation for all APIs following a consistent look and feel, S7) the Web App provides breadcrumbs for hierarchical navigation of the API objects, and S8) the recorded data is automatically published by the Web App in real-time. The API developers only need to focus on finding good example API calls for S1 and describing the complex rules about APIs that are not otherwise derivable from looking at the request and response data alone for S7. In addition to automating the RESTful API documentation process, SpyREST also displays a cURL command for each recorded API example so that developers can try the API examples without having to write any code. Using in page collaboration developers can discuss API related questions and find past conversation all in one place. In this specific example, we see the official documentation of $GET /notifications$ provided by GitHub was outdated and missing several fields (e.g. $subscription\_url$, $repository.releases\_url$, $repository.labels\_url$, $repository.notifications\_url$ and 28 more) that are automatically documented by SpyREST. API developers can also customize the auto generated summary information using a wiki-like editor on SpyREST. This allows API developers to explain behaviors that cannot be derived from analyzing the individual example API calls. For example, users can edit the table of Query Parameters to explain any parameter that is not used in the example API calls or explain validation rules (such as required, interdependent fields) about the query parameters.
 
-\subsection{Maintaining API Documentation for evolving APIs} % (fold)
+\subsection{Maintaining API Documentation for Evolving APIs} % (fold)
 Maintenance of RESTful API documentation is another use case of interest since the documentation for RESTful APIs need to evolve with the APIs to reflect the updated information. The 8 steps mentioned previously need to be repeated every time any of the API objects changes when a manual process is followed. Since APIs continue to evolve throughout their lifetime, manually maintaining their documentation incurs further costs or documentation can quickly become outdated.
 
 SpyREST automatically updates the recorded information for each example API call, so rerunning the API examples automatically updates the auto-generated documentation. To uniquely identify each example API call, the Spy computes a digital signature of each example API call based on its API version, resource, URL and custom description. To replay the example API calls, API developers can use automated scripts so that once an API example is scripted, it can be run repeatedly. Moreover, the automated scripts can be written as functional tests where the generation of API documentation becomes a side-benefit of running the tests. Running the automated scripts to exercise the API examples frequently can prevent out of date API documentation as shown on the previous use case.

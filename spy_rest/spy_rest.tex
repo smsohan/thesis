@@ -142,7 +142,7 @@ As shown in this example, the version ``v3'' is automatically detected by parsin
     \caption{API documentation examples section}
     \label{fig:examples}
   \end{subfigure}
-  \caption{SpyREST Screen shots showing auto generated API documentation}
+  \caption{SpyREST Screenshots Showing Auto Generated API Documentation}
   \label{fig:spyrest_screenshots}
 \end{figure*}
 
@@ -156,7 +156,7 @@ Now that we have explained the design and implementation of SpyREST, we discuss 
 
 \textbf{R1 - Automated RESTful API documentation:} The work flow for automated RESTful API documentation can be explained by the following steps: 1) API developer uses the Spy HTTP proxy to run example API calls, 2) The Spy records example API calls, 3) The Spy extracts meta information about the API call, 4) The Web App displays the auto generated documentation, 5) API developers can optionally customize the auto generated documentation.
 
-Fig \ref{fig:spyrest_screenshots} shows screen shots (shortened) from SpyREST auto generated documentation that is solely based on an example API call to URL \url{https://api.github.com/search/repositories?q=tetris+language:assembly&sort=stars&order=desc} with a custom header ``x-spy-rest-description'' to provide the short description for the example.
+Fig \ref{fig:spyrest_screenshots} shows screenshots (shortened) from SpyREST auto generated documentation that is solely based on an example API call to URL \url{https://api.github.com/search/repositories?q=tetris+language:assembly&sort=stars&order=desc} with a custom header ``x-spy-rest-description'' to provide the short description for the example.
 
 The auto generated API documentation features two sections, a summary section as shown in Fig. \ref{fig:summary} and an examples section as shown in Fig. \ref{fig:examples}. The summary section includes breadcrumbs to show hierarchy of the API objects related to each API action to help API client developers easily navigate the API documentation. This section also includes three tables that display the structure of query parameters, and request and response payloads. In addition to the structure, automated type detection is used to show the data type and example values for each field in these tables. The examples section on the API documentation shows all the recorded API examples for a given API action. For each example, it shows a description, the request URL, query parameters, and request and response headers and bodies. Spy filters out the ``authorization'' request header before saving the examples in the database and the documentation rendered by the Web App displays this header with a placeholder text as ``FILTERED''.
 
