@@ -2,6 +2,7 @@ set -e
 git clean -fX
 pdflatex root.tex
 bibtex controlled_study/controlled_study.aux
+bibtex spy_rest/spy_rest.aux
 bibtex demo_paper/demo_paper.aux
 bibtex case_study/case_study.aux
 bibtex cisco_study/cisco_study.aux
