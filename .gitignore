@@ -6,5 +6,6 @@
 *.bbl
 *.blg
 *.lot
+*.lof
 *.out
 *.toc

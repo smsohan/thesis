@@ -1,10 +1,12 @@
 \documentclass[12pt]{ucalgthes1}
 \usepackage[pdftex]{graphicx}
+\usepackage[pdftex]{color}
 \usepackage[letterpaper,top=1in, bottom= 1in, left= 1in, right= 1in]{geometry}
 \usepackage{hyperref}
 \usepackage{mathptmx}
 \usepackage{listings}
 \usepackage{url}
+\usepackage[tableposition=top]{caption}
 \usepackage{subcaption}
 \usepackage{tikz,pgfplots,pgfplotstable}
 \usepackage{mathtools}
@@ -24,6 +26,9 @@
 \floatstyle{boxed}
 \usepackage{blindtext}
 \let\labelindent\relax
+\usepackage{upquote}
+\usepackage{mdframed}
+%\usepackage{balance}
 \usepackage{enumitem}
 \title{Title of Thesis (title case, double spaced, no more than 240 characters. No bold font or symbols, except Greek) \\ \bigskip
 Thesis Title Second Line }
@@ -131,11 +136,11 @@ Paragraph 3
 \clearpage
 
 \pagenumbering{arabic}
-\graphicspath{{controlled_study/}, {case_study/}}
-\graphicspath{{controlled_study/}, {case_study/}, {cisco_study/}}
+\graphicspath{{controlled_study/}, {case_study/}, {cisco_study/}, {demo_paper/}}
 \pgfplotsset{table/search path={controlled_study,case_study}}
 \renewcommand\bibname{References}
 \include{case_study/case_study}
+\include{demo_paper/demo_paper}
 \include{cisco_study/cisco_study}
 \include{controlled_study/controlled_study}
 \appendix
