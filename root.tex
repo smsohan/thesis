@@ -8,12 +8,16 @@
 \usepackage{subcaption}
 \usepackage{tikz,pgfplots,pgfplotstable}
 \usepackage{mathtools}
+\usepgfplotslibrary{dateplot}
 \usepgfplotslibrary{statistics}
 \usepackage{courier}
 \usepackage[square,numbers,sectionbib]{natbib}
 \usepackage[sectionbib]{chapterbib}
 \usepackage[numbib]{tocbibind}
 \newcommand{\newblock}{}
+\usepackage{eurosym}
+\usepackage{multirow}
+
 \title{Title of Thesis (title case, double spaced, no more than 240 characters. No bold font or symbols, except Greek) \\ \bigskip
 Thesis Title Second Line }
 %
@@ -120,8 +124,10 @@ Paragraph 3
 \clearpage
 
 \pagenumbering{arabic}
-\graphicspath{{controlled_study/}}
-\pgfplotsset{table/search path={controlled_study}}
+\graphicspath{{controlled_study/}, {case_study/}}
+\pgfplotsset{table/search path={controlled_study,case_study}}
+\renewcommand\bibname{References}
+\include{case_study/case_study}
 \include{controlled_study/controlled_study}
 \appendix
 \end{document}

@@ -1,48 +1,28 @@
-\documentclass[conference]{IEEEtran}
-
-\ifCLASSINFOpdf
-\else
-\fi
-\usepackage{url}
-\usepackage[hypcap]{caption}
-\usepackage{listings}
-\usepackage{pgfplots}
-\usepackage{pgfplotstable}
-\usepackage{eurosym}
-\usepackage{multirow}
-\usepackage{subfigure}
-
-%\usepackage{caption}
-%\usepackage{subcaption}
-
 \usetikzlibrary{backgrounds}
 \pgfplotsset{compat=1.5}
-\usepgfplotslibrary{dateplot}
 
 
-\begin{document}
-\title{A Case Study of Web API Evolution}
+\chapter{A Case Study of Web API Evolution}
 
 
-\author{\IEEEauthorblockN{S M Sohan, Craig Anslow, Frank Maurer
-\IEEEauthorblockA{Department of Computer Science\\
-University of Calgary,
-Calgary, Alberta T2N 1N4\\ Email: \{smsohan, craig.anslow, frank.maurer\}@ucalgary.ca }
-}}
+%\author{\IEEEauthorblockN{S M Sohan, Craig Anslow, Frank Maurer
+%\IEEEauthorblockA{Department of Computer Science\\
+%University of Calgary,
+%Calgary, Alberta T2N 1N4\\ Email: \{smsohan, craig.anslow, frank.maurer\}@ucalgary.ca }
+%}}
 
-\maketitle
+%\maketitle
 
 
-\begin{abstract}
+\section{Abstract}
 When applications are integrated using web APIs, changes on a web API may break the dependent applications. This problem exists because old versions of the APIs may no longer be supported, a lack of adequate documentation to upgrade to a newer version, and insufficient communication of changes. In this paper we conducted a case study of evolving Web APIs to investigate what changes are made between versions and how the changes are documented and communicated to the API users. The findings are a list of recommendations for practitioners and researchers based on API change profiles, versioning, documentation and communication approaches that are observed in practice. This study will help inform developers of evolving Web APIs to make decision about versioning, documentation and communication methods.
-\end{abstract}
 
 
-\begin{IEEEkeywords}
-Case Study; RESTful, SOAP, Web API Evolution; WSDL
-\end{IEEEkeywords}
+%\begin{IEEEkeywords}
+%Case Study; RESTful, SOAP, Web API Evolution; WSDL
+%\end{IEEEkeywords}
 
-\IEEEpeerreviewmaketitle
+%\IEEEpeerreviewmaketitle
 
 \section{Introduction}
 
@@ -92,42 +72,6 @@ Existing techniques to evolve Web APIs focused on finding different techniques f
 \subsection{Tool support for evolving Web APIs} % (fold)
 \label{sub:tool_development}
 
-%{|p{0.2\linewidth}|p{0.3\linewidth}|p{0.2\line width}|p{0.2\linewidth}|}
-%& &  \multicolumn{4}{ c |}{\textbf{Categories}} & & \\ \cline{3-6}
-%\multirow{2}{*}{\textbf{Web API}}  & \multirow{2}{*}{\textbf{URL}} &\textbf{Industry} & \textbf{Popularity} &  \textbf{Maturity} & \textbf{Code}& \multirow{2}{*}{\\textbf{Rel.}} & \multirow{2}{*}{\\textbf{Dates}}\\
-
-\begin{table*}[!ht]
-\caption{Case Study - Representative Sample of Web APIs.}
-\label{web_api_grid}
-\begin{tabular} {| l | l  | l  | l | l | l | l  | l |}
-\hline
-\multirow{2}{*}{\textbf{Web API}} &
-\multirow{2}{*}{\textbf{URL}} &
-\multicolumn{4}{ c |}{\textbf{Categories}} &
-\textbf{Num of} &
-\multirow{2}{*}{\textbf{Dates}}\\    \cline{3-6}
-  & & Industry & Popularity &  Maturity & Code& \textbf{Releases}& \\
-\hline
-Facebook Platform API & \tiny{\url{https://developers.facebook.com/docs/apps/versions}} & Social & High & Est & Closed & 11 & 01/2013-07/2014\\
-\hline
-Twitter REST API & \tiny{\url{https://dev.twitter.com/docs/api}} & Social & High & Est & Closed & 2 & Not Available\\
-\hline
-Wordpress REST API & \tiny{\url{http://wp-api.org/}} & Business & Growing &  New & Open & 8 & 08/2013-06/2014\\
-\hline
-Salesforce \& Chatter REST API & \tiny{\url{https://www.salesforce.com/us/developer/docs/api_rest/}} & Business & Popular & Est & Closed & 4 & 01/2013-08/2014\\
-\hline
-Google Calendar API & \tiny{\url{https://developers.google.com/google-apps/calendar/}} & Business & Popular & Est & Closed & 2 & Not Available\\
-\hline
-Stripe Payment Processor API & \tiny{\url{https://stripe.com/docs/api}} & Business & Growing & New & Closed & 30 &09/2011-10/2014 \\
-\hline
-Github API & \tiny{\url{https://developer.github.com/}} & Productivity & Growing & New & Closed  & 59 &09/2012-10/2014\\
-\hline
-Google Maps API & \tiny{\url{https://developers.google.com/maps/web/}} & Productivity & Popular & Est & Closed & 102 &01/2011-09/2014\\
-\hline
-OpenStreetMap API &\tiny{\url{http://wiki.openstreetmap.org/wiki/API}} & Productivity & Growing & New & Open & 1 & Not Available\\
-\hline
-\end{tabular}
-\end{table*}
 
 Analyzing the available tool support for evolving Web APIs helped us identify opportunities for future research in this area. WSDarwin introduces a layer of adapters on both the Web API and its client to automatically migrate Web API clients to use a newer version of an API \cite{WSDarwin}. WSDarwin uses WSDL description of the SOAP service to automatically infer the changes between versions and uses preset default values for newly added objects to adapt the client request. VTracker, predecessor of WSDarwin, produces a changelog between versions of WSDL files \cite{fokaefs_2011_empirical}. WSDLDiff extends this by incorporating the semantic meaning of WSDL with an XML Schema Definition into their changelog computation \cite{wsdl_diff_2012}.
 
@@ -150,6 +94,41 @@ When companies evolve their Web APIs in practice the new changes can often break
 
 \subsection{Selection Strategy} % (fold)
 \label{sub:selection_strategy}
+\begin{table*}[!htbp]
+\caption{Case Study - Representative Sample of Web APIs.}
+\label{web_api_grid}
+\rotatebox{-90}{
+  \begin{tabular} {| p{1.5in}| p{2in}| l  | l | l | l | l  | l |}
+    \hline
+    \multirow{2}{*}{\textbf{Web API}} &
+    \multirow{2}{*}{\textbf{URL}} &
+    \multicolumn{4}{ c |}{\textbf{Categories}} &
+    \textbf{Num of} &
+    \multirow{2}{*}{\textbf{Dates}}\\    \cline{3-6}
+    & & Industry & Popularity &  Maturity & Code& \textbf{Releases}& \\
+    \hline
+    Facebook Platform API & \tiny{\url{https://developers.facebook.com/docs/apps/versions}} & Social & High & Est & Closed & 11 & 01/2013-07/2014\\
+    \hline
+    Twitter REST API & \tiny{\url{https://dev.twitter.com/docs/api}} & Social & High & Est & Closed & 2 & Not Available\\
+    \hline
+    Wordpress REST API & \tiny{\url{http://wp-api.org/}} & Business & Growing &  New & Open & 8 & 08/2013-06/2014\\
+    \hline
+    Salesforce \& Chatter REST API & \tiny{\url{https://www.salesforce.com/us/developer/docs/api_rest/}} & Business & Popular & Est & Closed & 4 & 01/2013-08/2014\\
+    \hline
+    Google Calendar API & \tiny{\url{https://developers.google.com/google-apps/calendar/}} & Business & Popular & Est & Closed & 2 & Not Available\\
+    \hline
+    Stripe Payment Processor API & \tiny{\url{https://stripe.com/docs/api}} & Business & Growing & New & Closed & 30 &09/2011-10/2014 \\
+    \hline
+    Github API & \tiny{\url{https://developer.github.com/}} & Productivity & Growing & New & Closed  & 59 &09/2012-10/2014\\
+    \hline
+    Google Maps API & \tiny{\url{https://developers.google.com/maps/web/}} & Productivity & Popular & Est & Closed & 102 &01/2011-09/2014\\
+    \hline
+    OpenStreetMap API &\tiny{\url{http://wiki.openstreetmap.org/wiki/API}} & Productivity & Growing & New & Open & 1 & Not Available\\
+    \hline
+  \end{tabular}
+}
+\end{table*}
+
 
 
 To gain a broad perspective, we selected evolving Web APIs to represent each of the following categories as shown in Table \ref{web_api_grid}.
@@ -183,10 +162,10 @@ We used codes to annotate the API changelogs to identify the different types of 
 \textbf{Authentication} - Authentication methods. e.g. HTTP Basic authentication.
 
 
-\begin{table*}[!tbh]
+\begin{table*}[!htbp]
 \caption{List of Codes}
 \label{coding_scheme}
-\begin{tabular}{|p{0.2\linewidth}|p{0.7\linewidth}|}
+\begin{tabular}{|p{0.3\linewidth}|p{0.6\linewidth}|}
 \hline
 \textbf{Category} & \textbf{Description}\\
 \hline
@@ -261,7 +240,7 @@ now hidden to unauthenticated users..
 ''\end{quotation}
 \normalsize
 
-Another example that demonstrates a behavior change can be found from the 2013-10-29 version of Stripe API \footnote{\url{https://stripe.com/docs/upgrades#2014-01-31}}:
+Another example that demonstrates a behavior change can be found from the 2013-10-29 version of Stripe API \footnote{\url{https://stripe.com/docs/upgrades\#2014-01-31}}:
 
 \small
 \begin{quotation}
@@ -293,7 +272,7 @@ Similarly, the Github API changed their custom headers about pagination in the f
 \end{quotation}
 \normalsize
 
-\textbf{Error condition change} - Web APIs change the error conditions that may require the users to adapt their integration. For example, in Salesforce API Version 29 the error codes were changed \footnote{\url{https://na1.salesforce.com/help/pdfs/en/salesforce_winter14_release_notes.pdf#rn_186_api_objects}}:
+\textbf{Error condition change} - Web APIs change the error conditions that may require the users to adapt their integration. For example, in Salesforce API Version 29 the error codes were changed \footnote{\url{https://na1.salesforce.com/help/pdfs/en/salesforce_winter14_release_notes.pdf\#rn_186_api_objects}}:
 
 \small
 \begin{quotation}
@@ -308,171 +287,6 @@ These extended list of change patterns need to be addressed by future work on fi
 \subsubsection{Version Identifiers}
 
 We analyzed different approaches to identify the versions of Web APIs to understand if the version identifiers can be used to infer information about their evolution. We can categorize the Web APIs into these groups:
-
-\begin{figure*}[!htp]
-\subfigure[Facebook API Changes (11 Releases)]{
-\def\dataSourceFileName{facebookx.dat}
-\begin{tikzpicture}[show background rectangle,tight background]
-  \begin{axis}[
-    ybar stacked,
-    bar width=5pt,
-    %title=Facebook API Changes (11 Releases),
-    date coordinates in=x,
-    xticklabel = \year-\month,
-    xtick = {2013-01-09, 2013-04-01, 2013-07-01, 2013-10-01, 2014-01-01, 2014-04-01, 2014-08-01, 2014-07-02},
-    %xlabel={Timeline},
-    xlabel style={font=\small},
-    ylabel style={font=\small},
-    ylabel={No. of Changes},
-    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-    enlarge x limits=false,
-    height=0.20\textheight,
-    width=0.32\linewidth,
-    legend style={legend pos=north west,font=\tiny, legend columns=4},
-    legend to name=legend
-    ]
-    \input{change_frequency}
-  \end{axis}
-\end{tikzpicture}
-\label{fig:facebook-chart}
-}
-\subfigure[Stripe API Changes (30 Releases)]{
-\def\dataSourceFileName{stripe.dat}
-\begin{tikzpicture}[show background rectangle,tight background]
-  \begin{axis}[
-    %title=Stripe API Changes (30 Releases),
-    date coordinates in=x,
-    ybar stacked,
-    bar width=5pt,
-    xticklabel = \year-\month,
-    xtick = {2011-09-15, 2012-01-01, 2013-01-01, 2014-01-01, 2014-10-01},
-    %xlabel={Timeline},
-    xlabel style={font=\small},
-    ylabel style={font=\small},
-    ylabel={No. of Changes},
-    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-    enlarge x limits=false,
-    height=0.20\textheight,
-    width=0.32\linewidth,
-    legend to name=legend
-    ]
-    \input{change_frequency}
-  \end{axis}
-\end{tikzpicture}
-\label{fig:stripe-chart}
-}
-\subfigure[WordPress REST API Changes (8 Releases)]{
-\def\dataSourceFileName{wordpress.dat}
-\begin{tikzpicture}[show background rectangle,tight background]
-  \begin{axis}[
-    %title=WordPress REST API Changes (8 Releases),
-    date coordinates in=x,
-    ybar stacked,
-    bar width=5pt,
-    xticklabel = \year-\month,
-    xtick = {2013-08-07, 2013-11-01, 2014-03-01, 2014-06-26},
-    %xlabel={Timeline},
-    xlabel style={font=\small},
-    ylabel style={font=\small},
-    ylabel={No. of Changes},
-    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-    enlarge x limits=false,
-    height=0.20\textheight,
-    width=0.32\linewidth,
-    legend to name=legend
-    ]
-    \input{change_frequency}
-  \end{axis}
-\end{tikzpicture}
-\label{fig:wordpress-chart}
-}
-\subfigure[GitHub API Changes (59 Releases)]{
-\def\dataSourceFileName{github.dat}
-\begin{tikzpicture}[show background rectangle,tight background]
-  \begin{axis}[
-    %title=GitHub API Changes (59 Releases),
-    date coordinates in=x,
-    ybar stacked,
-    bar width=5pt,
-    xticklabel = \year-\month,
-    xtick = {2012-09-05, 2012-12-01, 2013-03-01, 2013-06-01, 2013-09-01, 2013-12-01, 2014-03-01, 2014-10-06},
-    %xlabel={Timeline},
-    xlabel style={font=\small},
-    ylabel style={font=\small},
-    ylabel={No. of Changes},
-    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-    enlarge x limits=false,
-    height=0.20\textheight,
-    width=0.32\linewidth,
-    legend to name=legend
-    ]
-    \input{change_frequency}
-  \end{axis}
-\end{tikzpicture}
-\label{fig:github-chart}
-}
-\subfigure[Google Maps Web API (102 Releases)]{
-\def\dataSourceFileName{gmap.dat}
-\begin{tikzpicture}[show background rectangle,tight background]
-  \begin{axis}[
-    %title=Google Maps Web API (102 Releases),
-    date coordinates in=x,
-    ybar stacked,
-    bar width=5pt,
-    xticklabel = \year-\month,
-    xtick = {2011-01-06, 2011-07-01, 2012-01-01, 2012-07-01, 2013-01-01, 2013-07-01, 2014-01-01, 2014-07-01, 2014-09-18},
-    %xlabel={Timeline},
-    xlabel style={font=\small},
-    ylabel style={font=\small},
-    ylabel={No. of Changes},
-    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-    enlarge x limits=false,
-    height=0.20\textheight,
-    width=0.32\linewidth,
-    legend to name=legend
-    ]
-    \input{change_frequency}
-  \end{axis}
-\end{tikzpicture}
-\label{fig:gmaps-chart}
-}
-\subfigure[Salesforce REST API (4 Releases)]{
-\def\dataSourceName{Salesforce Force.com and Chatter REST}
-\def\dataSourceFileName{salesforce.dat}
-\begin{tikzpicture}[show background rectangle,tight background]
-  \begin{axis}[
-    %title=Salesforce REST API (4 Releases),
-    date coordinates in=x,
-    ybar stacked,
-    bar width=5pt,
-    xticklabel = \year-\month,
-    xtick = {2013-10-04, 2014-01-01, 2014-04-01, 2014-07-01, 2014-10-18},
-    %label={Timeline},
-    xlabel style={font=\small},
-    ylabel style={font=\small},
-    ylabel={No. of Changes},
-    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-    enlarge x limits=false,
-    height=0.20\textheight,
-    width=0.32\linewidth,
-    legend to name=legend
-    ]
-    \input{change_frequency}
-  \end{axis}
-\end{tikzpicture}
-\label{fig:salesforce-chart}
-}
-%% Add the legend here
-\begin{center}
-\subfigure{
-\includegraphics[keepaspectratio, width=10cm]{legend.png}
-}
-\end{center}
-\caption{Case Study - Change Profiles for the Web APIs.}
-\label{fig:proflie}
-\end{figure*}
-
-
 \textbf{Numbered identifiers} - Contiguous integers are used to identify new versions by Salesforce and GitHub Web APIs. Such naming scheme clearly communicates the sequence between versions but cannot be used to infer compatibility between versions.
 
 \textbf{Timestamped identifiers} - Stripe Web API uses date as a version identifier. While timestamped versions provide the time frame of a version, they do not provide any compatibility information between versions.
@@ -482,6 +296,186 @@ We analyzed different approaches to identify the versions of Web APIs to underst
 Also, web APIs often evolve with breaking changes without issuing a new version identifier. For example, Facebook, Google Calendar and GitHub APIs often receive breaking changes without using a new version identifier.
 
 
+
+
+\begin{figure*}[!hbtp]
+  \begin{subfigure}[b]{\textwidth}
+    \def\dataSourceFileName{facebookx.dat}
+    \begin{tikzpicture}[show background rectangle,tight background]
+      \begin{axis}[
+          ybar stacked,
+          bar width=5pt,
+          date coordinates in=x,
+          xticklabel = \year-\month,
+          xtick = {2013-01-09, 2013-04-01, 2013-07-01, 2013-10-01, 2014-01-01, 2014-04-01, 2014-08-01, 2014-07-02},
+          xlabel style={font=\small},
+          ylabel style={font=\small},
+          ylabel={No. of Changes},
+          xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
+          enlarge x limits=false,
+          height=0.20\textheight,
+          width=\textwidth,
+          legend style={legend pos=north west,font=\tiny, legend columns=4},
+          legend to name=legend
+        ]
+        \input{case_study/change_frequency}
+      \end{axis}
+    \end{tikzpicture}
+    \label{fig:facebook-chart}
+    \caption{Facebook API Changes (11 Releases)}
+  \end{subfigure}
+
+  \begin{subfigure}[b]{\textwidth}
+    \def\dataSourceFileName{stripe.dat}
+    \begin{tikzpicture}[show background rectangle,tight background]
+      \begin{axis}[
+          date coordinates in=x,
+          ybar stacked,
+          bar width=5pt,
+          xticklabel = \year-\month,
+          xtick = {2011-09-15, 2012-01-01, 2013-01-01, 2014-01-01, 2014-10-01},
+    %xlabel={Timeline},
+          xlabel style={font=\small},
+          ylabel style={font=\small},
+          ylabel={No. of Changes},
+          xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
+          enlarge x limits=false,
+          height=0.20\textheight,
+          width=\textwidth,
+          legend to name=legend
+        ]
+        \input{case_study/change_frequency}
+      \end{axis}
+    \end{tikzpicture}
+    \label{fig:stripe-chart}
+    \caption{Stripe API Changes (30 Releases)}
+  \end{subfigure}
+
+  \begin{subfigure}[b]{\textwidth}
+    \def\dataSourceFileName{wordpress.dat}
+    \begin{tikzpicture}[show background rectangle,tight background]
+      \begin{axis}[
+    %title=WordPress REST API Changes (8 Releases),
+          date coordinates in=x,
+          ybar stacked,
+          bar width=5pt,
+          xticklabel = \year-\month,
+          xtick = {2013-08-07, 2013-11-01, 2014-03-01, 2014-06-26},
+    %xlabel={Timeline},
+          xlabel style={font=\small},
+          ylabel style={font=\small},
+          ylabel={No. of Changes},
+          xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
+          enlarge x limits=false,
+          height=0.20\textheight,
+          width=\textwidth,
+          legend to name=legend
+        ]
+        \input{case_study/change_frequency}
+      \end{axis}
+    \end{tikzpicture}
+    \label{fig:wordpress-chart}
+    \caption{WordPress REST API Changes (8 Releases)}
+  \end{subfigure}
+  \begin{subfigure}[b]{\textwidth}
+    \def\dataSourceFileName{github.dat}
+    \begin{tikzpicture}[show background rectangle,tight background]
+      \begin{axis}[
+    %title=GitHub API Changes (59 Releases),
+          date coordinates in=x,
+          ybar stacked,
+          bar width=5pt,
+          xticklabel = \year-\month,
+          xtick = {2012-09-05, 2012-12-01, 2013-03-01, 2013-06-01, 2013-09-01, 2013-12-01, 2014-03-01, 2014-10-06},
+    %xlabel={Timeline},
+          xlabel style={font=\small},
+          ylabel style={font=\small},
+          ylabel={No. of Changes},
+          xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
+          enlarge x limits=false,
+          height=0.20\textheight,
+          width=\textwidth,
+          legend to name=legend
+        ]
+        \input{case_study/change_frequency}
+      \end{axis}
+    \end{tikzpicture}
+    \label{fig:github-chart}
+    \caption{GitHub API Changes (59 Releases)}
+  \end{subfigure}
+
+
+
+\end{figure*}
+\begin{figure*}[!h]\ContinuedFloat
+
+
+  \begin{subfigure}[b]{\textwidth}
+    \def\dataSourceFileName{gmap.dat}
+    \begin{tikzpicture}[show background rectangle,tight background]
+      \begin{axis}[
+    %title=Google Maps Web API (102 Releases),
+          date coordinates in=x,
+          ybar stacked,
+          bar width=5pt,
+          xticklabel = \year-\month,
+          xtick = {2011-01-06, 2011-07-01, 2012-01-01, 2012-07-01, 2013-01-01, 2013-07-01, 2014-01-01, 2014-07-01, 2014-09-18},
+    %xlabel={Timeline},
+          xlabel style={font=\small},
+          ylabel style={font=\small},
+          ylabel={No. of Changes},
+          xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
+          enlarge x limits=false,
+          height=0.20\textheight,
+          width=\textwidth,
+          legend to name=legend
+        ]
+        \input{case_study/change_frequency}
+      \end{axis}
+    \end{tikzpicture}
+    \label{fig:gmaps-chart}
+    \caption{Google Maps Web API (102 Releases)}
+  \end{subfigure}
+
+
+  \begin{subfigure}[b]{\textwidth}
+    \def\dataSourceName{Salesforce Force.com and Chatter REST}
+    \def\dataSourceFileName{salesforce.dat}
+    \begin{tikzpicture}[show background rectangle,tight background]
+      \begin{axis}[
+    %title=Salesforce REST API (4 Releases),
+          date coordinates in=x,
+          ybar stacked,
+          bar width=5pt,
+          xticklabel = \year-\month,
+          xtick = {2013-10-04, 2014-01-01, 2014-04-01, 2014-07-01, 2014-10-18},
+    %label={Timeline},
+          xlabel style={font=\small},
+          ylabel style={font=\small},
+          ylabel={No. of Changes},
+          xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
+          enlarge x limits=false,
+          height=0.20\textheight,
+          width=\textwidth,
+          legend to name=legend
+        ]
+        \input{case_study/change_frequency}
+      \end{axis}
+    \end{tikzpicture}
+    \label{fig:salesforce-chart}
+    \caption{Salesforce REST API (4 Releases)}
+  \end{subfigure}
+
+%% Add the legend here
+  \begin{center}
+    \begin{subfigure}[b]{10cm}
+      \includegraphics[keepaspectratio, width=10cm]{legend.png}
+      \caption{Legend}
+    \end{subfigure}
+  \end{center}
+  \caption{Case Study - Change Profiles for the Web APIs.}
+  \label{fig:proflie}
+\end{figure*}
 
 \subsubsection{Upgrade Mode} % (fold)
 
@@ -493,7 +487,7 @@ From our case studies, we found the Web APIs followed several different approach
 
 Both of these categories, single and multiple available versions, have their advantages and disadvantages. Forcing API clients to use a single stable version makes it easy to maintain the Web APIs at the expense of scheduling flexibility for API users. These APIs keep a deprecated version for a limited period of time to provide a buffer time for the API users. For example, Google Calendar API is supporting its deprecated version for 6 months.
 
-Maintaining multiple versions of the Web APIs provide more scheduling flexibility to the API clients but requires more effort from the API publisher. As a result, not all the older versions are maintained. When API clients lag far behind the latest version, migrating to the latest version becomes harder. For example, here is an excerpt of a comment from a Stripe Web API client developer \footnote{\url{https://groups.google.com/a/lists.stripe.com/forum/#!searchin/api-discuss/version/api-discuss/x8TM-yHnhYQ/y9JJKytSiUAJ}}:
+Maintaining multiple versions of the Web APIs provide more scheduling flexibility to the API clients but requires more effort from the API publisher. As a result, not all the older versions are maintained. When API clients lag far behind the latest version, migrating to the latest version becomes harder. For example, here is an excerpt of a comment from a Stripe Web API client developer \footnote{\url{https://groups.google.com/a/lists.stripe.com/forum/\#!searchin/api-discuss/version/api-discuss/x8TM-yHnhYQ/y9JJKytSiUAJ}}:
 
 \small
 ``...I just learned that we're about 14 versions behind and would like to work on upgrading but there are lots of breaking changes...''
@@ -503,324 +497,10 @@ While both the forced and on demand modes are found in practice, future work nee
 
 
 
+
 \subsubsection{Change Profiles}
 The Web APIs evolve at different frequencies as well as the actual change that takes place during their evolution varies from one API to another. Fig. \ref{fig:proflie} shows an aggregated view of the count of different categories of changes observed for different Web APIs based on the aforementioned coding scheme.
 
-%
-%
-%\begin{figure*}[!htp]
-%\begin{subfigure}[b]{\textwidth}
-%\def\dataSourceFileName{facebookx.dat}
-%\begin{tikzpicture}[show background rectangle,tight background]
-%  \begin{axis}[
-%    ybar stacked,
-%    bar width=5pt,
-%    %title=Facebook API Changes (11 Releases),
-%    date coordinates in=x,
-%    xticklabel = \year-\month,
-%    xtick = {2013-01-09, 2013-04-01, 2013-07-01, 2013-10-01, 2014-01-01, 2014-04-01, 2014-08-01, 2014-07-02},
-%    %xlabel={Timeline},
-%    xlabel style={font=\small},
-%    ylabel style={font=\small},
-%    ylabel={No. of Changes},
-%    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-%    enlarge x limits=false,
-%    height=0.20\textheight,
-%    %width=\linewidth,
-%    legend style={legend pos=north west,font=\tiny, legend columns=4},
-%    legend to name=legend
-%    ]
-%    \input{change_frequency}
-%  \end{axis}
-%\end{tikzpicture}
-%\caption{Facebook API Changes (11 Releases)}
-%\end{subfigure}
-%
-%\begin{subfigure}{\textwidth}
-%%\caption{Stripe API Changes (30 Releases)}
-%\def\dataSourceFileName{stripe.dat}
-%\begin{tikzpicture}[show background rectangle,tight background]
-%  \begin{axis}[
-%    %title=Stripe API Changes (30 Releases),
-%    date coordinates in=x,
-%    ybar stacked,
-%    bar width=5pt,
-%    xticklabel = \year-\month,
-%    xtick = {2011-09-15, 2012-01-01, 2013-01-01, 2014-01-01, 2014-10-01},
-%    %xlabel={Timeline},
-%    xlabel style={font=\small},
-%    ylabel style={font=\small},
-%    ylabel={No. of Changes},
-%    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-%    enlarge x limits=false,
-%    height=0.20\textheight,
-%    %width=\linewidth,
-%    legend to name=legend
-%    ]
-%    \input{change_frequency}
-%  \end{axis}
-%\end{tikzpicture}
-%\end{subfigure}
-%
-%\begin{subfigure}{\textwidth}
-%%\caption{WordPress REST API Changes (8 Releases)}
-%\def\dataSourceFileName{wordpress.dat}
-%\begin{tikzpicture}[show background rectangle,tight background]
-%  \begin{axis}[
-%    %title=WordPress REST API Changes (8 Releases),
-%    date coordinates in=x,
-%    ybar stacked,
-%    bar width=5pt,
-%    xticklabel = \year-\month,
-%    xtick = {2013-08-07, 2013-11-01, 2014-03-01, 2014-06-26},
-%    %xlabel={Timeline},
-%    xlabel style={font=\small},
-%    ylabel style={font=\small},
-%    ylabel={No. of Changes},
-%    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-%    enlarge x limits=false,
-%    height=0.20\textheight,
-%    %width=\linewidth,
-%    legend to name=legend
-%    ]
-%    \input{change_frequency}
-%  \end{axis}
-%\end{tikzpicture}
-%\end{subfigure}
-%
-%\begin{subfigure}{\textwidth}
-%%\caption{GitHub API Changes (59 Releases)}
-%\def\dataSourceFileName{github.dat}
-%\begin{tikzpicture}[show background rectangle,tight background]
-%  \begin{axis}[
-%    %title=GitHub API Changes (59 Releases),
-%    date coordinates in=x,
-%    ybar stacked,
-%    bar width=5pt,
-%    xticklabel = \year-\month,
-%    xtick = {2012-09-05, 2012-12-01, 2013-03-01, 2013-06-01, 2013-09-01, 2013-12-01, 2014-03-01, 2014-10-06},
-%    %xlabel={Timeline},
-%    xlabel style={font=\small},
-%    ylabel style={font=\small},
-%    ylabel={No. of Changes},
-%    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-%    enlarge x limits=false,
-%    height=0.20\textheight,
-%    %width=\linewidth,
-%    legend to name=legend
-%    ]
-%    \input{change_frequency}
-%  \end{axis}
-%\end{tikzpicture}
-%\end{subfigure}
-%
-%\begin{subfigure}{\textwidth}
-%%\caption{Google Maps Web API (102 Releases}
-%\def\dataSourceFileName{gmap.dat}
-%\begin{tikzpicture}[show background rectangle,tight background]
-%  \begin{axis}[
-%    %title=Google Maps Web API (102 Releases),
-%    date coordinates in=x,
-%    ybar stacked,
-%    bar width=5pt,
-%    xticklabel = \year-\month,
-%    xtick = {2011-01-06, 2011-07-01, 2012-01-01, 2012-07-01, 2013-01-01, 2013-07-01, 2014-01-01, 2014-07-01, 2014-09-18},
-%    %xlabel={Timeline},
-%    xlabel style={font=\small},
-%    ylabel style={font=\small},
-%    ylabel={No. of Changes},
-%    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-%    enlarge x limits=false,
-%    height=0.20\textheight,
-%    %width=\linewidth,
-%    legend to name=legend
-%    ]
-%    \input{change_frequency}
-%  \end{axis}
-%\end{tikzpicture}
-%\end{subfigure}
-%
-%\begin{subfigure}{\textwidth}
-%%\caption{[Salesforce REST API (4 Releases)]}
-%\def\dataSourceName{Salesforce Force.com and Chatter REST}
-%\def\dataSourceFileName{salesforce.dat}
-%\begin{tikzpicture}[show background rectangle,tight background]
-%  \begin{axis}[
-%    %title=Salesforce REST API (4 Releases),
-%    date coordinates in=x,
-%    ybar stacked,
-%    bar width=5pt,
-%    xticklabel = \year-\month,
-%    xtick = {2013-10-04, 2014-01-01, 2014-04-01, 2014-07-01, 2014-10-18},
-%    %label={Timeline},
-%    xlabel style={font=\small},
-%    ylabel style={font=\small},
-%    ylabel={No. of Changes},
-%    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-%    enlarge x limits=false,
-%    height=0.20\textheight,
-%    %width=0.9\linewidth,
-%    legend to name=legend
-%    ]
-%    \input{change_frequency}
-%  \end{axis}
-%\end{tikzpicture}
-%\end{subfigure}
-%
-%\begin{subfigure}{\textwidth}
-%\ref{legend}
-%\end{subfigure}
-%
-%\caption{Case Study - Change Profiles for the Web APIs.}
-%\end{figure*}
-%
-
-%%%%%%%%%%%%%%%%%%
-%
-%x.dat}
-%\begin{tikzpicture}[show background rectangle,tight background]
-%  \begin{axis}[
-%    ybar stacked,
-%    bar width=5pt,
-%    title=Facebook API Changes (11 Releases),
-%    date coordinates in=x,
-%    xticklabel = \year-\month,
-%    xtick = {2013-01-09, 2013-04-01, 2013-07-01, 2013-10-01, 2014-01-01, 2014-04-01, 2014-08-01, 2014-07-02},
-%    xlabel={Timeline},
-%    xlabel style={font=\small},
-%    ylabel style={font=\small},
-%    ylabel={No. of Changes},
-%    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-%    enlarge x limits=false,
-%    height=0.20\textheight,
-%    width=\linewidth,
-%    legend style={legend pos=north west,font=\tiny, legend columns=4},
-%    legend to name=legend
-%    ]
-%    \input{change_frequency}
-%  \end{axis}
-%\end{tikzpicture}
-%
-%
-%\ref{legend}
-%
-%\def\dataSourceFileName{stripe.dat}
-%\begin{tikzpicture}[show background rectangle,tight background]
-%  \begin{axis}[
-%    title=Stripe API Changes (30 Releases),
-%    date coordinates in=x,
-%    ybar stacked,
-%    bar width=5pt,
-%    xticklabel = \year-\month,
-%    xtick = {2011-09-15, 2012-01-01, 2013-01-01, 2014-01-01, 2014-10-01},
-%    xlabel={Timeline},
-%    xlabel style={font=\small},
-%    ylabel style={font=\small},
-%    ylabel={No. of Changes},
-%    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-%    enlarge x limits=false,
-%    height=0.20\textheight,
-%    width=\linewidth,
-%    legend to name=legend
-%    ]
-%    \input{change_frequency}
-%  \end{axis}
-%\end{tikzpicture}
-%
-%
-%\def\dataSourceFileName{wordpress.dat}
-%\begin{tikzpicture}[show background rectangle,tight background]
-%  \begin{axis}[
-%    title=WorPress REST API Changes (8 Releases),
-%    date coordinates in=x,
-%    ybar stacked,
-%    bar width=5pt,
-%    xticklabel = \year-\month,
-%    xtick = {2013-08-07, 2013-11-01, 2014-03-01, 2014-06-26},
-%    xlabel={Timeline},
-%    xlabel style={font=\small},
-%    ylabel style={font=\small},
-%    ylabel={No. of Changes},
-%    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-%    enlarge x limits=false,
-%    height=0.20\textheight,
-%    width=\linewidth,
-%    legend to name=legend
-%    ]
-%    \input{change_frequency}
-%  \end{axis}
-%\end{tikzpicture}
-%
-%
-%\def\dataSourceFileName{github.dat}
-%\begin{tikzpicture}[show background rectangle,tight background]
-%  \begin{axis}[
-%    title=GitHub API Changes (59 Releases),
-%    date coordinates in=x,
-%    ybar stacked,
-%    bar width=5pt,
-%    xticklabel = \year-\month,
-%    xtick = {2012-09-05, 2012-12-01, 2013-03-01, 2013-06-01, 2013-09-01, 2013-12-01, 2014-03-01, 2014-10-06},
-%    xlabel={Timeline},
-%    xlabel style={font=\small},
-%    ylabel style={font=\small},
-%    ylabel={No. of Changes},
-%    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-%    enlarge x limits=false,
-%    height=0.20\textheight,
-%    width=\linewidth,
-%    legend to name=legend
-%    ]
-%    \input{change_frequency}
-%  \end{axis}
-%\end{tikzpicture}
-%
-%\def\dataSourceFileName{gmap.dat}
-%\begin{tikzpicture}[show background rectangle,tight background]
-%  \begin{axis}[
-%    title=Google Maps Web API (102 Releases),
-%    date coordinates in=x,
-%    ybar stacked,
-%    bar width=5pt,
-%    xticklabel = \year-\month,
-%    xtick = {2011-01-06, 2011-07-01, 2012-01-01, 2012-07-01, 2013-01-01, 2013-07-01, 2014-01-01, 2014-07-01, 2014-09-18},
-%    xlabel={Timeline},
-%    xlabel style={font=\small},
-%    ylabel style={font=\small},
-%    ylabel={No. of Changes},
-%    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-%    enlarge x limits=false,
-%    height=0.20\textheight,
-%    width=\linewidth,
-%    legend to name=legend
-%    ]
-%    \input{change_frequency}
-%  \end{axis}
-%\end{tikzpicture}
-%
-%\def\dataSourceName{Salesforce Force.com and Chatter REST}
-%\def\dataSourceFileName{salesforce.dat}
-%\begin{tikzpicture}[show background rectangle,tight background]
-%  \begin{axis}[
-%    title=Salesforce REST API (4 Releases),
-%    date coordinates in=x,
-%    ybar stacked,
-%    bar width=5pt,
-%    xticklabel = \year-\month,
-%    xtick = {2013-10-04, 2014-01-01, 2014-04-01, 2014-07-01, 2014-10-18},
-%    xlabel={Timeline},
-%    xlabel style={font=\small},
-%    ylabel style={font=\small},
-%    ylabel={No. of Changes},
-%    xticklabel style= {rotate=90,anchor=near xticklabel,font=\tiny},
-%    enlarge x limits=false,
-%    height=0.20\textheight,
-%    width=0.9\linewidth,
-%    legend to name=legend
-%    ]
-%    \input{change_frequency}
-%  \end{axis}
-%\end{tikzpicture}
 
 The APIs here show very different change trajectories. Facebook API shows an alternating pattern of smaller and larger number of changes between subsequent versions, and each release consists of multiple categories of changes. On the other hand, Stripe and GitHub API changes are more frequent, but on the majority of the releases only include a single category of change. WordPress REST API releases contain multiple categories of changes, but shows only a single API element removal for the studied period. GoogleMaps API changes are also very frequent, dominated by AddAPIElement and BehaviorChange categories in a way that once new API elements are introduced, the subsequent releases primarily focus on bug fixes. The GoogleMaps API shows signs of stability with time. The Salesforce API changelog shows a different picture. Unlike the other APIs studied, Salesforce API evolves quarterly and involves a larger number of API elements with each release. We observed most Web API releases broke backward compatibility as shown by the presence of colors in addition to the green areas on the charts. We consider API changes to be backward compatible when changes are limited to only AddAPIElements category.
 
@@ -849,7 +529,7 @@ Web API documentation is used by API users as the primary source of information 
 
 Some of the studied Web APIs also provide live web browser based API explorers, where API users can make API calls without needing to write any code. However, the studied Web APIs that offered Live API Explorer only did so for the latest API versions.
 
-Web API documentation needs to include additional information compared to local APIs since HTTP is used for communication. As an API evolves lack of documentation for older API versions causes difficulties with the upgrade process as found in the following comment from a Stripe API user\footnote{\url{https://groups.google.com/a/lists.stripe.com/forum/#!searchin/api-discuss/version/api-discuss/li4PyVcweiw/NT9SFTtF-vQJ}}
+Web API documentation needs to include additional information compared to local APIs since HTTP is used for communication. As an API evolves lack of documentation for older API versions causes difficulties with the upgrade process as found in the following comment from a Stripe API user\footnote{\url{https://groups.google.com/a/lists.stripe.com/forum/\#!searchin/api-discuss/version/api-discuss/li4PyVcweiw/NT9SFTtF-vQJ}}
 
 \small
 \begin{quotation}
@@ -916,9 +596,5 @@ Given the state of practice we found a wide variety of ways to evolve Web APIs i
 \section{Conclusion}
 Web API evolution poses challenges since a change may break applications that are developed by different teams and organizations. We presented a case study of Web API evolution focusing on the challenges involved with versioning, documentation and communication of API changes. Recommendations for practitioners from our analysis include the use of semantic versioning, separate releases for bug fixes and new features, auto generated API documentation cross-linked with changelogs and providing live API explorers. A list of open research problems are discussed related to Web API evolution that we want to solve in our future work.
 
-\bibliographystyle{./IEEEtran}
-\bibliography{IEEEabrv,references}
-
-\end{document}
-
-
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,case_study/references}

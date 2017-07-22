@@ -1,0 +1,20 @@
+\addplot[fill=green] table[x=Date, y=AddAPIElements]{plotdata/\dataSourceFileName}
+\closedcycle;
+\addplot[fill=red] table[x=Date, y=RemoveAPIElements]{plotdata/\dataSourceFileName}
+\closedcycle;
+\addplot[fill=orange] table[x=Date, y=ChangeAPIElements]{plotdata/\dataSourceFileName}
+\closedcycle;
+\addplot[fill=gray] table[x=Date, y=ChangeFieldDataType]{plotdata/\dataSourceFileName}
+\closedcycle;
+\addplot[fill=violet] table[x=Date, y=ErrorConditionChange]{plotdata/\dataSourceFileName}
+\closedcycle;
+\addplot[fill=yellow] table[x=Date, y=ChangeAuthentication]{plotdata/\dataSourceFileName}
+\closedcycle;
+\addplot[fill=magenta] table[x=Date, y=BehaviorChange]{plotdata/\dataSourceFileName}
+\closedcycle;
+\addplot[fill=blue] table[x=Date, y=ChangeAuthorization]{plotdata/\dataSourceFileName}
+\closedcycle;
+
+\legend{AddAPIElements, RemoveAPIElements, ChangeAPIElements,
+  ChangeFieldDataType, ErrorConditionChange,
+  ChangeAuthentication, BehaviorChange, ChangeAuthorization}
