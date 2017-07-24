@@ -161,9 +161,19 @@ In Chapter~\ref{chapter:spy_rest}, I present the following list of REST API docu
 
 In Chapter~\ref{chapter:demo_paper}, I present a prototype implementation of the aformentioned technique to demonstrate a reusable tool and compare it against the existing REST API documentation tools that rely on custom API description languages. I also present an example where automated test code can be used to generate and maintain REST API documentation using the developed tool.
 
-I discuss an industrial evaluation of the proposed technique and the tool based on an eigtheen month period of production use at Cisco in Chapter~\ref{chapter:cisco_study}. From the study I found that it is feasible to use the interception technique and automated tests to document REST APIs satisfying the aforementioned requirements for an evolving API. Automated always-updated REST API documentation was found to help establish a quick feedback cycle among the stakeholders. I also discuss several refinements and limitations of the proposed technique based on the lessons learned from this case study.
+I discuss an industrial evaluation of the proposed technique and the tool in Chapter~\ref{chapter:cisco_study}. The evaluation is carried out based on the data collected from an eighteen month of production use of SpyREST at Cisco. From the study I found that it is feasible to use the proposed interception technique and automated tests to document evolving REST APIs satisfying the aforementioned requirements. Automated always-updated REST API documentation was found to help establish a quick feedback cycle among the stakeholders. I also discuss several refinements and limitations of the proposed technique based on the lessons learned from this case study.
 
-In Chapter~\ref{chapter:controlled_study}, I discuss a controlled study performed with 26 professional software engineers to undestand the impact of usage examples on REST API client developers. I provided an enahanced REST API documentation with usage examples containing data from API test code to participants of one of two study groups to perform the same set of API tasks. I found that without usage examples participants faced obstacles related to using appropriate data types, data formats, and required elements in the HTTP headers, query parameters, and request body. I observed that providing usage examples with data taken from API test code improves API client developer success rate, reduces required trial attempts, and improves satisfaction ratings.
+In Chapter~\ref{chapter:controlled_study}, I discuss a controlled study performed with 26 professional software engineers to undestand the impact of usage examples in API documentation on REST API client developers. I enahanced an existing REST API documentation with usage examples containing data from the API's test code and provided it to the participants of one of two study groups. I found that participants using the original documentation without usage examples faced obstacles related to using appropriate data types, data formats, and required elements in the HTTP input. I observed that providing usage examples with data taken from API test code reduces the obstacles and improves API client developer success rate, reduces required trial attempts, and improves satisfaction ratings.
+
+In summary, this thesis makes the following key contributions to the body of research in software engineering:
+
+\begin{enumerate}
+  \item A list of REST API documentation requirements derived from the existing literature and the current state of industry practices to be used as a guideline by practitioners and researchers.
+  \item SpyREST, a novel technique and a reusable tool that uses interception to automatically generate and maintain evolving REST API documentation with usage examples from executable code.
+  \item An industrial evaluation of SpyREST to demonstrate the feasibility of the proposed technique that practitioners can follow to improve their REST API documentation experience.
+  \item An empricial evidence showing the common obstacles faced by REST API client developers that can be reduced with usage examples to help the prioritization of REST API documentation efforts.
+\end{enumerate}
+
 
 \include{case_study/case_study}
 \include{spy_rest/spy_rest}
