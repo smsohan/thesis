@@ -181,5 +181,16 @@ In summary, this thesis makes the following key contributions to the body of res
 \include{cisco_study/cisco_study}
 \include{controlled_study/controlled_study}
 \chapter{Conclusion}
+
+In this thesis, I presented a novel idea of using interception to automate the process of REST API documentation with usage examples from executable code. I started by investigating the current industry practices and challenges associated with developing and maintaining evolving Web APIs. I found modern Web APIs predominently embraced REST architectural style, but the existing literature had primarily focused on solving problems related to the SOAP APIs. I also found that most REST APIs are documented using manual approaches that are time consuming and error- prone to maintain when an API evolves several times a month. Through my research, I aimed to fill this gap between the REST API documentation challenges and the existing literature by finding a reusable solution to the common problems.
+
+
+In my second study, I investigated the existing literature on API usablity to derive a set of re- quirements that are applicable to REST API documentation and proposed an idea of automatically generating and maintaining REST API documentation from executable code. I found that existing techniques for REST API documentation systems relied on custom API description languagees that are manually maintained as a parallel artifact to the API code, causing potential drift between the actual API and it’s documentation as it evolves over time. By using interception, I have demon- strated that it is possible to automatically record and synthesize the recorded API traffic to generate pragmatic REST API documentation from its test code. Additionally, the technique allows API de- velopers to collaboratively document the API with realistic and executable examples for multiple versions as the API evolves.
+
+In my third study, I evaluated the proposed technique in an industrial setup and found it to be a pragmatic solution for production use. The concept of leveraging API tests to maintain an always-updated API documentation has helped the organization establish a quick feedback loop during the API development process. Practitioners can incorporate the findings from this study to improve their own REST API documentation practice.
+
+To understand the impact of usage examples that can be derived from API tests, I performed the last study with professional software engineers and found that the examples help reduce the common obstacles faced by REST API client developers. I derived a list of recommendations for documenting usage examples to satisfy the common information needs when REST API client developers use an API. Practitiones can follow the recommendations as guideline to allocate ap- propriate priority while documenting their REST APIs in a resource constrained environment.
+
 \appendix
+\include{appendix}
 \end{document}

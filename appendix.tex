@@ -1,0 +1,490 @@
+\chapter{Source Code Fragments of the Spy from Chapter~\ref{chapter:demo_paper}}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+   language=JavaScript,
+   %backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
+
+
+\begin{lstlisting}[caption=index.js]
+(function() {
+  var ApiThough;
+
+  ApiThough = require('./lib/api_through');
+
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
+  process.on('uncaughtException', function(err) {
+    console.error('uncaughtException');
+    console.error(err);
+    return console.error(err.stack);
+  });
+
+  new ApiThough().start();
+
+}).call(this);
+\end{lstlisting}
+
+
+\begin{lstlisting}[caption=lib/api\_through.js]
+(function() {
+  var ApiThrough, PassThrough;
+
+  module.exports = function() {
+    return new ApiThrough();
+  };
+
+  PassThrough = require('stream').PassThrough;
+
+  ApiThrough = (function() {
+    var Proxy, SSLCert, fs;
+
+    Proxy = require('http-mitm-proxy');
+
+    SSLCert = require('./ssl_cert');
+
+    fs = require('fs');
+
+    function ApiThrough() {
+      var host, mongooose;
+      mongooose = require('mongoose');
+      host = process.env["MONGODB_PORT_27017_TCP_ADDR"] || 'localhost';
+      console.log("Connecting to mongo at " + host);
+      mongooose.connect("mongodb://" + host + ":27017/apis");
+    }
+
+    ApiThrough.prototype.start = function() {
+      var proxy;
+      proxy = new Proxy();
+      proxy.use(this);
+      proxy.onCertificateMissing = (function(_this) {
+        return function(ctx, files, callback) {
+          return _this.onCertificateMissing(ctx, files, callback);
+        };
+      })(this);
+      proxy.listen({
+        port: process.env['PROXY_PORT'] || 9081,
+        sslCertCacheDir: './scripts/certs/http-mitm-proxy'
+      });
+      return this.proxy = proxy;
+    };
+
+    ApiThrough.prototype.onCertificateMissing = function(ctx, files, callback) {
+      var sslCert;
+      console.log('Looking for "%s" certificates', ctx.hostname);
+      console.log('"%s" missing', ctx.files.keyFile);
+      console.log('"%s" missing', ctx.files.certFile);
+      sslCert = new SSLCert(ctx.hostname);
+      return sslCert.create((function(_this) {
+        return function() {
+          return callback(null, {
+            keyFileData: fs.readFileSync(ctx.files.keyFile),
+            certFileData: fs.readFileSync(ctx.files.certFile)
+          });
+        };
+      })(this));
+    };
+
+    ApiThrough.prototype.onError = function(ctx, err) {
+      console.error('proxy error:', err);
+      return console.error('proxy error stack:', err.stack);
+    };
+
+    ApiThrough.prototype.onRequest = function(ctx, callback) {
+      var ApiExample, User, apiExample, responseAggregator, responseBody;
+      ApiExample = require('./api_example');
+      User = require('./user');
+      ctx.onError((function(_this) {
+        return function(ctx, err) {
+          return _this.onError(ctx, err);
+        };
+      })(this));
+      apiExample = new ApiExample();
+      apiExample.populateFromRequest(ctx.clientToProxyRequest);
+      apiExample.setFullUrl(ctx.isSSL, ctx.proxyToServerRequestOptions);
+      responseBody = '';
+      responseAggregator = new PassThrough();
+      responseAggregator.on('finish', function() {
+        apiExample.responseBody = responseBody;
+        apiExample.stripResponseBody();
+        return User.findOne({
+          api_token: apiExample.apiToken
+        }, function(err, user) {
+          var apiExampleRaw;
+          console.log('findOne', err, user);
+          if (user) {
+            apiExample.userId = user.id;
+          }
+          apiExampleRaw = apiExample.toObject();
+          delete apiExampleRaw._id;
+          return ApiExample.findOneAndUpdate({
+            digest: apiExample.digest
+          }, apiExampleRaw, {
+            upsert: true
+          }, function(error) {
+            if (error != null) {
+              return console.log("Failed to save due to error", error);
+            }
+          });
+        });
+      });
+      ctx.addResponseFilter(responseAggregator);
+      ctx.onRequestData(function(ctx, chunk, callback) {
+        apiExample.requestBody += chunk.toString('utf8');
+        return callback(null, chunk);
+      });
+      ctx.onResponse(function(ctx, callback) {
+        apiExample.responseHeaders = ctx.serverToProxyResponse.headers;
+        apiExample.statusCode = ctx.serverToProxyResponse.statusCode;
+        ctx.serverToProxyResponse.on("finish", function() {
+          return console.log("FINISH");
+        });
+        return callback();
+      });
+      ctx.onResponseData(function(ctx, chunk, callback) {
+        responseBody += chunk.toString('utf8');
+        return callback(null, chunk);
+      });
+      return callback();
+    };
+
+    return ApiThrough;
+
+  })();
+
+}).call(this);
+
+\end{lstlisting}
+
+
+\begin{lstlisting}[caption=lib/api\_example.js]
+
+(function() {
+  var ApiExample, ApiExamplesSchema, CUSTOM_HEADERS, VERSION_IN_HEADER, VERSION_IN_URL, crypto, inflector, mongoose, url, validator, _u;
+
+  mongoose = require('mongoose');
+
+  url = require('url');
+
+  _u = require('underscore');
+
+  crypto = require('crypto');
+
+  validator = require('validator');
+
+  inflector = require('i')();
+
+  VERSION_IN_HEADER = /v(\d|\.\d)+/;
+
+  VERSION_IN_URL = /\/(v\d[^\/]*)/;
+
+  CUSTOM_HEADERS = {
+    DESC_HEADER: "x-spy-rest-desc",
+    VERSION_HEADER: "x-spy-rest-version",
+    RESOURCE_HEADER: "x-spy-rest-resource",
+    API_TOKEN_HEADER: "x-spy-rest-api-token",
+    HOST_HEADER: 'x-spy-rest-host',
+    NO_STRIP_HEADER: 'x-spy-rest-no-strip',
+    ACTION_HEADER: 'x-spy-rest-action'
+  };
+
+  ApiExamplesSchema = new mongoose.Schema({
+    description: {
+      type: String
+    },
+    version: {
+      type: String,
+      "default": 'Default'
+    },
+    resource: {
+      type: String
+    },
+    action: {
+      type: String
+    },
+    url: {
+      type: String
+    },
+    templatedURL: {
+      type: String
+    },
+    query: {
+      type: Object
+    },
+    host: {
+      type: String
+    },
+    http_method: {
+      type: String
+    },
+    requestBody: {
+      type: String,
+      "default": ''
+    },
+    requestHeaders: {
+      type: Object
+    },
+    statusCode: {
+      type: Number
+    },
+    responseHeaders: {
+      type: Object
+    },
+    responseBody: {
+      type: String,
+      "default": ''
+    },
+    strippedResponseBody: {
+      type: String
+    },
+    recordedAt: {
+      type: Date,
+      "default": function() {
+        return new Date();
+      }
+    },
+    fullURL: {
+      type: String,
+      "default": ''
+    },
+    digest: {
+      type: String,
+      "default": ''
+    },
+    requiresAuth: {
+      type: Boolean,
+      "default": false
+    },
+    apiToken: {
+      type: String,
+      "default": ''
+    },
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      "default": null
+    },
+    authType: {
+      type: String
+    }
+  }, {
+    collection: 'api_examples'
+  });
+
+  ApiExamplesSchema.index({
+    host: 1,
+    version: 1,
+    resource: 1,
+    action: 1
+  });
+
+  ApiExample = mongoose.model('ApiExample', ApiExamplesSchema);
+
+  ApiExample.prototype.populateFromRequest = function(request) {
+    this.host = request.headers[CUSTOM_HEADERS.HOST_HEADER] || request.headers.host;
+    this.url = this.filteredUrl(request.url);
+    this.http_method = request.method;
+    this.requestHeaders = request.headers;
+    this.description = request.headers[CUSTOM_HEADERS.DESC_HEADER];
+    this.version = request.headers[CUSTOM_HEADERS.VERSION_HEADER] || this.guessedVersion() || 'Default';
+    this.resource = request.headers[CUSTOM_HEADERS.RESOURCE_HEADER] || this.guessedResource();
+    this.query = this.parsedUrl().query;
+    this.apiToken = this.requestHeaders[CUSTOM_HEADERS.API_TOKEN_HEADER];
+    this.filterAuthHeaders();
+    this.action = this.computedAction();
+    return this.digest = this.computeDigest();
+  };
+
+  ApiExample.prototype.stripResponseBody = function() {
+    var StrippedObject, strippedObject;
+    if (!this.shouldStrip()) {
+      return;
+    }
+    StrippedObject = require('./stripped_object');
+    strippedObject = new StrippedObject();
+    try {
+      return this.strippedResponseBody = JSON.stringify(strippedObject.strip(JSON.parse(this.responseBody)));
+    } catch (_error) {
+      return this.strippedResponseBody = this.responseBody;
+    }
+  };
+
+  ApiExample.prototype.saveWithErrorLog = function() {
+    return this.save(function(error) {
+      if (error) {
+        return console.error("Failed to save because of error", error);
+      }
+    });
+  };
+
+  ApiExample.prototype.guessedVersion = function() {
+    return this.guessedVersionFromURL() || this.guessedVersionAcceptHeader();
+  };
+
+  ApiExample.prototype.guessedVersionFromURL = function() {
+    if (this.url == null) {
+      return null;
+    }
+    if (this.url.match(VERSION_IN_URL)) {
+      return RegExp.$1;
+    }
+  };
+
+  ApiExample.prototype.guessedVersionAcceptHeader = function() {
+    var matches;
+    if (this.requestHeaders['accept'] == null) {
+      return null;
+    }
+    matches = this.requestHeaders['accept'].match(VERSION_IN_HEADER);
+    if (matches != null) {
+      return matches[0];
+    }
+  };
+
+  ApiExample.prototype.parsedUrl = function() {
+    return url.parse(this.url, true);
+  };
+
+  ApiExample.prototype.guessedResource = function() {
+    var parts, possibleResource;
+    parts = this.parsedUrl().pathname.split('/').reverse();
+    possibleResource = _u.find(parts, function(part) {
+      return part.match(/^[^\d].*$/);
+    });
+    if (possibleResource != null) {
+      return possibleResource.split('.')[0];
+    }
+  };
+
+  ApiExample.prototype.computedAction = function() {
+    if (this.requestHeaders[CUSTOM_HEADERS.ACTION_HEADER] != null) {
+      return "" + this.http_method + " " + this.requestHeaders[CUSTOM_HEADERS.ACTION_HEADER];
+    } else {
+      this.templatizeURL();
+      return "" + this.http_method + " " + this.templatedURL;
+    }
+  };
+
+  ApiExample.prototype.setFullUrl = function(isSSL, hostPort) {
+    var host, port, scheme;
+    scheme = isSSL ? "https" : "http";
+    host = hostPort.host;
+    port = '';
+    if (hostPort.port) {
+      if (scheme === "http" && hostPort.port !== 80) {
+        port = ":" + hostPort.port;
+      } else if (scheme === "https" && hostPort.port !== 443) {
+        port = ":" + hostPort.port;
+      }
+    }
+    return this.fullURL = "" + scheme + "://" + host + port + this.url;
+  };
+
+  ApiExample.prototype.filterAuthHeaders = function() {
+    return this.requestHeaders = _u.reduce(this.requestHeaders, (function(_this) {
+      return function(filteredHeaders, value, key) {
+        if (key === 'authorization') {
+          console.log("value");
+          console.log(value);
+          if (value.match(/Basic/)) {
+            console.log(value);
+            _this.authType = 'Basic';
+            filteredHeaders[key] = 'Basic FILTERED';
+          } else {
+            filteredHeaders[key] = 'FILTERED';
+          }
+          _this.requiresAuth = true;
+        } else {
+          filteredHeaders[key] = value;
+        }
+        return filteredHeaders;
+      };
+    })(this), {});
+  };
+
+  ApiExample.prototype.filteredUrl = function(rawUrl) {
+    var api_key_param, parasedRawUrl;
+    if (!rawUrl) {
+      return rawUrl;
+    }
+    parasedRawUrl = url.parse(rawUrl, true);
+    api_key_param = _u.find(_u.keys(parasedRawUrl.query), function(param) {
+      return param.toLowerCase() === 'api_key';
+    });
+    if (!api_key_param) {
+      return rawUrl;
+    }
+    return rawUrl.replace("" + api_key_param + "=" + parasedRawUrl.query[api_key_param], "" + api_key_param + "=FILTERED");
+  };
+
+  ApiExample.prototype.computeDigest = function() {
+    var hash, text;
+    text = "__VERSION__" + this.version + "__RESOURCE__" + this.resource + "__URL__" + this.action + "__DESC__" + this.description;
+    hash = crypto.createHash('sha');
+    console.log("digest for text " + text);
+    hash.update(text);
+    return hash.digest('base64');
+  };
+
+  ApiExample.prototype.shouldStrip = function() {
+    var strip_header_value;
+    if (!this.requestHeaders) {
+      return true;
+    }
+    console.log("HERE");
+    strip_header_value = this.requestHeaders[CUSTOM_HEADERS.NO_STRIP_HEADER];
+    return strip_header_value !== 'true';
+  };
+
+  ApiExample.prototype.templatizeURL = function() {
+    var parts, path, templatedParts;
+    path = this.parsedUrl().pathname;
+    parts = path.split("/");
+    templatedParts = _u.map(parts, function(part, index) {
+      var previousPart;
+      previousPart = index > 0 ? parts[index - 1] : '';
+      if (validator.isNumeric(previousPart)) {
+        return part;
+      }
+      if (validator.isNumeric(part)) {
+        return "{:" + (inflector.singularize(previousPart)) + "-id}";
+      } else if (validator.isUUID(part)) {
+        return "{:" + (inflector.singularize(previousPart)) + "-guid}";
+      } else {
+        return part;
+      }
+    });
+    return this.templatedURL = templatedParts.join('/');
+  };
+
+  module.exports = ApiExample;
+
+}).call(this);
+\end{lstlisting}
+
+
