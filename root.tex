@@ -95,8 +95,18 @@ Practioners can use the presented technique to automatically generate and mainta
 \newpage
 \phantomsection
 \altchapter{\bf{Acknowledgements}}
-
 \begin{singlespace}
+I am grateful to Shahana, my wife, for supporting me and the family while I took the time away to work on this research.
+
+I am thankful to my supervisor Dr. Frank Maurer for giving me the opportunity and valuable guidance to pursue this research.
+
+I am also thankful to Dr. Craig Anslow for his continuous encouragement and the countless number of hours that he spent to provide feedback about my work.
+\newpage
+\phantomsection
+\altchapter{\bf{Dedication}}
+\begin{center}
+  To Shahana
+\end{center}
 \newpage
 \phantomsection
 \tableofcontents
@@ -124,57 +134,8 @@ Practioners can use the presented technique to automatically generate and mainta
 \pgfplotsset{table/search path={controlled_study,case_study}}
 \renewcommand\bibname{References}
 
-\chapter{Introduction}
-Application Programming Interfaces, commonly known as APIs, are used to express a software component in terms of its operations, inputs, outputs, and their types\footnote{\url{https://en.wikipedia.org/wiki/Application_programming_interface}}. Robillard defines an API as follows: An API is the interface to implement functionality that developers can access to perform various tasks \cite{Robillard_a_field_study} \cite{Robillard_what_makes}. APIs enable multiple software components to interact with each other.
 
-REST APIs are a type of APIs that are used to integrate software components using web technologies. Fielding defined Representational State Transfer or REST as an architectural style for developing distributed hypermedia systems \cite{Fielding_rest}. For example, the GitHub REST API\footnote{\url{https://developer.github.com/v3/repos/\#create}} has a resource called \texttt{Repository} to denote a code repository that can be identified by the URL \url{/user/repos}. To create a new \texttt{Repository} for a user, the GitHub API can be invoked via HTTP $POST$ at \url{/user/repos} using the following JSON representation of a \texttt{Repository}:
-
-\begin{verbatim}
-{
-  "name": "Hello-World",
-  "description": "This is your first repository",
-  "homepage": "https://github.com",
-  "private": false,
-  "has_issues": true,
-  "has_wiki": true,
-  "has_downloads": true
-}
-\end{verbatim}
-
-In today's world of technology, REST APIs have become ubiquitous and the primary choice for integrating Internet enabled applications due to its simplicity and similarity with HTTP \cite{mangler2010origin}. For example, a real estate listing website uses a REST API to collect ``walk score'' and another REST API to show a map view of a property listing. By incorporating the map and walk score using REST APIs, the real estate listng site provides important information to their users. Most REST APIs, including these two examples, are often documented manually or using custom implemented tools specific to the APIs that are not publicly available. This requires effort to generate and maintain the documentation of REST APIs over time since there is a lack of reusable tool support.
-
-Previous research in the area of API usability mostly focused on local APIs such as Java libraries. Researchers identified the documentation of APIs as both the primary source of information as well as the key obstacle for API usability \cite{Robillard_what_makes}. Hence the quality of the API documentation plays an important role in API usability. To this regard, researchers have identified the qualities of ``good API documentation'' as follows: complete, correct, includes thorough explanations and code examples, provides consistent presentation and organization \cite{Robillard_what_makes,Myers_study}. Today, there are several tools such as Junit\footnote{\url{http://junit.org/}}, UsETeC \cite{zhu2014mining}, Jadeite \cite{Jadeite}, APIMiner \cite{montandon2013documenting}, Roast \cite{Hoffman_api_documentation} that can be used to document local APIs with the aforementioned qualities .
-
-While there are overlaps between the documentation requirements of local and REST APIs, there are significant requirements that are unique to each. For example, REST API documentation needs to include information about its API endpoints, HTTP headers, and request and response payloads. On the other hand, documentation of local APIs need to explain the classes and methods. Due to such differences between local and REST APIs, the existing technique and tools for local API documentation cannot be readily used to generate REST API documentation.
-
-\begin{figure}[htb]
-  \includegraphics[width=\linewidth]{manual_workflow.png}
-  \caption{Manual REST API Documentation Steps}
-  \label{fig:manual}
-\end{figure}
-
-Currently, the process of documenting REST APIs are largely manual. Conceptually, the high level steps involved in the manual process can be identified as shown in Figure \ref{fig:manual}. These steps S1-S7 can be described as follows: S1 - API developer prepares an example API with the required HTTP parameters and request body, S2 - API developer uses a REST API client to make the example API call, S3 - the API developer records the HTTP data , S4 - API developer then edits the recorded data so that only relevant content is selected for documentation, S5 - API developers use any custom content to describe the API example, S6 - API developers combine the custom content with the edited content from the HTTP traffic into HTML to publish to the web, and S7 - API developer adds custom overview information to explain API concepts and general rules, and publishes the final documentation so other developers can learn the API. The steps S1-S6 are repeated for every API action that needs to be documented, and S1-S7 need to repeated for every version of the REST API as it evolves. As depicted here, this manual process can be both time consuming and error-prone.
-
-This thesis is ogranized as follows. In Chapter~\ref{chapter:case_study}, I discuss a case study to summarize the state of existing literature and industry practices related to the versioning, documentation, and change communication patterns of evolving Web APIs. The primary findings from this study are as follows: Web APIs evolve frequently, often several times a week, including both compatible and incompatible API changes, using manual or bespoke methods to version, document, and communicate the changes as they evolve. I found a lack of reusable techniques in the existing literature to automatically generate and maintain the documentation of multi-version evolving REST APIs with usage examples. I persued further research to solve this problem as discussed in the following paragraphs.
-
-In Chapter~\ref{chapter:spy_rest}, I present the following list of REST API documentation requirements by studying the literature and applying the findings from Chapter~\ref{chapter:case_study}: 1) automated, 2) example based, 3) executable, 4) version aware, 5) customizable, 6) reusable, and 7) collaborative. I present, SpyREST, a novel technique to intercept example REST API calls using an HTTP proxy server to collect and autmatically synthesize API traffic to generate and update API documentation to satisfy the aforementioned requirements. The primary advantage of the presented technique is that the documentation is generated from executable code. Existing techniques that rely on formatted comments or manually written API descriptions following custom languages require manual effort to find and update the API documentation everytime an API evolves.
-
-In Chapter~\ref{chapter:demo_paper}, I present a prototype implementation of the aformentioned technique to demonstrate a reusable tool and compare it against the existing REST API documentation tools that rely on custom API description languages. I also present an example where automated test code can be used to generate and maintain REST API documentation using the developed tool.
-
-I discuss an industrial evaluation of the proposed technique and the tool in Chapter~\ref{chapter:cisco_study}. The evaluation is carried out based on the data collected from an eighteen month of production use of SpyREST at Cisco. From the study I found that it is feasible to use the proposed interception technique and automated tests to document evolving REST APIs satisfying the aforementioned requirements. Automated always-updated REST API documentation was found to help establish a quick feedback cycle among the stakeholders. I also discuss several refinements and limitations of the proposed technique based on the lessons learned from this case study.
-
-In Chapter~\ref{chapter:controlled_study}, I discuss a controlled study performed with 26 professional software engineers to undestand the impact of usage examples in API documentation on REST API client developers. I enahanced an existing REST API documentation with usage examples containing data from the API's test code and provided it to the participants of one of two study groups. I found that participants using the original documentation without usage examples faced obstacles related to using appropriate data types, data formats, and required elements in the HTTP input. I observed that providing usage examples with data taken from API test code reduces the obstacles and improves API client developer success rate, reduces required trial attempts, and improves satisfaction ratings.
-
-In summary, this thesis makes the following key contributions to the body of research in software engineering:
-
-\begin{enumerate}
-  \item A list of REST API documentation requirements derived from the existing literature and the current state of industry practices to be used as a guideline by practitioners and researchers.
-  \item SpyREST, a novel technique and a reusable tool that uses interception to automatically generate and maintain evolving REST API documentation with usage examples from executable code.
-  \item An industrial evaluation of SpyREST to demonstrate the feasibility of the proposed technique that practitioners can follow to improve their REST API documentation experience.
-  \item An empricial evidence showing the common obstacles faced by REST API client developers that can be reduced with usage examples to help the prioritization of REST API documentation efforts.
-\end{enumerate}
-
-
+\include{introduction}
 \include{case_study/case_study}
 \include{spy_rest/spy_rest}
 \include{demo_paper/demo_paper}
