@@ -7,24 +7,10 @@
 \label{chapter:case_study}
 
 
-%\author{\IEEEauthorblockN{S M Sohan, Craig Anslow, Frank Maurer
-%\IEEEauthorblockA{Department of Computer Science\\
-%University of Calgary,
-%Calgary, Alberta T2N 1N4\\ Email: \{smsohan, craig.anslow, frank.maurer\}@ucalgary.ca }
-%}}
-
-%\maketitle
-
-
 \section{Abstract}
 When applications are integrated using web APIs, changes on a web API may break the dependent applications. This problem exists because old versions of the APIs may no longer be supported, a lack of adequate documentation to upgrade to a newer version, and insufficient communication of changes. In this paper we conducted a case study of evolving Web APIs to investigate what changes are made between versions and how the changes are documented and communicated to the API users. The findings are a list of recommendations for practitioners and researchers based on API change profiles, versioning, documentation and communication approaches that are observed in practice. This study will help inform developers of evolving Web APIs to make decision about versioning, documentation and communication methods.
 
 
-%\begin{IEEEkeywords}
-%Case Study; RESTful, SOAP, Web API Evolution; WSDL
-%\end{IEEEkeywords}
-
-%\IEEEpeerreviewmaketitle
 
 \section{Introduction}
 
@@ -149,13 +135,13 @@ To gain a broad perspective, we selected evolving Web APIs to represent each of 
 
 The APIs in this case study are proprietary and open-source evolving Web APIs. For each API, we collected publicly available data from the following sources: API home page, formal API reference, and user forums and question-answer sites. A homepage provides a general introduction to the Web API. The formal API reference described the different elements of the API. The user forums and question-answer sites are used to communicate news and collect feedback about the Web APIs, for example StackOverflow.com.
 
-The first author of this paper read the the API homepages and followed relevant hyperlinks to find answers to RQ1. A summary of the strategies were presented to the co-authors, which was used to categorize Web API versioning strategies into groups. Web API homepages contain changelogs and links to API references which were used to find answers to RQ2.
+The first author of this paper read the API homepages and followed relevant hyperlinks to find answers to RQ1. A summary of the strategies were presented to the co-authors, which was used to categorize Web API versioning strategies into groups. Web API homepages contain changelogs and links to API references which were used to find answers to RQ2.
 
 We used codes to annotate the API changelogs to identify the different types of API changes. The coding scheme started with a set of codes based on the codes from Jun et al. \cite{li_client_2013}. New codes  emerged from our analysis as the existing codes did not describe an API change scenario. An overview of the used codes is provided in Table \ref{coding_scheme}. The codes were applied to the different API elements as described through the following example Web API description:
 
 ``A Web API to post a comment on a photo.''
 
-\textbf{Endpoint} - URLs to access the the API.
+\textbf{Endpoint} - URLs to access the API.
 \textbf{Resource} - An input or output object. For example, comment, photo, etc.
 \textbf{Method} - An API operation on a resource. e.g. post a comment.
 \textbf{Field} - An attribute of the resource. e.g. timestamps of a comment.
@@ -199,7 +185,7 @@ post meta \textbf{(AddResource)} is now possible by
 using \url{the/posts/<id>/meta} endpoints.''
 \normalsize
 
-We analyzed the API user forums and newsboards to find answers to RQ3. Messages in these sources were filtered to focus on the evolution of Web APIs. These data sources provided the perspectives of both the developers and users of Web APIs. To find evolution related messages, based on trial search runs, full text search features on the forums were used to search for these keywords: version, release, migration, breaking, deprecate, change.
+We analyzed the API user forums and news boards to find answers to RQ3. Messages in these sources were filtered to focus on the evolution of Web APIs. These data sources provided the perspectives of both the developers and users of Web APIs. To find evolution related messages, based on trial search runs, full text search features on the forums were used to search for these keywords: version, release, migration, breaking, deprecate, change.
 
 
 \section{Findings} % (fold)
@@ -579,7 +565,7 @@ Our case study findings such as a lack of standard approaches to deal with Web A
 
 Our change profiles show that Web APIs often evolve as fast as several times a month and forces API clients to upgrade. Also, releases often combine both bug fixes and other breaking changes, forcing the API users to adapt even though they only need the fixes.  For practitioners, we recommend that bug fixes and breaking changes be released under separate versions to provide more flexibility to the API clients. Future research needs to focus on finding strategies for evolving Web APIs so that bug fixes and other changes can be easily delivered in separate versions and multiple versions can be made available at the same time.
 
-\textbf{RQ2 Documentation} - We observed a that largely manual process is used for generating API documentation for most RESTful APIs. Manually generating and maintaining such documentation is expensive and error-prone. From our analysis, we showed that even when Web APIs are  versioned, documentation for older versions is not always available, and the difference between two versions of a Web API cannot be easily derived from their manually edited API references. We also found that the changelogs and API references are two disconnected documents even though a user needs to read both documents while upgrading. For practitioners, we recommend releasing Web API documentation for each available version that is cross-linked with the changelog. Future research on tool development can be aimed to support automated, version-aware documentation needs of evolving Web APIs. 
+\textbf{RQ2 Documentation} - We observed a that largely manual process is used for generating API documentation for most RESTful APIs. Manually generating and maintaining such documentation is expensive and error-prone. From our analysis, we showed that even when Web APIs are  versioned, documentation for older versions is not always available, and the difference between two versions of a Web API cannot be easily derived from their manually edited API references. We also found that the changelogs and API references are two disconnected documents even though a user needs to read both documents while upgrading. For practitioners, we recommend releasing Web API documentation for each available version that is cross-linked with the changelog. Future research on tool development can be aimed to support automated, version-aware documentation needs of evolving Web APIs.
 
 Live Web API explorers are used by API users to try the APIs with little effort. However, there is a lack of reusable approach to create Live Web API explorers and bespoke implementation of the live API explorers are expensive since they need additional software development. We have seen only two of the nine studied APIs to provide a live API explorer. Moreover, we found that live Web API explorers are only offered for latest versions. Future research can focus on the implementation of a reusable, version-aware live Web API explorer for evolving Web APIs.
 

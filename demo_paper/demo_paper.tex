@@ -1,44 +1,9 @@
-%\documentclass[conference]{IEEEtran}
-
-%\usepackage{cite}
-%\usepackage{listings}
-%\usepackage{amsmath}
-%\lstset{showstringspaces=false, basicstyle=\footnotesize, numbers=left, numbersep=1pt }
-%\usepackage[tableposition=top]{caption}
-%\ifCLASSINFOpdf
-%\usepackage[pdftex]{graphicx}
-%\usepackage[pdftex]{color}
-%\usepackage{subcaption}
-%\else
-%\fi
-%\usepackage{url}
-%\usepackage{upquote}
-%\usepackage{mdframed}
-%\usepackage{balance}
-%\hyphenation{op-tical net-works semi-conduc-tor}
-
-
 \chapter{SpyREST in Action: An Automated RESTful API Documentation Tool}
 \label{chapter:demo_paper}
-
-%\author{\IEEEauthorblockN{S M Sohan, Craig Anslow, and Frank Maurer}
-%\IEEEauthorblockA{Department of Computer Science\\
-%University of Calgary\\
-%Calgary, Alberta T2N 1N4\\
-%Email: \{smsohan, craig.anslow, frank.maurer\}@ucalgary.ca  }
-%}
-%\maketitle
-
 
 \section{Abstract}
 RESTful APIs are often manually documented. As a result, the process of maintaining the documentation of RESTful APIs is both expensive and error-prone. In this demonstration paper, we present SpyREST as an automated software as a service tool that can be used to document RESTful APIs. SpyREST leverages an HTTP Proxy server to intercept real API calls to automatically collect and generate RESTful API documentation by processing HTTP traffic involved in API calls. SpyREST provides an automated yet customizable example based documentation solution for RESTful APIs. RESTful API developers can use SpyREST to automatically generate and maintain updated API documentation.
 
-
-%\begin{IEEEkeywords}
-%RESTful API, Web API, Documentation, Automation, Example based documentation
-%\end{IEEEkeywords}
-
-%\IEEEpeerreviewmaketitle
 
 \section{Introduction}
 Fielding introduced RESTful APIs as a versatile mechanism for connecting internet based applications \cite{Fielding_rest}. For example, a hotel web site may use the Google Maps API to provide driving directions to the hotel. RESTful API developers need to provide and maintain API documentations when releasing the APIs so that the APIs can be used. Maintaining API documentation manually is less efficient and often less reliable than automated documentation \cite{Espinha_web}.

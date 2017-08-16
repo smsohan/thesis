@@ -1,70 +1,9 @@
-
-%\documentclass[conference]{IEEEtran}
-
-
-%\ifCLASSINFOpdf
-  %\usepackage{listings}
-  %\usepackage[pdftex]{graphicx}
-  %\usepackage{url}
-  %\usepackage{subcaption}
-  %\usepackage{tikz,pgfplots,pgfplotstable}
-  %\usepackage{mathtools}
-  %\usepgfplotslibrary{statistics}
-  %\usepackage{courier}
-%\else
-%\fi
-
-%\makeatletter
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
-%\def\ps@IEEEtitlepagestyle{%
-  %\def\@oddfoot{\mycopyrightnotice}%
-  %\def\@evenfoot{}%
-%}
-%\def\mycopyrightnotice{%
-  %{\footnotesize 978-1-5386-0443-4/17/\$31.00 ©2017 IEEE\hfill}% <--- Change here
-  %\gdef\mycopyrightnotice{}% just in case
-%}
-%\begin{document}
-%\title{A Study of the Effectiveness of Usage Examples in REST API Documentation}
 \chapter{A Study of the Effectiveness of Usage Examples in REST API Documentation}
 \label{chapter:controlled_study}
 
 
- %\author{\IEEEauthorblockN{S M Sohan, Frank Maurer\IEEEauthorrefmark{1}}
- %\IEEEauthorblockA{\IEEEauthorrefmark{1}
- %Dept. of Computer Science\\
- %University of Calgary\\
- %Canada\\
- %\{smsohan, frank.maurer\}@ucalgary.ca}
- %\and
- %\IEEEauthorblockN{Craig Anslow}
- %\IEEEauthorblockA{School of Eng. and Computer Science\\
- %Victoria University of Wellington\\
- %New Zealand\\
- %craig@ecs.vuw.ac.nz}
- %\and
- %\IEEEauthorblockN{Martin P. Robillard}
- %\IEEEauthorblockA{
- %School of Computer Science\\
- %McGill University\\
- %Canada\\
- %martin@cs.mcgill.ca}
- %}
-
-%\maketitle
-
 \section{Abstract}
 Generating and maintaining REST API documentation with usage examples can be a time consuming and expensive process for evolving APIs. Most REST API documentation tools focus on automating the documentation of the API objects, but require manual effort for capturing usage examples. Consequently, REST API developers need to know the cost vs. benefit of providing usage examples in the documentation to prioritize the documentation efforts. To this end, we have performed a controlled study with 26 experienced software engineers to understand problems that REST API client developers face while using an API without usage examples. We found that REST API client developers face productivity problems with using correct data types, data formats, required HTTP headers and request body when documentation lacks usage examples. By following the REST API documentation suggestions from this paper, REST API developers can reduce the errors, improve success rate and satisfaction of API client developers.
-
-
-
-%\begin{IEEEkeywords}
-%API; REST; Documentation; Usage Examples; Empirical Study; Controlled Study; Productivity;
-
-%\end{IEEEkeywords}
-
-%\IEEEpeerreviewmaketitle
-
 
 \section{Introduction}
 REST APIs are used as the predominant application integration mechanism over the Internet. Generating and maintaining REST API documentation with usage examples can be an expensive process because most API documentation tools do not support effective usage examples. Researchers have emphasized API documentation as a key factor that impacts API usability both positively and negatively. To improve API documentation, researchers have recommended incorporating usage examples in the API documentation.
@@ -100,7 +39,7 @@ To answer the aforementioned research question, the study has the following requ
   \item \textbf{R1. Representative API.} We had to choose an existing REST API that is currently used by API client developers. Selecting a mature REST API for this study reduces the possibility that the obstacles we observe in the study are the results of insignificant accidental problems symptomatic of an immature technology. We selected a familiar domain so that participants are able to relate to the API features without requiring upfront training. In addition to selecting the API, we had to select tasks that are related to the core features provided by the API to represent a common usage area of the API.
   \item \textbf{R2. Open source.} To be able to understand the impact of usage examples, we needed to select an open-source API where we can add new examples to the documentation for performing this study.
   \item \textbf{R3. Time bound.} We applied a maximum time constraint for each participant to measure the rate of success within a limited time frame. As a result, the study needs to be setup such that participants are able to focus on performing the tasks minimizing any overhead.
-  \item \textbf{R4. Participant Selection.} Developers with prior experience on REST APIs need to be recruited as study participants to perform the study within a limited amount of time and in a realistic setup. Furthermore, to reduce a learning bias, only participants with no prior experince of using the WordPress REST API V2 are accepted for this study.
+  \item \textbf{R4. Participant Selection.} Developers with prior experience on REST APIs need to be recruited as study participants to perform the study within a limited amount of time and in a realistic setup. Furthermore, to reduce a learning bias, only participants with no prior experience of using the WordPress REST API V2 are accepted for this study.
 \end{itemize}
 
 

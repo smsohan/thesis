@@ -2,39 +2,8 @@
 \label{chapter:cisco_study}
 
 
-
-%\author{\IEEEauthorblockN{S M Sohan}
-%\IEEEauthorblockA{
-%Security Group\\
-%Cisco Systems Ltd.\\
-%Calgary, Canada\\
-%sosohan@cisco.com}
-%\and
-%\IEEEauthorblockN{Craig Anslow}
-%\IEEEauthorblockA{
-%Department of Computer Science\\
-%Middlesex University\\
-%London, United Kingdom\\
-%c.anslow@mdx.ac.uk}
-%\and
-%\IEEEauthorblockN{Frank Maurer}
-%\IEEEauthorblockA{
-%Department of Computer Science\\
-%University of Calgary\\
-%Calgary, Canada\\
-%frank.maurer@ucalgary.ca}
-%}
-
-
 \section{Abstract}
 Generating and maintaining an up-to-date API documentation is a challenging problem for evolving REST APIs. At Cisco, we've used SpyREST, an automated REST API documentation tool, via our functional tests to solve this problem with one of our APIs for a cyber security application over the past eighteen months. Using this approach, we've avoided the need for extensive manual effort by leveraging our test code to also generate a continuously updated API documentation as the API evolved. Our always-updated API documentation has helped creating a fast feedback loop between the developers and QA engineers. The findings from this paper can be used by practitioners to introduce automation to reduce the manual effort associated to their REST API documentation process.
-
-
-%\begin{IEEEkeywords}
-%API; REST; Documentation; Tool; Case study; Test; Automation; HTTP; Web API;
-
-%\end{IEEEkeywords}
-
 
 \section{Introduction}
 
@@ -320,14 +289,14 @@ This example code is written using RSpec\footnote{\url{http://rspec.info}}, a Ru
 
 This practice of using tests for documentation was mentioned as an advantage by 4 of the 9 participants. For example, QA2 mentioned the following: \textbf{``SpyREST was a useful tool for us... as the (API) endpoints were documented using unit tests, (API) developers would write the documentation for a similar audience (API client developers).''} The PM mentioned the following feedback about the executable API examples in the documentation: \textbf{``The embedded examples are great for allowing users to try API calls quickly and easily to get a feel for how the API works.''}
 
-The next step in the lifecycle of the API documentation is in the automated build server where the test suite is executed against a deployed API on a staging server through a SpyREST proxy. This promotes the REST API documentation from the developer workstation to a shared instance that is used by the quality assurance engineers, product management, and the peer developers to verify against the acceptance criteria. This often results in several loops between the developer workstations and the staging servers until the API and its documentation meets the acceptance criteria. During the team retrospective following the API production release, the following comment was captured in the meeting notes by one of the QA engineers (QA1):  \textbf{``Up-to-date documentation using SpyREST helped developing and collecting lots of input about the API in small pieces during the weekly meetings before production release''}. The API developers and quality assurance engineers add any custom content as needed to describe complex API concepts and prerequisites that aren't captured in the automated examples.
+The next step in the life cycle of the API documentation is in the automated build server where the test suite is executed against a deployed API on a staging server through a SpyREST proxy. This promotes the REST API documentation from the developer workstation to a shared instance that is used by the quality assurance engineers, product management, and the peer developers to verify against the acceptance criteria. This often results in several loops between the developer workstations and the staging servers until the API and its documentation meets the acceptance criteria. During the team retrospective following the API production release, the following comment was captured in the meeting notes by one of the QA engineers (QA1):  \textbf{``Up-to-date documentation using SpyREST helped developing and collecting lots of input about the API in small pieces during the weekly meetings before production release''}. The API developers and quality assurance engineers add any custom content as needed to describe complex API concepts and prerequisites that aren't captured in the automated examples.
 
-The next step in the lifecycle of the API is a release to one or more of the production environments that customers use. With the production release of an updated API, its documentation is automatically promoted from the staging environment to production. The promotion of the documentation is a three-step process. First, the data from the staging server is exported in a portable archive file. Then, a transformation is performed to update staging specific data such as URLs, email domains, and hostnames within the archive to match the desired production environment. Finally, the transformed archive is published to production as a read-only artifact.
+The next step in the life cycle of the API is a release to one or more of the production environments that customers use. With the production release of an updated API, its documentation is automatically promoted from the staging environment to production. The promotion of the documentation is a three-step process. First, the data from the staging server is exported in a portable archive file. Then, a transformation is performed to update staging specific data such as URLs, email domains, and host names within the archive to match the desired production environment. Finally, the transformed archive is published to production as a read-only artifact.
 
 
 \subsubsection{Documentation of a new Version for an Existing API Action}
 
-When API version v1 is launched, all the functional tests for v0 are run on a loop, once per version. This code reuse minimizes the effort required to document multiple versions of the same API action when the API versions are backward compatible. The rest of the lifecycle steps follow similar process as the documentation of a new API action.
+When API version v1 is launched, all the functional tests for v0 are run on a loop, once per version. This code reuse minimizes the effort required to document multiple versions of the same API action when the API versions are backward compatible. The rest of the life cycle steps follow similar process as the documentation of a new API action.
 
 \subsubsection{Documentation of an updated API Action}
 When an API update requires a new example, a new automated test case is written. For example, an API action was updated to receive a new query parameter to support an additional operation.

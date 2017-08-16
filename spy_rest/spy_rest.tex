@@ -2,23 +2,8 @@
 \label{chapter:spy_rest}
 
 
-%\author{\IEEEauthorblockN{S M Sohan, Craig Anslow, and Frank Maurer}
-%\IEEEauthorblockA{Department of Computer Science\\
-%University of Calgary\\
-%Calgary, Alberta T2N 1N4\\
-%Email: \{smsohan, craig.anslow, frank.maurer\}@ucalgary.ca  }
-%}
-%\maketitle
-
-
 \section{Abstract}
 RESTful API documentation is expensive to produce and maintain due to the lack of reusable tools and automated solutions. Most RESTful APIs are documented manually and the API developers are responsible for keeping the documentation up to date as the API evolves making the process both costly and error-prone. In this paper we introduce a novel technique using an HTTP proxy server that can be used to automatically generate RESTful API documentation and demonstrate SpyREST, an example implementation of the proposed technique. SpyREST uses a proxy to intercept example API calls and intelligently produces API documentation for RESTful Web APIs by processing the request and response data. Using the proposed HTTP proxy server based technique, RESTful API developers can significantly reduce the cost of producing and maintaining API documentation by replacing a large manual process with an automated process.
-
-%\IEEEpeerreviewmaketitle
-
-%\begin{IEEEkeywords}
-%RESTful API, Web API, Documentation, Automation, Example based documentation
-%\end{IEEEkeywords}
 
 
 \section{Introduction}
@@ -46,7 +31,7 @@ Stepalina identified several advantages of software as a service (SaaS) based so
 \subsection{RESTful API Documentation} % (fold)
 \label{sub:restful_api_documentation}
 
-Several related work proposed specifications for RESTful APIs. Maleshkova et al. found that a lack of a standard format to document Web APIs and manual documentation causes confusions about how to use the APIs for different use cases \cite{Maleshkova_investigating}. Espinha et al. observed that most RESTful APIs are documented manually by API developers making the documentation a less reliable one \cite{Espinha_web}. Danielsen et al. presented a vocabulary for documenting RESTful Web APIs called Web Interface Language (WIfL) \cite{Danielsen_validation}. Verborgh et at. presented RESTdesc, a Resource oriented and Hyper-link based specification for describing RESTful APIs \cite{Verborgh_functional}. Mangler et al. presented RDDL, an XML based specification for describing RESTful APIs \cite{Mangler_rddl}. Kopecky et al. presented hRESTS, a machine readable micro-format to describe RESTful APIs that use an alternate representation compared to WIfL \cite{Kopecky_hrests}. Ning et al. presented OmniVoke, a RESTful API based invocation engine that provides an abstraction layer for RESTful API calls to multiple APIs that follow different conventions \cite{Ning_omnivoke}. Manual configuration is required to generate these aforementioned specifications for RESTful APIs. Myers et al. recommended providing a consistent look-and-feel with explanation for the starting points and an overall map comprising of both text and diagrams, providing a browsing experience with breadcrumb trail following a hierarchy, an effective search interface, providing example code and a way to exercise the examples online without writing code \cite{Myers_study}.
+Several related work proposed specifications for RESTful APIs. Maleshkova et al. found that a lack of a standard format to document Web APIs and manual documentation causes confusions about how to use the APIs for different use cases \cite{Maleshkova_investigating}. Espinha et al. observed that most RESTful APIs are documented manually by API developers making the documentation a less reliable one \cite{Espinha_web}. Danielsen et al. presented a vocabulary for documenting RESTful Web APIs called Web Interface Language (WIfL) \cite{Danielsen_validation}. Verborgh et al. presented RESTdesc, a Resource oriented and Hyper-link based specification for describing RESTful APIs \cite{Verborgh_functional}. Mangler et al. presented RDDL, an XML based specification for describing RESTful APIs \cite{Mangler_rddl}. Kopecky et al. presented hRESTS, a machine readable micro-format to describe RESTful APIs that use an alternate representation compared to WIfL \cite{Kopecky_hrests}. Ning et al. presented OmniVoke, a RESTful API based invocation engine that provides an abstraction layer for RESTful API calls to multiple APIs that follow different conventions \cite{Ning_omnivoke}. Manual configuration is required to generate these aforementioned specifications for RESTful APIs. Myers et al. recommended providing a consistent look-and-feel with explanation for the starting points and an overall map comprising of both text and diagrams, providing a browsing experience with breadcrumb trail following a hierarchy, an effective search interface, providing example code and a way to exercise the examples online without writing code \cite{Myers_study}.
 
 In addition to the research community, there are several custom RESTful API specification formats that are observed in the industry such as, Swagger\footnote{https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md}, RAML\footnote{http://raml.org/spec.html}, and Blueprint\footnote{https://github.com/apiaryio/api-blueprint}. In addition to producing RESTful API documentation, there are SaaS based tools providers that can be used to publish the documentation and auto generate API client code for RESTful APIs that are described using one of these formats. To use these tools to generate HTML based RESTful API documentation, API developers need to manually construct the intermediate documentation format such as Swagger, Blueprint, RAML, etc. since there is no automated tool to produce this.
 % subsubsection restful_api_specification (end)
