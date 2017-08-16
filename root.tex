@@ -31,7 +31,7 @@
 %\usepackage{balance}
 \usepackage{enumitem}
 
-\title{Automated Example Oriented REST API Documenation}
+\title{Automated Example Oriented REST API Documentation}
 %
 %            Insert the correct information between the {}
 %
@@ -84,13 +84,11 @@ New Zealand\\
 \newpage
 \phantomsection
 \altchapter{\bf{Abstract}}
-API documentation presents both a problem and an opportunity for API usability. Most developers learn to use an API based on its documentation and at the same time face obstacles using the APIs due to lack of necessary information in the documentation. REST APIs provide interconnectivity between applications over HTTP. Documentation of a REST API is a key information source for software developers that use these types of API. As a REST API evolves, the documentation needs to be maintained alongside. This implies that REST API developers also need to efficiently generate and maintain the documentation of their APIs with the qualities that make the API usable. This introduces the problem of interest in this research: how to document REST APIs?
+API documentation presents both a problem and an opportunity for API usability. REST APIs provide interconnectivity between applications over HTTP. Documentation of a REST API is a key information source for API client developers. Most REST APIs are documented using a manual approach, which can be time consuming and error-prone. REST API developers need to efficiently document their APIs with the qualities that make the API usable. In this research I focused on the topic of automated REST API documentation to satisfy this need.
 
-This is a problem because there is a lack of scientifically established guidelines and automated tool support for REST API documentation with usage examples. Existing local API documentation techniques and tools are not readily usable for the documentation of REST APIs because REST APIs have HTTP protocol specific parameters, and API clients are agonistic to the programming languages used to implement the APIs. Existing REST API documentation techniques rely on custom API definition languages that require manual effort to generate and maintain REST API documentation as a separate artifact as the API evolves.
+In this thesis, I present and evaluate of a novel technique to solve REST API documentaiton requirements. I present a set of REST API documentation requirements by studying the existing literature and the current industry practice. From this study, I observed that REST APIs evolve frequently, but used a manual or bespoke approach for generating and maintaining their documentation. I present a reusable technique with a prototype implementation to automate the REST API documentation process with executable API usage examples. The technique involves the interception of example REST API calls using an HTTP proxy server to auto-generate an accurate and updated REST API documentation. I present an industrial evaluation of the proposed technique based on a period of eighteen months of production use. From this study, I found that it was feasible to leverage API test code to automatically generate an always-updated REST API documentation for evolving REST APIs with usage examples. To evaluate the impact of usage examples on REST API client developers, I performed a controlled study with experienced REST API developers. From this case study, I found that REST API client developers faced patterns of obstacles using REST APIs that can be reduced by including API usage examples in the API documentation, as suggested in the proposed technique.
 
-In this reasearch, I proposed and evaluated a novel technique to solve REST API documentaiton requirements. I identified the requirements by studying the existing literature and the current state of REST API documentation in practice. The technique involves the interception of example REST API calls using an HTTP proxy server to auto-generate an accurate and updated REST API documentation.
-
-Practioners can use the presented technique to automatically generate and maintain an updated documentation of REST APIs including the API structure and usage examples from their API test code. Researchers can apply the novel concept of using interception to automatically document API usage examples from test scripts to other forms of APIs.
+The findings of this research can be used as a guideline by practitioners to automatically generate an updated REST API documentation with usage examples. Researchers can extend the novel concept of using interception to automatically document API usage examples from test scripts to other forms of APIs.
 
 \newpage
 \phantomsection
