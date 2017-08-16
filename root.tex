@@ -9,6 +9,7 @@
 \usepackage[tableposition=top]{caption}
 \usepackage{subcaption}
 \usepackage{tikz,pgfplots,pgfplotstable}
+\usetikzlibrary{shapes,arrows}
 \usepackage{mathtools}
 \usepgfplotslibrary{dateplot}
 \usepgfplotslibrary{statistics}
@@ -140,6 +141,7 @@ I am grateful to Cisco for allowing me to pursue this research alongside my job.
 \include{cisco_study/cisco_study}
 \include{controlled_study/controlled_study}
 \chapter{Conclusion}
+\label{chapter:conclusion}
 
 In this thesis, I presented a novel idea of using interception to automate the process of REST API documentation with usage examples from executable code. I started by investigating the current industry practices and challenges associated with developing and maintaining evolving Web APIs. I found modern Web APIs predominently embraced REST architectural style, but the existing literature had primarily focused on solving problems related to the SOAP APIs. I also found that most REST APIs are documented using manual approaches that are time consuming and error- prone to maintain when an API evolves several times a month. Through my research, I aimed to fill this gap between the REST API documentation challenges and the existing literature by finding a reusable solution to the common problems.
 
