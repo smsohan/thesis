@@ -25,7 +25,48 @@ In today's world of technology, REST APIs have become ubiquitous and the primary
 
 Previous research in the area of API usability mostly focused on local APIs such as Java libraries. Researchers identified the documentation of APIs as both the primary source of information as well as the key obstacle for API usability \cite{Robillard_what_makes}. Hence the quality of the API documentation plays an important role in API usability. To this regard, researchers have identified the qualities of ``good API documentation'' as follows: complete, correct, includes thorough explanations and code examples, provides consistent presentation and organization \cite{Robillard_what_makes,Myers_study}. Today, there are several tools such as Javadoc\footnote{\url{http://www.oracle.com/technetwork/java/javase/documentation/index-jsp-135444.html}}, UsETeC \cite{zhu2014mining}, Jadeite \cite{Jadeite}, APIMiner \cite{montandon2013documenting}, Roast \cite{Hoffman_api_documentation} that can be used to document local APIs with the aforementioned qualities .
 
-While there are overlaps between the documentation requirements of local and REST APIs, there are significant requirements that are unique to each. The documentation of most local APIs contain a structural definition of the API classes and methods. API usage examples for local APIs are documented using the same programming language of the API. On the other hand, REST APIs are defined using HTTP specific parameters such as API endpoints, query parameters, HTTP headers and body. REST API clients can be written in any programming language agnostic to the API implementation language. Due to such structural and implementation differences between local and REST APIs, the existing technique and tools for local API documentation cannot be readily used to generate REST API documentation.
+While there are overlaps between the documentation requirements of local and REST APIs, there are significant requirements that are unique to each. The differences between the documentation
+of local vs. REST APIs can be depicted by an example as follows:
+\newcommand*{\captionsource}[2]{%
+  \caption[{#1}]{%
+    \textbf{Source:} #2%
+    \\\hspace{\linewidth}%
+    #1%
+  }%
+}
+\begin{figure}[htb]
+  \includegraphics[width=\linewidth]{javadoc.png}
+  \captionsource{Example Local API Documentation from Formatted Comments Using JavaDoc}{Log4J}
+  \label{fig:javadoc}
+\end{figure}
+
+
+
+Figure~\ref{fig:javadoc} shows an example of how JavaDoc is used to automatically extract formatted comments from the API source code to
+generate human readable documentation. Here the developers of the \texttt{debug} API method provided comments describing the intended way to use the method. JavaDoc can
+automatically parse such comments to render the API documentation. Since the comments are not executable code, the API developers need to ensure the correctness of the
+comments, and maintain it manually when the API evolves.
+
+\begin{figure}[htb]
+  \includegraphics[width=\linewidth]{wordpress_doc.png}
+  \captionsource{Difference between a REST API Code and its Documentation}{WordPress REST API}
+  \label{fig:wordpress_doc}
+\end{figure}
+
+
+Figure~\ref{fig:wordpress_doc} shows an example of a REST API source code and a fragment of its API documentation
+taken from WordPress REST API. The developers of the \texttt{get\_items} API provided formatted comments to describe the intended use of this method similar to the example
+in Figure~\ref{fig:javadoc}. However, there is a stark difference between the API source code and its documentation. This is because even though the API is implemented
+using a specific language, PHP in this case, the documentation is agnostic to this choice of technology because REST APIs are described by their HTTP interface elements such as
+HTTP headers, URLs, and body. As shown in this example, using existing local API documentaiton tools such as JavaDoc that converts formatted comments into API documentation would require extensive
+manuall effort for REST APIs for its verbosity and difference between the source code and the documentation constructs.
+
+The documentation of most local APIs
+contain a structural definition of the API classes and methods. API usage examples for local APIs are documented using the same programming language of the API. On the other hand, REST APIs
+are defined using HTTP specific parameters such as API endpoints, query parameters, HTTP headers and body. REST API clients can be written in any programming language agnostic to the API
+implementation language. Due to such structural and implementation differences between local and REST APIs, the existing technique and tools for local API documentation cannot be readily
+used to generate REST API documentation.
+
 
 \begin{figure}[htb]
   \includegraphics[width=\linewidth]{manual_workflow.png}
