@@ -74,19 +74,19 @@ used to generate REST API documentation.
   \label{fig:manual}
 \end{figure}
 
-Currently, the process of documenting REST APIs is largely manual. Conceptually, the high level steps involved in the manual process can be identified as shown in Figure \ref{fig:manual}. These steps S1-S7 can be described as follows:
+Currently, the process of documenting REST APIs is largely manual. Conceptually, the high level steps involved in the manual process can be identified as shown in Figure \ref{fig:manual}. These steps 1-7 can be described as follows:
 
-\begin{itemize}
-  \item S1 - API developer prepares an example API with the required HTTP parameters and request body.
-  \item S2 - API developer uses a REST API client to make the example API call.
-  \item S3 - the API developer records the HTTP data.
-  \item S4 - API developer then edits the recorded data so that only relevant content is selected for documentation.
-  \item S5 - API developers use any custom content to describe the API example.
-  \item S6 - API developers combine the custom content with the edited content from the HTTP traffic into HTML to publish on the web.
-  \item S7 - API developer adds custom overview information to explain API concepts and general rules, and publishes the final documentation so other developers can learn the API.
-\end{itemize}
+\begin{enumerate}
+  \item API developer prepares an example API with the required HTTP parameters and request body.
+  \item API developer uses a REST API client to make the example API call.
+  \item the API developer records the HTTP data.
+  \item API developer then edits the recorded data so that only relevant content is selected for documentation.
+  \item API developers use any custom content to describe the API example.
+  \item API developers combine the custom content with the edited content from the HTTP traffic into HTML to publish on the web.
+  \item API developer adds custom overview information to explain API concepts and general rules, and publishes the final documentation so other developers can learn the API.
+\end{enumerate}
 
-The steps S1-S6 are repeated for every API action that needs to be documented, and S1-S7 need to repeated for every version of the REST API as it evolves. As depicted here, this manual process can be both time consuming and error-prone.
+The steps 1-6 are repeated for every API action that needs to be documented, and steps 1-7 need to repeated for every version of the REST API as it evolves. As depicted here, this manual process can be both time consuming and error-prone.
 
 \section{Research Goals}
 The overarching goal of my research is to improve the current state of the process of REST API documentation process by automating the repeating manual steps in the aforementioned workflow. More specifically, I aim to solve the following research goals:
